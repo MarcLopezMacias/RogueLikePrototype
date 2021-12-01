@@ -36,7 +36,7 @@ public class Alien : Enemy
         if (CollidedWithPlayer(collision))
         {
             GameObject cl = collision.gameObject;
-            cl.GetComponent<DataPlayer>().DecreaseLifes(Damage);
+            cl.GetComponent<Player>().DecreaseLifes(Damage);
         }
         Die();
     }

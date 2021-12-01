@@ -17,27 +17,21 @@ using UnityEngine;
  * BUG: SI EL PERSONATGE ES MOU MENTRE DURA L'HABILITAT, ES TORNA A LA MIDA ORIGINAL
  * */
 
-public class Growth : MonoBehaviour
+public class Growth : Skill
 {
-
+    [SerializeField]
     private float MaxHeight;
 
     private Vector3 RegularScale;
 
     [SerializeField]
-    private int Duration = 9, HeightMultiplier = 10;
-
-    [SerializeField]
-    private int Cooldown = 15;
-
-    [SerializeField]
-    private bool IsOnCooldown = false;
+    private int HeightMultiplier;
 
     // Start is called before the first frame update
     void Start()
     {
         RegularScale = transform.localScale;
-        MaxHeight = transform.localScale.x * gameObject.GetComponent<DataPlayer>().GetHeight() * HeightMultiplier;
+        MaxHeight = transform.localScale.x * gameObject.GetComponent<Player>().GetHeight() * HeightMultiplier;
     }
 
     // Update is called once per frame
@@ -55,7 +49,7 @@ public class Growth : MonoBehaviour
         for(int i = 0; i < Duration / 3; i++)
         {
             yield return new WaitForSeconds(1);
-            float Height = gameObject.GetComponent<DataPlayer>().GetHeight();
+            float Height = gameObject.GetComponent<Player>().GetHeight();
             if(Height < MaxHeight)
             {
                 Vector3 tempScale = transform.localScale;

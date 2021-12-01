@@ -44,7 +44,7 @@ public class SpriteManager : MonoBehaviour
     void Start()
     {
         AnimationActive = false;
-        Speed = gameObject.GetComponent<DataPlayer>().GetSpeed();
+        Speed = gameObject.GetComponent<Player>().GetSpeed();
     }
 
     // Update is called once per frame

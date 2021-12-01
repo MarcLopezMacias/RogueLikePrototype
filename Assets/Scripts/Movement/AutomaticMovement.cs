@@ -24,9 +24,9 @@ public class AutomaticMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Speed = gameObject.GetComponent<DataPlayer>().GetSpeed();
-        Weight = gameObject.GetComponent<DataPlayer>().GetWeight();
-        Height = gameObject.GetComponent<DataPlayer>().GetHeight();
+        Speed = gameObject.GetComponent<Player>().GetSpeed();
+        Weight = gameObject.GetComponent<Player>().GetWeight();
+        Height = gameObject.GetComponent<Player>().GetHeight();
 
         transform.position = new Vector3(0.00f, 0.00f, 0.00f);
 

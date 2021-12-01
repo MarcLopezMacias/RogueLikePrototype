@@ -35,7 +35,7 @@ private void OnTriggerEnter2D(Collider2D collision)
         if (collision.CompareTag("Player") || collision.CompareTag("Jumping"))
         {
             GameObject cl = collision.gameObject;
-            cl.GetComponent<DataPlayer>().DecreaseLifes(1);
+            cl.GetComponent<Player>().DecreaseLifes(1);
         }
     }
 }

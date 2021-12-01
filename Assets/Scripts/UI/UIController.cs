@@ -45,7 +45,7 @@ public class UIController : MonoBehaviour
     {
         if(mainLoop)
         {
-            LifesText.text = "Lifes: " + GameManager.Instance.Player.GetComponent<DataPlayer>().Lifes;
+            LifesText.text = "Lifes: " + GameManager.Instance.Player.GetComponent<Player>().Lifes;
 
             EnemiesText.text = "Threats: " + GameManager.Instance.GetNumberOfEnemiesAlive();
 
@@ -64,7 +64,7 @@ public class UIController : MonoBehaviour
             GameOverText.text = GameOverString;
             GameOverScoreText.text = "Final Score: " + GameManager.Instance.GetScore();
 
-            EnemiesSlainText.text = "Enemies Slain: " + GameManager.Instance.Player.GetComponent<DataPlayer>().GetEnemiesSlain();
+            EnemiesSlainText.text = "Enemies Slain: " + GameManager.Instance.Player.GetComponent<Player>().GetEnemiesSlain();
         }
         FrameCount++;
         FrameText.text = "Frames: " + FrameCount;

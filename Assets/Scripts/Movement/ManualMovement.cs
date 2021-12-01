@@ -21,7 +21,7 @@ public class ManualMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Speed = gameObject.GetComponent<DataPlayer>().GetSpeed();
+        Speed = gameObject.GetComponent<Player>().GetSpeed();
     }
 
     // Update is called once per frame

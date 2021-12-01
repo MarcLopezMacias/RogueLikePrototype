@@ -28,16 +28,9 @@ public enum PlayerKind
     AstroGuy
 }
 
-public class DataPlayer : MonoBehaviour
+public class Player : Character
     
 {
-
-    [SerializeField]
-    private string FullName;
-
-    [SerializeField]
-    private float Height, Speed, JumpSpeed, Weight;
-
     [SerializeField]
     private PlayerKind PlayerKind;
 
@@ -45,8 +38,6 @@ public class DataPlayer : MonoBehaviour
     private int _lifes;
     public int Lifes { get { return _lifes; } }
     public int MaxLifes;
-
-    Vector2 InitialPosition;
 
     private float _maxScoreY;
 
@@ -62,36 +53,6 @@ public class DataPlayer : MonoBehaviour
     void Update()
     {
         checkMaxScore();
-    }
-
-    public float GetSpeed()
-    {
-        return Speed;
-    }
-
-    public float GetJumpSpeed()
-    {
-        return JumpSpeed;
-    }
-
-    public float GetWeight()
-    {
-        return Weight;
-    }
-
-    public float GetHeight()
-    {
-        return Height;
-    }
-
-    public void SetSpeed(float newSpeed)
-    {
-        Speed = newSpeed;
-    }
-
-    public string GetName()
-    {
-        return FullName;
     }
 
     public PlayerKind GetKind()
@@ -120,7 +81,7 @@ public class DataPlayer : MonoBehaviour
         if (_lifes > 0) return true; else return false;
     }
 
-    public int GetHearts()
+    public int GetLifes()
     {
         return Lifes;
     }

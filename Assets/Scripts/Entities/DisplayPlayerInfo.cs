@@ -27,12 +27,12 @@ public class DisplayPlayerInfo : MonoBehaviour
 
         Player = GameObject.Find("Female");
 
-        Name = Player.GetComponent<DataPlayer>().GetName();
-        Kind = Player.GetComponent<DataPlayer>().GetKind();
+        Name = Player.GetComponent<Player>().GetName();
+        Kind = Player.GetComponent<Player>().GetKind();
 
-        Height = Player.GetComponent<DataPlayer>().GetHeight();
-        Speed = Player.GetComponent<DataPlayer>().GetSpeed();
-        Weight = Player.GetComponent<DataPlayer>().GetWeight();
+        Height = Player.GetComponent<Player>().GetHeight();
+        Speed = Player.GetComponent<Player>().GetSpeed();
+        Weight = Player.GetComponent<Player>().GetWeight();
 
         ResultText = Name + " the " + Kind.ToString();
 

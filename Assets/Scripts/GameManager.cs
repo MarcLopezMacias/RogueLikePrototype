@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
 
     public void ResetPlayerPosition()
     {
-        _player.GetComponent<DataPlayer>().ResetPosition();
+        _player.GetComponent<Player>().ResetPosition();
     }
 
     public void ResetCameraPosition()
@@ -122,6 +122,11 @@ public class GameManager : MonoBehaviour
     public void GoToGameScreen()
     {
         SceneManager.LoadScene("E5");
+    }
+
+    public void PlayerDead()
+    {
+        ResetStage();
     }
 
 }
