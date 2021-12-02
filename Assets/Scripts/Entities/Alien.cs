@@ -36,9 +36,9 @@ public class Alien : Enemy
         if (CollidedWithPlayer(collision))
         {
             GameObject cl = collision.gameObject;
-            cl.GetComponent<Player>().DecreaseLifes(Damage);
+            cl.GetComponent<Player>().Damage(Damage);
         }
-        Die();
+        Kill();
     }
 
     private bool InPlayerRange()

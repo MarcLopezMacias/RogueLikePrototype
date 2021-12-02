@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Character : MonoBehaviour, IKillable, IDamageable<float>
+public class Character : MonoBehaviour, IKillable, IDamageable<float>, IHealable<float>
 {
 
     protected string Name;
@@ -10,6 +8,9 @@ public class Character : MonoBehaviour, IKillable, IDamageable<float>
     protected float Height, Speed, JumpSpeed, Weight;
 
     protected Vector2 InitialPosition;
+
+    protected float Health, Lifes;
+    protected int MaxLifes;
 
     // Start is called before the first frame update
     void Start()
@@ -55,11 +56,29 @@ public class Character : MonoBehaviour, IKillable, IDamageable<float>
 
     public void Kill()
     {
-        GameManager.Instance.PlayerDead();
+        Lifes -= 1;
+        if(Lifes <= 0 && !CompareTag("Player"))
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     public void Damage(float damageTaken)
     {
-        throw new System.NotImplementedException();
+        Health -= damageTaken;
+        if(Health <= 0)
+        {
+            Kill();
+        }
+    }
+
+    public void IncreaseLifes(int amount)
+    {
+        if (Lifes < MaxLifes) Lifes += amount;
+    }
+
+    public void Heal(float amountHealed)
+    {
+        Health += amountHealed;
     }
 }

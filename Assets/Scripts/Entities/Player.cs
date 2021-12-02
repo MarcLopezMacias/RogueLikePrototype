@@ -20,26 +20,31 @@ using UnityEngine;
  * torna a iniciar-se la partida.
  * */
 
-public enum PlayerKind
+public enum PlayerClass
 {
+    Mage,
+    Archer,
+    Warrior,
     Sorcerer,
+    Summoner,
+    Fighter,
     Assassin,
-    Barbarian,
-    AstroGuy
+    Rogue,
+    Necromancer
 }
 
 public class Player : Character
     
 {
     [SerializeField]
-    private PlayerKind PlayerKind;
+    private PlayerClass PlayerClass;
 
     [SerializeField]
     private int _lifes;
     public int Lifes { get { return _lifes; } }
     public int MaxLifes;
 
-    private float _maxScoreY;
+    private int Health;
 
     private int enemiesSlain;
 
@@ -52,23 +57,12 @@ public class Player : Character
     // Update is called once per frame
     void Update()
     {
-        checkMaxScore();
+
     }
 
-    public PlayerKind GetKind()
+    public PlayerClass GetKind()
     {
-        return PlayerKind;
-    }
-
-    public void DecreaseLifes(int amount)
-    {
-        _lifes -= amount;
-        Die();
-    }
-
-    public void IncreaseLifes(int amount)
-    {
-        if(_lifes < MaxLifes) _lifes+= amount;
+        return PlayerClass;
     }
 
     private void Die()
@@ -96,6 +90,10 @@ public class Player : Character
         
     }
 
+    /*
+     * RESET PLAYER POSITION TO STARTING POSITION WHEN IT DIES, AND CAN CONTINUE PLAYING (NO GAME OVER)
+     */
+
     public void ResetPosition()
     {
         if (!IsPlayerAlive())
@@ -108,15 +106,9 @@ public class Player : Character
         }
     }
 
-    private void checkMaxScore()
-    {
-        float PlayerPosY = gameObject.transform.position.y;
-        if (PlayerPosY > _maxScoreY)
-        {
-            _maxScoreY = PlayerPosY;
-            GameManager.Instance.SetScore(_maxScoreY);
-        }
-    }
+    /*
+     * ENEMIES SLAIN
+     */
 
     public int GetEnemiesSlain()
     {
@@ -127,4 +119,5 @@ public class Player : Character
     {
         enemiesSlain += amount;
     }
+
 }
