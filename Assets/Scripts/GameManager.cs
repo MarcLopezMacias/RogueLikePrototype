@@ -16,13 +16,9 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
 
     public GameObject Player { get { return _player; } }
-    private static GameObject _player;
-
+    private GameObject _player;
 
     public static UIController UIController;
-
-    public float MaxScore { get { return _maxScoreY; } }
-    private float _maxScoreY;
 
     public List<GameObject> EnemiesInGame;
 
@@ -42,7 +38,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _maxScoreY = 0;
         _player = GameObject.FindWithTag("Player");
 
         UIController = GameObject.Find("Canvas").GetComponent<UIController>();
@@ -54,21 +49,6 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-    }
-
-    public float GetScore()
-    {
-        return MaxScore;
-    }
-
-    public void SetScore(float value)
-    {
-        _maxScoreY = value;
-    }
-
-    public void IncreaseScore(int value)
-    {
-        _maxScoreY += value;
     }
 
     public int GetNumberOfEnemiesAlive()
@@ -89,7 +69,7 @@ public class GameManager : MonoBehaviour
 
     public void ResetPlayerPosition()
     {
-        _player.GetComponent<Player>().ResetPosition();
+        Player.GetComponent<Player>().ResetPosition();
     }
 
     public void ResetCameraPosition()
@@ -124,9 +104,12 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("E5");
     }
 
-    public void PlayerDead()
+    public bool SuccessfulRol(float DropChance)
     {
-        ResetStage();
+        if (UnityEngine.Random.Range(0, 100) <= DropChance)
+        {
+            return true;
+        }
+        else return false;
     }
-
 }

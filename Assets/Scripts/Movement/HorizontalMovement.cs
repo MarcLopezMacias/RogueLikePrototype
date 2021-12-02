@@ -10,14 +10,10 @@ using UnityEngine;
 
 public class HorizontalMovement : MonoBehaviour
 {
-    private float jumpSpeed;
     private float speed;
     private Rigidbody2D rb;
 
     private Vector2 playerInput;
-    private bool shouldJump;
-    private bool canJump;
-    private bool canDoubleJump;
 
     [SerializeField]
     private int multiplyingFactor = 1000;
@@ -26,7 +22,6 @@ public class HorizontalMovement : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         speed = gameObject.GetComponent<Player>().GetSpeed();
-        jumpSpeed = gameObject.GetComponent<Player>().GetJumpSpeed();
     }
 
     // get input values each frame
@@ -39,17 +34,6 @@ public class HorizontalMovement : MonoBehaviour
 
         playerInput = new Vector2(Input.GetAxis("Horizontal"), 0);
 
-        if (canJump && Input.GetButtonDown("Jump"))
-        {
-            canJump = false;
-            shouldJump = true;
-        }
-        if (canDoubleJump && Input.GetButtonDown("Jump"))
-        {
-            canDoubleJump = false;
-            shouldJump = true;
-        }
-
     }
 
     // apply physics movement based on input values
@@ -60,25 +44,6 @@ public class HorizontalMovement : MonoBehaviour
         {
             rb.AddForce(multiplyingFactor * playerInput * speed * Time.fixedDeltaTime, ForceMode2D.Impulse);
         }
-
-        // jump
-        if (shouldJump)
-        {
-            rb.AddForce(multiplyingFactor * Vector2.up * jumpSpeed, ForceMode2D.Impulse);
-            shouldJump = false;
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        // allow jumping again
-        canJump = true;
-        gameObject.transform.tag = "onFloor";
-    }
-
-    private void OnCollisionExit2D(Collision2D col)
-    {
-        gameObject.transform.tag = "Jumping";
     }
 
     public bool GetMoving()

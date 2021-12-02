@@ -2,19 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Alien : Enemy
+public class Alien : Enemy, IDropper<GameObject>, IAttack<float>
 {
 
     private Chase chaserino;
     private Vector3 playerPosition, ownPosition;
 
+    [SerializeField]
+    private float AttackDamage;
+
     private float HeightChasingOffset;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
         XP = 1;
-        Damage = 1;
+        AttackDamage = 1;
         chaserino = gameObject.GetComponent<Chase>();
         HeightChasingOffset = 1f;
     }
@@ -35,8 +40,7 @@ public class Alien : Enemy
     {
         if (CollidedWithPlayer(collision))
         {
-            GameObject cl = collision.gameObject;
-            cl.GetComponent<Player>().Damage(Damage);
+            Attack(AttackDamage);
         }
         Kill();
     }
@@ -54,4 +58,8 @@ public class Alien : Enemy
         }
     }
 
+    public void Attack(float damageDone)
+    {
+        GameManager.Instance.Player.Damage(AttackDamage);
+    }
 }

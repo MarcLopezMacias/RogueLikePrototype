@@ -2,15 +2,18 @@
 
 public class Character : MonoBehaviour, IKillable, IDamageable<float>, IHealable<float>
 {
-
+    [SerializeField]
     protected string Name;
 
-    protected float Height, Speed, JumpSpeed, Weight;
+    [SerializeField]
+    protected float Height, Speed, Weight;
 
     protected Vector2 InitialPosition;
 
-    protected float Health, Lifes;
-    protected int MaxLifes;
+    [SerializeField]
+    protected float Health, MaxHealth;
+    [SerializeField]
+    protected int Lifes, MaxLifes;
 
     // Start is called before the first frame update
     void Start()
@@ -27,11 +30,6 @@ public class Character : MonoBehaviour, IKillable, IDamageable<float>, IHealable
     public float GetSpeed()
     {
         return Speed;
-    }
-
-    public float GetJumpSpeed()
-    {
-        return JumpSpeed;
     }
 
     public float GetWeight()
@@ -80,5 +78,10 @@ public class Character : MonoBehaviour, IKillable, IDamageable<float>, IHealable
     public void Heal(float amountHealed)
     {
         Health += amountHealed;
+    }
+
+    public float GetLifes()
+    {
+        return Lifes;
     }
 }

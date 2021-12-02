@@ -1,17 +1,18 @@
 ﻿using System;
 using UnityEngine;
 
-public class Enemy : Character, IDropper<GameObject>
+public class Enemy : Character
 
 {
-
     // EXP OR SCORE AWARDED
     [SerializeField]
     protected int XP;
 
-    // DAMAGE THAT IS ABLE TO DEAL
     [SerializeField]
-    protected int Damage;
+    protected float DropChance;
+
+    [SerializeField]
+    protected GameObject ItemDrop;
 
     // Start is called before the first frame update
     void Start()
@@ -27,11 +28,11 @@ public class Enemy : Character, IDropper<GameObject>
 
     protected void Die()
     {
-        if(SuccessfulRol())
+        if(GameManager.Instance.SuccessfulRol(DropChance))
         {
-            // Drop(Loot[GameManager.Instance.RandomNumber]);
+           Drop(ItemDrop);
         }
-        GameManager.Instance.IncreaseScore(XP);
+        GameManager.Instance.Player.GetComponent<Player>().IncreaseScore(XP);
         GameManager.Instance.Player.GetComponent<Player>().IncreaseEnemiesSlain(1);
         GameManager.Instance.EnemiesInGame.Remove(this.gameObject);
         Destroy(this.gameObject);
@@ -45,16 +46,9 @@ public class Enemy : Character, IDropper<GameObject>
 
     public void Drop(GameObject drop)
     {
-        // TODO
+        Instantiate(drop, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.identity);
     }
 
-    private bool SuccessfulRol()
-    {
-        // BULLSHIE
-        if (0 == 0)
-        {
-            return true;
-        }
-        // TODO
-    }
+
+
 }

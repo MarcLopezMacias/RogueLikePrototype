@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5042975805230334078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.37147, y: -0.57125354, z: 2.6065905}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -43,9 +43,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef557f69af77dcd4fb77a8bac268c002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Cooldown: 1
-  EnemyToSpawn: {fileID: 3483697070053888023, guid: f9283082d8c767441863d5d3476f16d2,
+  Cooldown: 5
+  RandomCooldown: 1
+  RCRangeInSeconds: {x: 3, y: 5}
+  EnemyToSpawn: {fileID: 4771413154113129611, guid: 18403ba03c13283428c8ea9b02d0c5e1,
     type: 3}
-  RangeX: {x: 1, y: 5}
-  RangeY: {x: 1, y: 5}
+  NumberOfEnemiesToSpawn: 5
+  RangeX: {x: 1, y: 1}
+  RangeY: {x: 1, y: 1}
   _active: 1

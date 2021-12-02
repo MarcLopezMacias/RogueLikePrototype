@@ -1,15 +1,22 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
 
     [SerializeField]
-    private int Cooldown = 5;
+    private float Cooldown;
+
+    [SerializeField]
+    private bool RandomCooldown;
+    [SerializeField]
+    private Vector2 RCRangeInSeconds;
 
     [SerializeField]
     private GameObject EnemyToSpawn;
+
+    [SerializeField]
+    private int NumberOfEnemiesToSpawn;
 
     [SerializeField]
     private Vector2 RangeX, RangeY;
@@ -17,11 +24,6 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     private bool _active;
     public bool Active { get { return _active; } set { _active = value; } }
-
-    /*
-     * Spawner: objecte en escena que genera enemics.  Aquest objecte invoca 
-     * enemics als marges de la pantalla.
-     */
 
     // Start is called before the first frame update
     void Start()
@@ -32,24 +34,22 @@ public class Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (NumberOfEnemiesToSpawn > 0 && !Active)
+        {
+            StartCoroutine(Spawn());
+        }
     }
 
     private IEnumerator Spawn()
     {
-        while (true)
-        {
-            if(Active)
-            {
-                yield return new WaitForSeconds(Cooldown);
-                int PosX = Random.Range(5, 10);
-                int PosY = Random.Range(5, 10);
-                Instantiate(EnemyToSpawn, new Vector3(PosX, PosY, 0), Quaternion.identity);
-            }
-            else
-            {
-                yield return new WaitForSeconds(1);
-            }
-        }
+        Active = true;
+        if (RandomCooldown) Cooldown = Random.Range(RCRangeInSeconds.x, RCRangeInSeconds.y);
+        float PosX = Random.Range(RangeX.x, RangeX.y);
+        float PosY = Random.Range(RangeY.x, RangeY.y);
+        Instantiate(EnemyToSpawn, new Vector3(PosX, PosY, 0), Quaternion.identity);
+        NumberOfEnemiesToSpawn -= 1;
+        yield return new WaitForSeconds(Cooldown);
+        Active = false;
     }
+
 }
