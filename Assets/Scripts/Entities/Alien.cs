@@ -60,6 +60,6 @@ public class Alien : Enemy, IDropper<GameObject>, IAttack<float>
 
     public void Attack(float damageDone)
     {
-        GameManager.Instance.Player.Damage(AttackDamage);
+        GameManager.Instance.Player.GetComponent<Player>().Damage(damageDone);
     }
 }

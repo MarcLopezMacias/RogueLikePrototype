@@ -55,18 +55,9 @@ public class Character : MonoBehaviour, IKillable, IDamageable<float>, IHealable
     public void Kill()
     {
         Lifes -= 1;
-        if(Lifes <= 0 && !CompareTag("Player"))
+        if(Lifes <= 0 && CompareTag("Enemy"))
         {
             Destroy(this.gameObject);
-        }
-    }
-
-    public void Damage(float damageTaken)
-    {
-        Health -= damageTaken;
-        if(Health <= 0)
-        {
-            Kill();
         }
     }
 
@@ -83,5 +74,14 @@ public class Character : MonoBehaviour, IKillable, IDamageable<float>, IHealable
     public float GetLifes()
     {
         return Lifes;
+    }
+
+    public void Damage(float damageTaken)
+    {
+        Health -= damageTaken;
+        if (Health <= 0)
+        {
+            Kill();
+        }
     }
 }

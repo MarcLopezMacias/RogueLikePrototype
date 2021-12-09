@@ -8,29 +8,23 @@ public class Chase : MonoBehaviour
     float MoveSpeed;
 
     [SerializeField]
-    private int factor = 10;
-
-    private float playerX;
+    private int DividingFactor;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (MoveSpeed != null) MoveSpeed /= factor;
-        else MoveSpeed = 2 / factor;
+        if (MoveSpeed != null) MoveSpeed /= DividingFactor;
+        else MoveSpeed = 2 / DividingFactor;
     }
 
     // Update is called once per frame
     void Update()
     {
-        playerX = GameManager.Instance.Player.transform.position.x;
-        if(playerX > gameObject.transform.position.x)
-        {
-            transform.Translate(new Vector3(MoveSpeed * Time.deltaTime, 0f, 0f));
-        }
-        else
-        {
-            transform.Translate(new Vector3((-1) * MoveSpeed * Time.deltaTime, 0f, 0f));
-        }
+        Vector2 target = GameManager.Instance.Player.transform.position;
+        transform.LookAt(target);
+        transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
+        transform.Translate(new Vector3(MoveSpeed * Time.deltaTime, 0, 0));
+
     }
 
 }

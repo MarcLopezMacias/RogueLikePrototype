@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public enum PlayerClass
 {
@@ -16,7 +13,7 @@ public enum PlayerClass
     Necromancer
 }
 
-public class Player : Character
+public class Player : Character 
     
 {
     [SerializeField]
@@ -45,8 +42,8 @@ public class Player : Character
 
     private void Die()
     {
-        ResetPosition();
         ResetStats();
+        ResetPosition();
     }
 
     private bool IsPlayerAlive()
@@ -113,5 +110,6 @@ public class Player : Character
     {
         Score += amount;
     }
+
 
 }
