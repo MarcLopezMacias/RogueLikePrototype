@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Alien : Enemy, IDropper<GameObject>, IAttack<float>
+public class Alien : Enemy, IDropper<GameObject>, IAttack<int>
 {
 
     private Chase chaserino;
     private Vector3 playerPosition, ownPosition;
 
     [SerializeField]
-    private float AttackDamage;
+    private int AttackDamage;
 
     private float HeightChasingOffset;
 
@@ -58,8 +58,13 @@ public class Alien : Enemy, IDropper<GameObject>, IAttack<float>
         }
     }
 
-    public void Attack(float damageDone)
+    public void Attack(int damageDone)
     {
         GameManager.Instance.Player.GetComponent<Player>().Damage(damageDone);
+    }
+
+    public void Drop(GameObject drop)
+    {
+        throw new System.NotImplementedException();
     }
 }

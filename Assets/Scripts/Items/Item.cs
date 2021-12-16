@@ -6,6 +6,8 @@ public class Item : MonoBehaviour
 {
     protected int Amount;
 
+    protected int DropChance;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,5 +29,10 @@ public class Item : MonoBehaviour
     {
         if (collision.CompareTag("Player") || collision.CompareTag("onFloor") || collision.CompareTag("Jumping")) return true;
         else return false;
+    }
+
+    public float GetDropChance()
+    {
+        return DropChance;
     }
 }

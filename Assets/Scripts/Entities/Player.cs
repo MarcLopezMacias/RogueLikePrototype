@@ -1,32 +1,58 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public enum PlayerClass
+/*
+ * - Crear un component que recopila dades del personatge: 
+ * Nom, Cognom, Tipus de personatge, alçada, velocitat, 
+ * distància a recórrer. Aquest component ha de ser consultat 
+ * per altres classes i editable des de l'inspector.
+ * 
+ * - Associar velocitat i pes: el personatge anirà més lent 
+ * caminant com més gran sigui la variable "weight" del 
+ * component "DataPlayer". La velocitat del personatge és 
+ * inversament proporcional al pes del personatge.
+ * 
+ * Mort: si el enemic toca al jugador aquest  l'enemic s'elimina i 
+ * el player perd una vida. Si l'enemic toca a un altre enemic els dos 
+ * s'eliminen. Si player perd dos vides s'acaba el joc. Si el joc s'acaba
+ * torna a iniciar-se la partida.
+ * */
+
+public enum PlayerKind
 {
-    Mage,
-    Archer,
-    Warrior,
     Sorcerer,
-    Summoner,
-    Fighter,
     Assassin,
-    Rogue,
-    Necromancer
+    Barbarian,
+    Flying_Machine
 }
 
-public class Player : Character 
-    
+public class Player : Character
+
 {
+
     [SerializeField]
-    private PlayerClass PlayerClass;
+    private string Name, Surname;
 
-    private int enemiesSlain;
+    [SerializeField]
+    private float Height, Speed, Weight;
 
-    private int Score;
+    [SerializeField]
+    private PlayerKind PlayerKind;
+
+    [SerializeField]
+    private int _hearts;
+    public int Hearts { get { return _hearts; } }
+
+    private Vector2 StartingPosition;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        InitialPosition = gameObject.transform.position;
+        Speed = 100 / Weight;
+        StartingPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -35,81 +61,73 @@ public class Player : Character
 
     }
 
-    public PlayerClass GetKind()
+    public float GetSpeed()
     {
-        return PlayerClass;
+        return Speed;
     }
 
-    private void Die()
+    public float GetWeight()
     {
-        ResetStats();
-        ResetPosition();
+        return Weight;
+    }
+
+    public float GetHeight()
+    {
+        return Height;
+    }
+
+    public void SetSpeed(float newSpeed)
+    {
+        Speed = newSpeed;
+    }
+
+    public string GetName()
+    {
+        return Name;
+    }
+
+    public PlayerKind GetKind()
+    {
+        return PlayerKind;
+    }
+
+    public void Damage(int amount)
+    {
+        _hearts -= amount;
+        if(!IsPlayerAlive())
+        {
+            GameManager.Instance.GameOver();
+        }
     }
 
     private bool IsPlayerAlive()
     {
-        if (Lifes > 0) return true; else return false;
+        if (_hearts > 0) return true; else return false;
     }
 
-    private void OnDestroy()
+    public int GetHearts()
     {
-        
+        return Hearts;
     }
 
-    /*
-     * RESET PLAYER POSITION TO STARTING POSITION WHEN IT DIES, AND CAN CONTINUE PLAYING (NO GAME OVER)
-     */
-
-    public void ResetPosition()
-    {
-        if (!IsPlayerAlive())
-        {
-            GameOver();
-        }
-        else
-        {
-            gameObject.transform.position = InitialPosition;
-        }
-    }
-
-    public void GameOver()
+    public void Die()
     {
         GameManager.Instance.GameOver();
     }
 
-    /*
-     * ENEMIES SLAIN
-     */
-
-    public int GetEnemiesSlain()
+    private void OnDestroy()
     {
-        return enemiesSlain;
+
     }
 
-    public void IncreaseEnemiesSlain(int amount)
+    public void ResetPosition()
     {
-        enemiesSlain += amount;
+        transform.position = StartingPosition;
     }
 
-    private void ResetStats()
+    public void IncreaseHearts(int value)
     {
-        ResetHealth();
+        _hearts += value;
     }
-
-    private void ResetHealth()
-    {
-        Health = MaxHealth;
-    }
-
-    public int GetScore()
-    {
-        return Score;
-    }
-
-    public void IncreaseScore(int amount)
-    {
-        Score += amount;
-    }
-
 
 }

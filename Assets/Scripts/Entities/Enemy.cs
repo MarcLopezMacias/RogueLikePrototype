@@ -9,15 +9,15 @@ public class Enemy : Character
     protected int XP;
 
     [SerializeField]
-    protected float DropChance;
+    protected int Score;
 
     [SerializeField]
-    protected GameObject ItemDrop;
+    protected GameObject[] Drops;
 
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.Instance.EnemiesInGame.Add(this.gameObject);
+        GameManager.Instance.GetComponent<EnemyManager>().EnemiesInGame.Add(this.gameObject);
     }
 
     // Update is called once per frame
@@ -28,13 +28,11 @@ public class Enemy : Character
 
     protected void Die()
     {
-        if(GameManager.Instance.SuccessfulRol(DropChance))
-        {
-           Drop(ItemDrop);
-        }
-        GameManager.Instance.Player.GetComponent<Player>().IncreaseScore(XP);
-        GameManager.Instance.Player.GetComponent<Player>().IncreaseEnemiesSlain(1);
-        GameManager.Instance.EnemiesInGame.Remove(this.gameObject);
+        GameManager.Instance.GetComponent<DropManager>().AttemptDrop(Drops);
+        GameManager.Instance.GetComponent<XPManager>().IncreaseXP(XP);
+        GameManager.Instance.GetComponent<ScoreManager>().IncreaseScore(Score);
+        GameManager.Instance.GetComponent<EnemyManager>().IncreaseEnemiesSlain(1);
+        GameManager.Instance.GetComponent<EnemyManager>().Remove(this.gameObject);
         Destroy(this.gameObject);
     }
 
@@ -42,11 +40,6 @@ public class Enemy : Character
     {
         if (collision.CompareTag("Player")) return true;
         else return false;
-    }
-
-    public void Drop(GameObject drop)
-    {
-        Instantiate(drop, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.identity);
     }
 
 

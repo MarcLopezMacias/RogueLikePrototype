@@ -12,7 +12,7 @@ public class DisplayPlayerInfo : MonoBehaviour
 
     string Name, ResultText;
 
-    PlayerClass Kind;
+    PlayerKind Kind;
 
     float Height, Speed, Weight;
 

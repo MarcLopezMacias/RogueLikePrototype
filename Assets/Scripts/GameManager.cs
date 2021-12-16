@@ -7,11 +7,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    /*
-     * GameManager: que gestiona l'estat del joc, el reinici de partida 
-     * i serveix per comunicar els elements de partida.
-     */
-
     public static  GameManager Instance { get { return _instance; } }
     private static GameManager _instance;
 
@@ -19,8 +14,9 @@ public class GameManager : MonoBehaviour
     private GameObject _player;
 
     public static UIController UIController;
-
-    public List<GameObject> EnemiesInGame;
+    public static ScoreManager ScoreManager;
+    public static XPManager XPManager;
+    public static EnemyManager EnemyManager;
 
     private static GameObject MainCamera;
 
@@ -41,6 +37,8 @@ public class GameManager : MonoBehaviour
         _player = GameObject.FindWithTag("Player");
 
         UIController = GameObject.Find("Canvas").GetComponent<UIController>();
+        ScoreManager = gameObject.GetComponent<ScoreManager>();
+        XPManager = gameObject.GetComponent<XPManager>();
 
         MainCamera = GameObject.FindWithTag("MainCamera");
     }
@@ -50,16 +48,6 @@ public class GameManager : MonoBehaviour
     {
 
     }
-
-    public int GetNumberOfEnemiesAlive()
-    {
-        return EnemiesInGame.Count;
-    }
-
-
-    /* PER FER EL CANVI ENTRE SCENES ESCALABLE, ES PODRIA CREAR
-     * UN "SCENE_CHANGER" O ALGO AIXI
-     */
 
     public void ResetStage()
     {
