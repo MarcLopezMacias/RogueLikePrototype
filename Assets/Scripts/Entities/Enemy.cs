@@ -14,6 +14,8 @@ public class Enemy : Character
     [SerializeField]
     protected GameObject[] Drops;
 
+    protected float AggroRange;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +44,9 @@ public class Enemy : Character
         else return false;
     }
 
-
+    public float GetAggroRange()
+    {
+        return AggroRange;
+    }
 
 }

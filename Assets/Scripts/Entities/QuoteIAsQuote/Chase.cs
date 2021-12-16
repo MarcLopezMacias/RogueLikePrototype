@@ -8,23 +8,33 @@ public class Chase : MonoBehaviour
     float MoveSpeed;
 
     [SerializeField]
-    private int DividingFactor;
+    private int MoveSpeedDividingFactor;
+
+    private bool Chasing;
+
+    float AggroRange;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (MoveSpeed != null) MoveSpeed /= DividingFactor;
-        else MoveSpeed = 2 / DividingFactor;
+        MoveSpeed /= MoveSpeedDividingFactor;
+        Chasing = false;
+        // TO FIX
+        AggroRange = gameObject.GetComponent<Enemy>().GetAggroRange();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector2 target = GameManager.Instance.Player.transform.position;
-        transform.LookAt(target);
-        transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
-        transform.Translate(new Vector3(MoveSpeed * Time.deltaTime, 0, 0));
-
+        // TO FIX
+        ColliderDistance2D Distance = gameObject.GetComponent<BoxCollider2D>().Distance(GameManager.Instance.Player.GetComponent<BoxCollider2D>());
+        while (Distance.distance < AggroRange)
+        {
+            Vector3 target = GameManager.Instance.Player.transform.position;
+            transform.LookAt(target);
+            transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
+            transform.Translate(new Vector3(MoveSpeed * Time.deltaTime, 0, 0));
+        }
     }
 
 }

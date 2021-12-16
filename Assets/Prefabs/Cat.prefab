@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 1
-  DividingFactor: 10
+  MoveSpeedDividingFactor: 1
 --- !u!1 &4771413154388840582
 GameObject:
   m_ObjectHideFlags: 0

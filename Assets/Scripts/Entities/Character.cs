@@ -84,4 +84,5 @@ public class Character : MonoBehaviour, IKillable, IDamageable<float>, IHealable
             Kill();
         }
     }
+
 }

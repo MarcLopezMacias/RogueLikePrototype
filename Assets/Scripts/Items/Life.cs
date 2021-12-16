@@ -22,7 +22,7 @@ public class Life : Item
         if (CollidedWithPlayer(collision))
         {
             GameObject cl = collision.gameObject;
-            cl.GetComponent<Player>().IncreaseHearts(Amount);
+            cl.GetComponent<Player>().IncreaseLifes(Amount);
         }
         Die();
     }

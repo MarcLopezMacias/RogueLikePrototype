@@ -13,7 +13,7 @@ public class Spawner : MonoBehaviour
     private Vector2 RCRangeInSeconds;
 
     [SerializeField]
-    private GameObject EnemyToSpawn;
+    private GameObject[] EnemiesToSpawn;
 
     [SerializeField]
     private int NumberOfEnemiesToSpawn;
@@ -36,6 +36,7 @@ public class Spawner : MonoBehaviour
     {
         if (NumberOfEnemiesToSpawn > 0 && !Active)
         {
+            Debug.Log("STARTED");
             StartCoroutine(Spawn());
         }
     }
@@ -46,10 +47,15 @@ public class Spawner : MonoBehaviour
         if (RandomCooldown) Cooldown = Random.Range(RCRangeInSeconds.x, RCRangeInSeconds.y);
         float PosX = Random.Range(RangeX.x, RangeX.y);
         float PosY = Random.Range(RangeY.x, RangeY.y);
-        Instantiate(EnemyToSpawn, new Vector3(PosX, PosY, 0), Quaternion.identity);
+        Instantiate(GetRandomEnemy(), new Vector3(transform.position.x + PosX, transform.position.y + PosY, 0), Quaternion.identity);
         NumberOfEnemiesToSpawn -= 1;
         yield return new WaitForSeconds(Cooldown);
         Active = false;
+    }
+
+    private GameObject GetRandomEnemy()
+    {
+        return EnemiesToSpawn[Random.Range(0, EnemiesToSpawn.Length)];
     }
 
 }

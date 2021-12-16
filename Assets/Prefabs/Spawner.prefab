@@ -46,8 +46,8 @@ MonoBehaviour:
   Cooldown: 1
   RandomCooldown: 0
   RCRangeInSeconds: {x: 3, y: 5}
-  EnemyToSpawn: {fileID: 4771413154113129611, guid: 18403ba03c13283428c8ea9b02d0c5e1,
-    type: 3}
+  EnemiesToSpawn:
+  - {fileID: 4771413154113129611, guid: 18403ba03c13283428c8ea9b02d0c5e1, type: 3}
   NumberOfEnemiesToSpawn: 5
   RangeX: {x: -4, y: 4}
   RangeY: {x: -4, y: 4}
