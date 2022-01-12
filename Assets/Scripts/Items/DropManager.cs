@@ -19,7 +19,7 @@ public class DropManager : MonoBehaviour
     public bool AttemptDrop(GameObject[] Drops)
     {
         foreach(GameObject Drop in Drops) {
-            if (Drop.GetComponent<Item>().GetDropChance() <= Random.Range(0, 100)) return true; else return false;
+            if (Drop.GetComponent<Item>().DropChance <= Random.Range(0, 100)) return true; else return false;
         }
         return false;
     }

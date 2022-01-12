@@ -2,37 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+public abstract class Item : ScriptableObject
 {
-    protected int Amount;
+    public string Name;
+    public int DropChance;
+    public int Price;
+    public ItemType Type;
+    public Sprite Image;
 
-    protected int DropChance;
-
-    // Start is called before the first frame update
-    void Start()
+    public enum ItemType
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    protected void Die()
-    {
-        Destroy(this.gameObject);
-    }
-
-    protected bool CollidedWithPlayer(Collider2D collision)
-    {
-        if (collision.CompareTag("Player") || collision.CompareTag("onFloor") || collision.CompareTag("Jumping")) return true;
-        else return false;
-    }
-
-    public float GetDropChance()
-    {
-        return DropChance;
+        Active,
+        Passive,
+        Consumable
     }
 }
