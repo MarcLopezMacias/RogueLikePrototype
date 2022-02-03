@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40f845287d8c36042a2b32de3919276d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Rose
+  Name: Red
   Height: 1.69
   Speed: 3
   Weight: 50
@@ -117,3 +117,4 @@ MonoBehaviour:
   Lifes: 3
   MaxLifes: 5
   PlayerKind: 0
+  BumpDamage: 0

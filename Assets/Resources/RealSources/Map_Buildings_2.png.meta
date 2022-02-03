@@ -1,0 +1,7040 @@
+fileFormatVersion: 2
+guid: 4fd9a24e1572c084f864dba89866aa5b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2255453266361629680
+    second: Map_Buildings_2_0
+  - first:
+      213: -375006941881364183
+    second: Map_Buildings_2_1
+  - first:
+      213: 2228017925617469941
+    second: Map_Buildings_2_2
+  - first:
+      213: -3080086714589761006
+    second: Map_Buildings_2_3
+  - first:
+      213: 7185170036375153549
+    second: Map_Buildings_2_4
+  - first:
+      213: -7481037464573156108
+    second: Map_Buildings_2_5
+  - first:
+      213: -6308691159818563817
+    second: Map_Buildings_2_6
+  - first:
+      213: -5187294458078927338
+    second: Map_Buildings_2_7
+  - first:
+      213: -1221714604790873678
+    second: Map_Buildings_2_8
+  - first:
+      213: 6665678615141882231
+    second: Map_Buildings_2_9
+  - first:
+      213: -5907268444909695994
+    second: Map_Buildings_2_10
+  - first:
+      213: -7583685497625235828
+    second: Map_Buildings_2_17
+  - first:
+      213: -5089982146921620065
+    second: Map_Buildings_2_18
+  - first:
+      213: 9041350871824156365
+    second: Map_Buildings_2_19
+  - first:
+      213: 266328862581741809
+    second: Map_Buildings_2_20
+  - first:
+      213: -679901462946986893
+    second: Map_Buildings_2_21
+  - first:
+      213: -2680245202355439142
+    second: Map_Buildings_2_22
+  - first:
+      213: 7704571057983076715
+    second: Map_Buildings_2_23
+  - first:
+      213: 7839604246760005363
+    second: Map_Buildings_2_24
+  - first:
+      213: 1012596994809380819
+    second: Map_Buildings_2_25
+  - first:
+      213: 126421108931219132
+    second: Map_Buildings_2_26
+  - first:
+      213: 6849827436892752442
+    second: Map_Buildings_2_27
+  - first:
+      213: -2624237681972812212
+    second: Map_Buildings_2_35
+  - first:
+      213: 5320122365705024805
+    second: Map_Buildings_2_42
+  - first:
+      213: -1488351077370120372
+    second: Map_Buildings_2_43
+  - first:
+      213: 1491387628583106053
+    second: Map_Buildings_2_44
+  - first:
+      213: -566654640119279995
+    second: Map_Buildings_2_45
+  - first:
+      213: 8533453512702382314
+    second: Map_Buildings_2_46
+  - first:
+      213: 8425956501828918293
+    second: Map_Buildings_2_47
+  - first:
+      213: -6161753926029764139
+    second: Map_Buildings_2_54
+  - first:
+      213: -8449960724066504823
+    second: Map_Buildings_2_55
+  - first:
+      213: -9089176717200528949
+    second: Map_Buildings_2_56
+  - first:
+      213: 7282173553727358338
+    second: Map_Buildings_2_57
+  - first:
+      213: 4759510377999026156
+    second: Map_Buildings_2_58
+  - first:
+      213: -6880262284162329022
+    second: Map_Buildings_2_68
+  - first:
+      213: 5138340354638327361
+    second: Map_Buildings_2_69
+  - first:
+      213: 7027653172318391496
+    second: Map_Buildings_2_70
+  - first:
+      213: -2680789609221923171
+    second: Map_Buildings_2_71
+  - first:
+      213: 8270924908440427545
+    second: Map_Buildings_2_72
+  - first:
+      213: 7648380378514140690
+    second: Map_Buildings_2_73
+  - first:
+      213: -8602202265523184836
+    second: Map_Buildings_2_74
+  - first:
+      213: -3790540640925991076
+    second: Map_Buildings_2_75
+  - first:
+      213: 5892284301218148987
+    second: Map_Buildings_2_76
+  - first:
+      213: 4359732669404464558
+    second: Map_Buildings_2_77
+  - first:
+      213: -4674725750922868220
+    second: Map_Buildings_2_84
+  - first:
+      213: 8238565962061123990
+    second: Map_Buildings_2_85
+  - first:
+      213: -3077530831507629790
+    second: Map_Buildings_2_86
+  - first:
+      213: 2496750940469389688
+    second: Map_Buildings_2_87
+  - first:
+      213: -6818948583752743635
+    second: Map_Buildings_2_88
+  - first:
+      213: -1336887287974989425
+    second: Map_Buildings_2_89
+  - first:
+      213: -2400221073639882228
+    second: Map_Buildings_2_90
+  - first:
+      213: 1884496645165631554
+    second: Map_Buildings_2_91
+  - first:
+      213: 5673335150126695306
+    second: Map_Buildings_2_92
+  - first:
+      213: 3224402326792052127
+    second: Map_Buildings_2_93
+  - first:
+      213: 4881039107600245714
+    second: Map_Buildings_2_94
+  - first:
+      213: -2212700015779694896
+    second: Map_Buildings_2_95
+  - first:
+      213: 2979713048500216041
+    second: Map_Buildings_2_96
+  - first:
+      213: -5767813436943787899
+    second: Map_Buildings_2_97
+  - first:
+      213: -2211370546765431288
+    second: Map_Buildings_2_98
+  - first:
+      213: 7545153029094454641
+    second: Map_Buildings_2_99
+  - first:
+      213: 7481419194432689132
+    second: Map_Buildings_2_100
+  - first:
+      213: -5880199388244059328
+    second: Map_Buildings_2_101
+  - first:
+      213: -7651407290992221982
+    second: Map_Buildings_2_102
+  - first:
+      213: -7804563221629864028
+    second: Map_Buildings_2_103
+  - first:
+      213: -3630253493404890190
+    second: Map_Buildings_2_104
+  - first:
+      213: -5703846638326861166
+    second: Map_Buildings_2_105
+  - first:
+      213: 1681053671906447031
+    second: Map_Buildings_2_106
+  - first:
+      213: 1964431612862856072
+    second: Map_Buildings_2_107
+  - first:
+      213: 3479400009082181084
+    second: Map_Buildings_2_108
+  - first:
+      213: -1326365768594040898
+    second: Map_Buildings_2_109
+  - first:
+      213: 7379282115224537952
+    second: Map_Buildings_2_110
+  - first:
+      213: -7795725893711403998
+    second: Map_Buildings_2_111
+  - first:
+      213: -1004016025852258347
+    second: Map_Buildings_2_112
+  - first:
+      213: -635188195016377150
+    second: Map_Buildings_2_113
+  - first:
+      213: -2971643161010194586
+    second: Map_Buildings_2_114
+  - first:
+      213: 4302154689792663365
+    second: Map_Buildings_2_115
+  - first:
+      213: -1612862405333206781
+    second: Map_Buildings_2_116
+  - first:
+      213: 3805031759664875809
+    second: Map_Buildings_2_117
+  - first:
+      213: 3676099841781360085
+    second: Map_Buildings_2_118
+  - first:
+      213: 5088441365825528249
+    second: Map_Buildings_2_119
+  - first:
+      213: 7234753771707008143
+    second: Map_Buildings_2_120
+  - first:
+      213: -2646016785632501083
+    second: Map_Buildings_2_121
+  - first:
+      213: -8144848366501352516
+    second: Map_Buildings_2_122
+  - first:
+      213: -8068606141735292271
+    second: Map_Buildings_2_123
+  - first:
+      213: 6115852606188180642
+    second: Map_Buildings_2_124
+  - first:
+      213: 5887879257866606049
+    second: Map_Buildings_2_125
+  - first:
+      213: -2552079257372240328
+    second: Map_Buildings_2_126
+  - first:
+      213: 2369624232902542470
+    second: Map_Buildings_2_127
+  - first:
+      213: -1602337556625256918
+    second: Map_Buildings_2_128
+  - first:
+      213: -3017257221485152649
+    second: Map_Buildings_2_129
+  - first:
+      213: 989343150179733099
+    second: Map_Buildings_2_130
+  - first:
+      213: -6172190695282312267
+    second: Map_Buildings_2_131
+  - first:
+      213: -8893186701475830383
+    second: Map_Buildings_2_132
+  - first:
+      213: -9079920541327780606
+    second: Map_Buildings_2_133
+  - first:
+      213: 7033197628765636868
+    second: Map_Buildings_2_134
+  - first:
+      213: -4513708954286792794
+    second: Map_Buildings_2_135
+  - first:
+      213: 2680547620828486166
+    second: Map_Buildings_2_136
+  - first:
+      213: -3788498036147538172
+    second: Map_Buildings_2_137
+  - first:
+      213: 4100167957243316315
+    second: Map_Buildings_2_138
+  - first:
+      213: -7760942119001059977
+    second: Map_Buildings_2_139
+  - first:
+      213: 6907101090694253171
+    second: Map_Buildings_2_140
+  - first:
+      213: -468203638530542969
+    second: Map_Buildings_2_141
+  - first:
+      213: -9141365782755461260
+    second: Map_Buildings_2_142
+  - first:
+      213: -7167887232733556382
+    second: Map_Buildings_2_143
+  - first:
+      213: -9064456895823662261
+    second: Map_Buildings_2_144
+  - first:
+      213: -6741363123504150483
+    second: Map_Buildings_2_145
+  - first:
+      213: 1508284493718088579
+    second: Map_Buildings_2_146
+  - first:
+      213: 216134055649474030
+    second: Map_Buildings_2_147
+  - first:
+      213: 3254603998832354635
+    second: Map_Buildings_2_148
+  - first:
+      213: -1743484962242693329
+    second: Map_Buildings_2_149
+  - first:
+      213: 5407134823122594415
+    second: Map_Buildings_2_150
+  - first:
+      213: -6788157607607434564
+    second: Map_Buildings_2_151
+  - first:
+      213: -1588909345590543788
+    second: Map_Buildings_2_152
+  - first:
+      213: 7581973418339643812
+    second: Map_Buildings_2_153
+  - first:
+      213: -7582468155652949218
+    second: Map_Buildings_2_154
+  - first:
+      213: 2693702597431484624
+    second: Map_Buildings_2_155
+  - first:
+      213: -716410277240790060
+    second: Map_Buildings_2_156
+  - first:
+      213: 872483209376679502
+    second: Map_Buildings_2_157
+  - first:
+      213: -3214913993540354942
+    second: Map_Buildings_2_158
+  - first:
+      213: 5267448316899811310
+    second: Map_Buildings_2_159
+  - first:
+      213: -6103602799985800535
+    second: Map_Buildings_2_160
+  - first:
+      213: -8006600950573019497
+    second: Map_Buildings_2_161
+  - first:
+      213: 8670490850037315507
+    second: Map_Buildings_2_162
+  - first:
+      213: 6934444585520306741
+    second: Map_Buildings_2_163
+  - first:
+      213: -4401694035352185151
+    second: Map_Buildings_2_164
+  - first:
+      213: 1220414727939857665
+    second: Map_Buildings_2_165
+  - first:
+      213: -835840182195953341
+    second: Map_Buildings_2_166
+  - first:
+      213: -8576788302336335627
+    second: Map_Buildings_2_167
+  - first:
+      213: -283542209410485236
+    second: Map_Buildings_2_168
+  - first:
+      213: 6349606409121944175
+    second: Map_Buildings_2_169
+  - first:
+      213: -5528405583642010349
+    second: Map_Buildings_2_170
+  - first:
+      213: -6805488644687357235
+    second: Map_Buildings_2_171
+  - first:
+      213: 6140490375653781326
+    second: Map_Buildings_2_172
+  - first:
+      213: -8026667812858017611
+    second: Map_Buildings_2_173
+  - first:
+      213: 7132436087168019234
+    second: Map_Buildings_2_174
+  - first:
+      213: -3172339481684638073
+    second: Map_Buildings_2_175
+  - first:
+      213: 2147704213550460901
+    second: Map_Buildings_2_176
+  - first:
+      213: 4281765500030476139
+    second: Map_Buildings_2_177
+  - first:
+      213: -6388735170578184849
+    second: Map_Buildings_2_178
+  - first:
+      213: 3767155195497142024
+    second: Map_Buildings_2_179
+  - first:
+      213: -7188545253876208436
+    second: Map_Buildings_2_180
+  - first:
+      213: 6130868742290705217
+    second: Map_Buildings_2_181
+  - first:
+      213: 2330808403428037723
+    second: Map_Buildings_2_182
+  - first:
+      213: -3564294380341912418
+    second: Map_Buildings_2_183
+  - first:
+      213: -4074828423478552552
+    second: Map_Buildings_2_184
+  - first:
+      213: 8222337261192359279
+    second: Map_Buildings_2_185
+  - first:
+      213: -439814780363102315
+    second: Map_Buildings_2_186
+  - first:
+      213: -6841929552698799583
+    second: Map_Buildings_2_187
+  - first:
+      213: 8058455360540964716
+    second: Map_Buildings_2_188
+  - first:
+      213: 1096572482323234324
+    second: Map_Buildings_2_189
+  - first:
+      213: 6977641067947781562
+    second: Map_Buildings_2_190
+  - first:
+      213: 2657571360347773814
+    second: Map_Buildings_2_191
+  - first:
+      213: -5319322683430305626
+    second: Map_Buildings_2_192
+  - first:
+      213: 220724768224484720
+    second: Map_Buildings_2_193
+  - first:
+      213: -5102157347380480920
+    second: Map_Buildings_2_194
+  - first:
+      213: -3050392373318020596
+    second: Map_Buildings_2_195
+  - first:
+      213: 5731348697378661077
+    second: Map_Buildings_2_196
+  - first:
+      213: 225045824840931530
+    second: Map_Buildings_2_197
+  - first:
+      213: 1501310694271086059
+    second: Map_Buildings_2_198
+  - first:
+      213: -3837253617894079776
+    second: Map_Buildings_2_199
+  - first:
+      213: -5647756437864068929
+    second: Map_Buildings_2_200
+  - first:
+      213: -1149654872278567597
+    second: Map_Buildings_2_201
+  - first:
+      213: 1786333464800993082
+    second: Map_Buildings_2_202
+  - first:
+      213: 281958821847852034
+    second: Map_Buildings_2_203
+  - first:
+      213: 2999972592201223969
+    second: Map_Buildings_2_204
+  - first:
+      213: 3946631627874732218
+    second: Map_Buildings_2_205
+  - first:
+      213: -8225821069946613809
+    second: Map_Buildings_2_206
+  - first:
+      213: 6209097733829140076
+    second: Map_Buildings_2_207
+  - first:
+      213: 8641296726139551046
+    second: Map_Buildings_2_208
+  - first:
+      213: -4876326729579530196
+    second: Map_Buildings_2_209
+  - first:
+      213: 7732085570817934938
+    second: Map_Buildings_2_210
+  - first:
+      213: -2706342793761728938
+    second: Map_Buildings_2_211
+  - first:
+      213: -8829426293998678297
+    second: Map_Buildings_2_212
+  - first:
+      213: -2250666243209644400
+    second: Map_Buildings_2_213
+  - first:
+      213: 3102861086487366138
+    second: Map_Buildings_2_214
+  - first:
+      213: 6674571822365670856
+    second: Map_Buildings_2_215
+  - first:
+      213: 5584475491867981461
+    second: Map_Buildings_2_216
+  - first:
+      213: -1324008981790398926
+    second: Map_Buildings_2_217
+  - first:
+      213: -1486284106168762572
+    second: Map_Buildings_2_218
+  - first:
+      213: 780670145310792392
+    second: Map_Buildings_2_219
+  - first:
+      213: -5680810613239902441
+    second: Map_Buildings_2_220
+  - first:
+      213: 2347895182834527791
+    second: Map_Buildings_2_221
+  - first:
+      213: 4558948492360468936
+    second: Map_Buildings_2_222
+  - first:
+      213: 3853996302972599325
+    second: Map_Buildings_2_223
+  - first:
+      213: 109955777803874239
+    second: Map_Buildings_2_224
+  - first:
+      213: 4067450093214771667
+    second: Map_Buildings_2_225
+  - first:
+      213: -8877409423996570648
+    second: Map_Buildings_2_226
+  - first:
+      213: -2683472135451063714
+    second: Map_Buildings_2_227
+  - first:
+      213: -7352905359800520497
+    second: Map_Buildings_2_228
+  - first:
+      213: 5789524404680984372
+    second: Map_Buildings_2_229
+  - first:
+      213: -6513843125082245257
+    second: Map_Buildings_2_230
+  - first:
+      213: -138882434172476464
+    second: Map_Buildings_2_231
+  - first:
+      213: -1579962630273851009
+    second: Map_Buildings_2_232
+  - first:
+      213: 6068011280937412164
+    second: Map_Buildings_2_233
+  - first:
+      213: -3211246100070648935
+    second: Map_Buildings_2_234
+  - first:
+      213: -2227530859822215876
+    second: Map_Buildings_2_235
+  - first:
+      213: -3401887396156732990
+    second: Map_Buildings_2_236
+  - first:
+      213: 4382989052322141521
+    second: Map_Buildings_2_237
+  - first:
+      213: 7650686281576344613
+    second: Map_Buildings_2_238
+  - first:
+      213: -1120337816952464860
+    second: Map_Buildings_2_239
+  - first:
+      213: -4985049302551901419
+    second: Map_Buildings_2_240
+  - first:
+      213: -1534597599268728654
+    second: Map_Buildings_2_241
+  - first:
+      213: -1115800631144494437
+    second: Map_Buildings_2_242
+  - first:
+      213: -7412568516169278771
+    second: Map_Buildings_2_243
+  - first:
+      213: 676278214710012976
+    second: Map_Buildings_2_244
+  - first:
+      213: 7303894224665221193
+    second: Map_Buildings_2_245
+  - first:
+      213: -6202409409150324452
+    second: Map_Buildings_2_247
+  - first:
+      213: -333955340192663468
+    second: Map_Buildings_2_248
+  - first:
+      213: -7820283671462100349
+    second: Map_Buildings_2_249
+  - first:
+      213: -8113520609971030189
+    second: Map_Buildings_2_250
+  - first:
+      213: -6254016197576765788
+    second: Map_Buildings_2_251
+  - first:
+      213: 3118695443552648757
+    second: Map_Buildings_2_252
+  - first:
+      213: -553537521368419089
+    second: Map_Buildings_2_253
+  - first:
+      213: -435823002002359523
+    second: Map_Buildings_2_254
+  - first:
+      213: 5734316914085095957
+    second: Map_Buildings_2_255
+  - first:
+      213: -7111094011434947346
+    second: Map_Buildings_2_256
+  - first:
+      213: -7363927313107425665
+    second: Map_Buildings_2_257
+  - first:
+      213: 8151092842245858663
+    second: Map_Buildings_2_258
+  - first:
+      213: -8553292764942537459
+    second: Map_Buildings_2_259
+  - first:
+      213: -4922303209005017041
+    second: Map_Buildings_2_260
+  - first:
+      213: 5282689677309492936
+    second: Map_Buildings_2_261
+  - first:
+      213: 4879541872279650720
+    second: Map_Buildings_2_262
+  - first:
+      213: -3969259912411589807
+    second: Map_Buildings_2_263
+  - first:
+      213: -816064466139510860
+    second: Map_Buildings_2_264
+  - first:
+      213: -4711116401088389390
+    second: Map_Buildings_2_265
+  - first:
+      213: 1850378291828969732
+    second: Map_Buildings_2_266
+  - first:
+      213: -6952238803387224987
+    second: Map_Buildings_2_267
+  - first:
+      213: -366536398777315679
+    second: Map_Buildings_2_268
+  - first:
+      213: -360121377677340159
+    second: Map_Buildings_2_269
+  - first:
+      213: -4883193651005526886
+    second: Map_Buildings_2_270
+  - first:
+      213: 6627046727768064995
+    second: Map_Buildings_2_271
+  - first:
+      213: 3754934167457285849
+    second: Map_Buildings_2_272
+  - first:
+      213: -7955571696000954922
+    second: Map_Buildings_2_273
+  - first:
+      213: -8710958415417601704
+    second: Map_Buildings_2_274
+  - first:
+      213: 7959133913834263820
+    second: Map_Buildings_2_275
+  - first:
+      213: 5755150471609629866
+    second: Map_Buildings_2_276
+  - first:
+      213: -8379288658804393166
+    second: Map_Buildings_2_277
+  - first:
+      213: -2124256751691562085
+    second: Map_Buildings_2_278
+  - first:
+      213: -7403557969391377962
+    second: Map_Buildings_2_279
+  - first:
+      213: 4390083361269108489
+    second: Map_Buildings_2_280
+  - first:
+      213: 3963249365339364106
+    second: Map_Buildings_2_281
+  - first:
+      213: 777368160448306861
+    second: Map_Buildings_2_282
+  - first:
+      213: -6196097779518160071
+    second: Map_Buildings_2_283
+  - first:
+      213: 8142716458426259179
+    second: Map_Buildings_2_284
+  - first:
+      213: 1969060597406267878
+    second: Map_Buildings_2_285
+  - first:
+      213: 5511212268547119266
+    second: Map_Buildings_2_286
+  - first:
+      213: -3142606583844238938
+    second: Map_Buildings_2_287
+  - first:
+      213: -6406173910328946676
+    second: Map_Buildings_2_288
+  - first:
+      213: -6665649949375425310
+    second: Map_Buildings_2_289
+  - first:
+      213: -9201241619228780410
+    second: Map_Buildings_2_290
+  - first:
+      213: 1830544951654918655
+    second: Map_Buildings_2_291
+  - first:
+      213: 5911558015831093454
+    second: Map_Buildings_2_292
+  - first:
+      213: 103762671247137949
+    second: Map_Buildings_2_293
+  - first:
+      213: -4624928755681111876
+    second: Map_Buildings_2_294
+  - first:
+      213: -4818133715706596543
+    second: Map_Buildings_2_295
+  - first:
+      213: 8282181340021967073
+    second: Map_Buildings_2_296
+  - first:
+      213: -9166000851821698560
+    second: Map_Buildings_2_297
+  - first:
+      213: -8974787219935610042
+    second: Map_Buildings_2_298
+  - first:
+      213: -5047624506297076274
+    second: Map_Buildings_2_299
+  - first:
+      213: 1357265385332803124
+    second: Map_Buildings_2_300
+  - first:
+      213: 9177655909958982679
+    second: Map_Buildings_2_301
+  - first:
+      213: -7794211730569866885
+    second: Map_Buildings_2_302
+  - first:
+      213: -778665540392632298
+    second: Map_Buildings_2_303
+  - first:
+      213: -6379933366634107840
+    second: Map_Buildings_2_304
+  - first:
+      213: -128333921205407556
+    second: Map_Buildings_2_305
+  - first:
+      213: 5669148005985579539
+    second: Map_Buildings_2_306
+  - first:
+      213: 6588610802415428493
+    second: Map_Buildings_2_307
+  - first:
+      213: -6875547593717524766
+    second: Map_Buildings_2_308
+  - first:
+      213: -4184755716421977955
+    second: Map_Buildings_2_309
+  - first:
+      213: 7719678238277235439
+    second: Map_Buildings_2_316
+  - first:
+      213: 1896318545221041267
+    second: Map_Buildings_2_320
+  - first:
+      213: -2699654425090033953
+    second: Map_Buildings_2_321
+  - first:
+      213: 7273612016658162925
+    second: Map_Buildings_2_322
+  - first:
+      213: 2109132306534850174
+    second: Map_Buildings_2_323
+  - first:
+      213: 8260444432325988507
+    second: Map_Buildings_2_324
+  - first:
+      213: -8223797998287083622
+    second: Map_Buildings_2_326
+  - first:
+      213: 5873124725811358242
+    second: Map_Buildings_2_327
+  - first:
+      213: -1924935091339193413
+    second: Map_Buildings_2_328
+  - first:
+      213: -2955409380655044694
+    second: Map_Buildings_2_329
+  - first:
+      213: -7409618983283756457
+    second: Map_Buildings_2_330
+  - first:
+      213: 5905843655918863439
+    second: Map_Buildings_2_331
+  - first:
+      213: 3721500288145280861
+    second: Map_Buildings_2_332
+  - first:
+      213: 2703413290127803636
+    second: Map_Buildings_2_333
+  - first:
+      213: -2365245953217318249
+    second: Map_Buildings_2_334
+  - first:
+      213: 7668579989979353954
+    second: Map_Buildings_2_335
+  - first:
+      213: 919662515345742847
+    second: Map_Buildings_2_336
+  - first:
+      213: -5220900613645451526
+    second: Map_Buildings_2_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Lumin
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Map_Buildings_2_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 431
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0144503443503b0e0800000000000000
+      internalID: -2255453266361629680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 431
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9211bd85c25bbcaf0800000000000000
+      internalID: -375006941881364183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 431
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f9c1a1bf728bee10800000000000000
+      internalID: 2228017925617469941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_3
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 431
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2123a7bb3755145d0800000000000000
+      internalID: -3080086714589761006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_4
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 431
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8bebe4541ad6b360800000000000000
+      internalID: 7185170036375153549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_5
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 431
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f46abcef040e2890800000000000000
+      internalID: -7481037464573156108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_6
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 431
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f0e55a0d60378a0800000000000000
+      internalID: -6308691159818563817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_7
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 431
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6166ad08c270308b0800000000000000
+      internalID: -5187294458078927338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_8
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 431
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b188843a099b0fe0800000000000000
+      internalID: -1221714604790873678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_9
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 430
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 779137a526f318c50800000000000000
+      internalID: 6665678615141882231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_10
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 430
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c884cb5aa250ea0800000000000000
+      internalID: -5907268444909695994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_17
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 410
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e24c1583651c690800000000000000
+      internalID: -7583685497625235828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_18
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 410
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d18ab8430cc59b0800000000000000
+      internalID: -5089982146921620065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_19
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 411
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc64fbcf6b4597d70800000000000000
+      internalID: 9041350871824156365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_20
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 411
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f85e9f70b032b300800000000000000
+      internalID: 266328862581741809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_21
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 410
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 374c6c2c8318096f0800000000000000
+      internalID: -679901462946986893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_22
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 415
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9b8a2603bddcad0800000000000000
+      internalID: -2680245202355439142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_23
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 415
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6936d18e822cea60800000000000000
+      internalID: 7704571057983076715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_24
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 414
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fe16c3c68edbcc60800000000000000
+      internalID: 7839604246760005363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_25
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 406
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dfbd301a977d0e00800000000000000
+      internalID: 1012596994809380819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_26
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 409
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbec4f9245321c100800000000000000
+      internalID: 126421108931219132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_27
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 412
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a87bc03c97f0f50800000000000000
+      internalID: 6849827436892752442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_35
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 372
+        width: 32
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c46e0d76bb5d49bd0800000000000000
+      internalID: -2624237681972812212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_42
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 391
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5257579ba1fd4d940800000000000000
+      internalID: 5320122365705024805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_43
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 391
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c47b84ca490585be0800000000000000
+      internalID: -1488351077370120372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_44
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 391
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 506bb10852972b410800000000000000
+      internalID: 1491387628583106053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_45
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 391
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e0d596b96d228f0800000000000000
+      internalID: -566654640119279995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_46
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 391
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae05fe3f1caec6670800000000000000
+      internalID: 8533453512702382314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_47
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 376
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51cd768bbc20fe470800000000000000
+      internalID: 8425956501828918293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_54
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 392
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d990ad537d0d7aa0800000000000000
+      internalID: -6161753926029764139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_55
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 392
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f6304cd75bbba80800000000000000
+      internalID: -8449960724066504823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_56
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 392
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc9e286aee1ccd180800000000000000
+      internalID: -9089176717200528949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_57
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 392
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 285c9a6b34a7f0560800000000000000
+      internalID: 7282173553727358338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_58
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 392
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7ca69c87d2d0240800000000000000
+      internalID: 4759510377999026156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_68
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 370
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2469cfed7e56480a0800000000000000
+      internalID: -6880262284162329022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_69
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 370
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ea545145d0f4740800000000000000
+      internalID: 5138340354638327361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_70
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 370
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc4fac735d378160800000000000000
+      internalID: 7027653172318391496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_71
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 370
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ed4c8cd0cebcad0800000000000000
+      internalID: -2680789609221923171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_72
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 378
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c958b026a38c270800000000000000
+      internalID: 8270924908440427545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_73
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 378
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e27607e61842a60800000000000000
+      internalID: 7648380378514140690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_74
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 383
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b1e6dad96de9880800000000000000
+      internalID: -8602202265523184836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_75
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 383
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5fbce6ce5b456bc0800000000000000
+      internalID: -3790540640925991076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_76
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 383
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72f7b17a5995c150800000000000000
+      internalID: 5892284301218148987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_77
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 383
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea5c48393c1e08c30800000000000000
+      internalID: 4359732669404464558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_84
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 374
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a0fd182b9002fb0800000000000000
+      internalID: -4674725750922868220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_85
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 374
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691174bb714455270800000000000000
+      internalID: 8238565962061123990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_86
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 374
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 229dca2a30a6a45d0800000000000000
+      internalID: -3077530831507629790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_87
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 374
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 879ec4380cd36a220800000000000000
+      internalID: 2496750940469389688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_88
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 374
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25c3c3346a3e51a0800000000000000
+      internalID: -6818948583752743635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_89
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 353
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f81f38f381c627de0800000000000000
+      internalID: -1336887287974989425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_90
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 354
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c02c94386a3b0bed0800000000000000
+      internalID: -2400221073639882228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_91
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 348
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248438bd6b3172a10800000000000000
+      internalID: 1884496645165631554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_92
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 356
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a830a0ba24cbbbe40800000000000000
+      internalID: 5673335150126695306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_93
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 365
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d126525d06fbc20800000000000000
+      internalID: 3224402326792052127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_94
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 365
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d36d4f153fecb340800000000000000
+      internalID: 4881039107600245714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_95
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 365
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d633fc1f09ea41e0800000000000000
+      internalID: -2212700015779694896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_96
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 365
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e0a37cfa311a5920800000000000000
+      internalID: 2979713048500216041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_97
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 366
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5889d300d3c94ffa0800000000000000
+      internalID: -5767813436943787899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_98
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 366
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ef84d3432af41e0800000000000000
+      internalID: -2211370546765431288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_99
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 366
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175332b34b4c5b860800000000000000
+      internalID: 7545153029094454641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_100
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 366
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce313fb7e1753d760800000000000000
+      internalID: 7481419194432689132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_101
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 366
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b5e3f9fc5556ea0800000000000000
+      internalID: -5880199388244059328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_102
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 358
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e023949b9db0d590800000000000000
+      internalID: -7651407290992221982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_103
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 358
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a77caba91f90b390800000000000000
+      internalID: -7804563221629864028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_104
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 358
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb0bf08eafbe9dc0800000000000000
+      internalID: -3630253493404890190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_105
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 356
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 292b835e3bdd7d0b0800000000000000
+      internalID: -5703846638326861166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_106
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 356
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be8952786d445710800000000000000
+      internalID: 1681053671906447031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_107
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 356
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88bfc36d420134b10800000000000000
+      internalID: 1964431612862856072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_108
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 356
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd595d4afdf494030800000000000000
+      internalID: 3479400009082181084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_109
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 357
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb7d6b06c5dc79de0800000000000000
+      internalID: -1326365768594040898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_110
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 357
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b0a579cf9786660800000000000000
+      internalID: 7379282115224537952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_111
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 357
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 224640b6a9400d390800000000000000
+      internalID: -7795725893711403998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_112
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 357
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d7d6467eb40112f0800000000000000
+      internalID: -1004016025852258347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_113
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 349
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ccf686b3bb5f27f0800000000000000
+      internalID: -635188195016377150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_114
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 349
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 667b4cc1a4a92c6d0800000000000000
+      internalID: -2971643161010194586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_115
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 349
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54f5fd585e254bb30800000000000000
+      internalID: 4302154689792663365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_116
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 347
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 309388a0036fd99e0800000000000000
+      internalID: -1612862405333206781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_117
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 347
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12987e9b9303ec430800000000000000
+      internalID: 3805031759664875809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_118
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 347
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d56f3c4451240330800000000000000
+      internalID: 3676099841781360085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_119
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 347
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b12f666676cd9640800000000000000
+      internalID: 5088441365825528249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_120
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 347
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8483085932076460800000000000000
+      internalID: 7234753771707008143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_121
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 338
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a267aea0c5774bd0800000000000000
+      internalID: -2646016785632501083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_122
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 347
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbb244d509fa7fe80800000000000000
+      internalID: -8144848366501352516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_123
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 347
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1923551a67d860090800000000000000
+      internalID: -8068606141735292271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_124
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 348
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a45e7aca8fdfd450800000000000000
+      internalID: 6115852606188180642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_125
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 348
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e5978d5df2f5b150800000000000000
+      internalID: 5887879257866606049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_126
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 348
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8365fa9df61359cd0800000000000000
+      internalID: -2552079257372240328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_127
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 348
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684405d5fa892e020800000000000000
+      internalID: 2369624232902542470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_128
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 348
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2e85175b7a53c9e0800000000000000
+      internalID: -1602337556625256918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_129
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 339
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776356d0b8c8026d0800000000000000
+      internalID: -3017257221485152649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_130
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 339
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ecd637a5adabd00800000000000000
+      internalID: 989343150179733099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_131
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 339
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bbf9b9a349f75aa0800000000000000
+      internalID: -6172190695282312267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_132
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 340
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1952e4920dd059480800000000000000
+      internalID: -8893186701475830383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_133
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 340
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20592690064adf180800000000000000
+      internalID: -9079920541327780606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_134
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 340
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40902b9daffea9160800000000000000
+      internalID: 7033197628765636868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_135
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 338
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6af5c38ee951c51c0800000000000000
+      internalID: -4513708954286792794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_136
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 342
+        width: 16
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a1007ebd7333520800000000000000
+      internalID: 2680547620828486166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_137
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 338
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4073923cb1d8c6bc0800000000000000
+      internalID: -3788498036147538172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_138
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 338
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b584de29809b6e830800000000000000
+      internalID: 4100167957243316315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_139
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 338
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77d039213489b4490800000000000000
+      internalID: -7760942119001059977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_140
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 339
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37a4b8ab8d3fadf50800000000000000
+      internalID: 6907101090694253171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_141
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 339
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78277da754b9089f0800000000000000
+      internalID: -468203638530542969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_142
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 339
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47733fce048532180800000000000000
+      internalID: -9141365782755461260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_143
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 339
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 261dbd6f98c868c90800000000000000
+      internalID: -7167887232733556382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_144
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 339
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4337929a74943280800000000000000
+      internalID: -9064456895823662261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_145
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 322
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d280e99d4fdd172a0800000000000000
+      internalID: -6741363123504150483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_146
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 330
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38beb4c71c08ee410800000000000000
+      internalID: 1508284493718088579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_147
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 330
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee5f9da47ccdff200800000000000000
+      internalID: 216134055649474030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_148
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 330
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b45e7f2e71daa2d20800000000000000
+      internalID: 3254603998832354635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_149
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 322
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f27f94a0aa5edc7e0800000000000000
+      internalID: -1743484962242693329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_150
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 331
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6aedd039700a0b40800000000000000
+      internalID: 5407134823122594415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_151
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 331
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb2813ffe9e9bc1a0800000000000000
+      internalID: -6788157607607434564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_152
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 331
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45af6cb5e5f03f9e0800000000000000
+      internalID: -1588909345590543788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_153
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 329
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a1b69827a4983960800000000000000
+      internalID: 7581973418339643812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_154
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 331
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1b3895d269a5c690800000000000000
+      internalID: -7582468155652949218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_155
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 331
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d063729d34f16520800000000000000
+      internalID: 2693702597431484624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_156
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 329
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d3af9706acce06f0800000000000000
+      internalID: -716410277240790060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_157
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 329
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e46c3673bdeab1c00800000000000000
+      internalID: 872483209376679502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_158
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 329
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28c389791c45263d0800000000000000
+      internalID: -3214913993540354942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_159
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 329
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eefda89065cb91940800000000000000
+      internalID: 5267448316899811310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_160
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 329
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa44c87795ab4ba0800000000000000
+      internalID: -6103602799985800535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_161
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 329
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e4ac23bd6d2e090800000000000000
+      internalID: -8006600950573019497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_162
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 330
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b7bfb86d75c35870800000000000000
+      internalID: 8670490850037315507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_163
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 330
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53a919a3c981c3060800000000000000
+      internalID: 6934444585520306741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_164
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 330
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c690e4989a0ae2c0800000000000000
+      internalID: -4401694035352185151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_165
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 330
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10d9281aab8cfe010800000000000000
+      internalID: 1220414727939857665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_166
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 321
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 341663368cf7664f0800000000000000
+      internalID: -835840182195953341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_167
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 321
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f064851b7029f880800000000000000
+      internalID: -8576788302336335627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_168
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 321
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c043241ecd7a01cf0800000000000000
+      internalID: -283542209410485236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_169
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 322
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f62d14f23655e1850800000000000000
+      internalID: 6349606409121944175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_170
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 322
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d5bb499682743b0800000000000000
+      internalID: -5528405583642010349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_171
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 322
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca947a722c0e81a0800000000000000
+      internalID: -6805488644687357235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_172
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 316
+        width: 4
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4f6c838677673550800000000000000
+      internalID: 6140490375653781326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_173
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 321
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b8498cb62c8b9090800000000000000
+      internalID: -8026667812858017611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_174
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 316
+        width: 4
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ba3def4d08bf260800000000000000
+      internalID: 7132436087168019234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_175
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 312
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7868d379c0699f3d0800000000000000
+      internalID: -3172339481684638073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_176
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 284
+        width: 16
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5efe84b6a9d2ecd10800000000000000
+      internalID: 2147704213550460901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_177
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 309
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6fd6d85903eb6b30800000000000000
+      internalID: 4281765500030476139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_178
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 321
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6584a91637a657a0800000000000000
+      internalID: -6388735170578184849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_179
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 321
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 807df59e0bf974430800000000000000
+      internalID: 3767155195497142024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_180
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 321
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc63ea9d282d3c90800000000000000
+      internalID: -7188545253876208436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_181
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 321
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14b88cc63a8351550800000000000000
+      internalID: 6130868742290705217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_182
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 321
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54d2ddc4e1b85020800000000000000
+      internalID: 2330808403428037723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_183
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 313
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c9cc04525198ec0800000000000000
+      internalID: -3564294380341912418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_184
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 313
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81855e1632d4377c0800000000000000
+      internalID: -4074828423478552552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_185
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 313
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6d24dcdc2c9b1270800000000000000
+      internalID: 8222337261192359279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_186
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 312
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 597ad7999c675e9f0800000000000000
+      internalID: -439814780363102315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_187
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 312
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12a042962559c01a0800000000000000
+      internalID: -6841929552698799583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_188
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 312
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c67f263747265df60800000000000000
+      internalID: 8058455360540964716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_189
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 312
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41e385fdcdec73f00800000000000000
+      internalID: 1096572482323234324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_190
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 312
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abd6439059f85d060800000000000000
+      internalID: 6977641067947781562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_191
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 294
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67bd7c2621791e420800000000000000
+      internalID: 2657571360347773814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_192
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 294
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a08570d338fd26b0800000000000000
+      internalID: -5319322683430305626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_193
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 294
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07d962bd10c201300800000000000000
+      internalID: 220724768224484720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_194
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 294
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864bc39ccee7139b0800000000000000
+      internalID: -5102157347380480920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_195
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 296
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0291d25c44daa5d0800000000000000
+      internalID: -3050392373318020596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_196
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 295
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d227273647d98f40800000000000000
+      internalID: 5731348697378661077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_197
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 295
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac814df3cf58f1300800000000000000
+      internalID: 225045824840931530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_198
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 295
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bede5854f1ab5d410800000000000000
+      internalID: 1501310694271086059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_199
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 295
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e247584a265fbac0800000000000000
+      internalID: -3837253617894079776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_200
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 290
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb8cf2f51732f91b0800000000000000
+      internalID: -5647756437864068929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_201
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 290
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 355f98b1cfa9b00f0800000000000000
+      internalID: -1149654872278567597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_202
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 303
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f1bd362d45ac810800000000000000
+      internalID: 1786333464800993082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_203
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 303
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2046789fd08b9e300800000000000000
+      internalID: 281958821847852034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_204
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 303
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12fcf069d2b02a920800000000000000
+      internalID: 2999972592201223969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_205
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 303
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab88bce2e8045c630800000000000000
+      internalID: 3946631627874732218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_206
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 294
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcf88e3b15308dd80800000000000000
+      internalID: -8225821069946613809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_207
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 294
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e9190ed752b2650800000000000000
+      internalID: 6209097733829140076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_208
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 294
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d3b40c69d0ce770800000000000000
+      internalID: 8641296726139551046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_209
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 294
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c287ba2ecaec35cb0800000000000000
+      internalID: -4876326729579530196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_210
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 294
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56c68d3cd2ed4b60800000000000000
+      internalID: 7732085570817934938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_211
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 222
+        width: 80
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 656d4616193217ad0800000000000000
+      internalID: -2706342793761728938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_212
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 278
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ee07bfd093977580800000000000000
+      internalID: -8829426293998678297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_213
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 286
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 096b681f9f604c0e0800000000000000
+      internalID: -2250666243209644400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_214
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 286
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af9467fe7b39f0b20800000000000000
+      internalID: 3102861086487366138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_215
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 286
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cdffe385b7d0ac50800000000000000
+      internalID: 6674571822365670856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_216
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 277
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5967aad3fda008d40800000000000000
+      internalID: 5584475491867981461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_217
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 285
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 236e4f098dc20ade0800000000000000
+      internalID: -1324008981790398926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_218
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 285
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f7088ea78af5be0800000000000000
+      internalID: -1486284106168762572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_219
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 285
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca900a6c5f75da00800000000000000
+      internalID: 780670145310792392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_220
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 285
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71f019178d4b921b0800000000000000
+      internalID: -5680810613239902441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_221
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 285
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2ee3b6aa36659020800000000000000
+      internalID: 2347895182834527791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_222
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 277
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c9c27cdf73a44f30800000000000000
+      internalID: 4558948492360468936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_223
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 277
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1cb95cd7352c7530800000000000000
+      internalID: 3853996302972599325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_224
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 277
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbf60058234a68100800000000000000
+      internalID: 109955777803874239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_225
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 277
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d922bb3f4c727830800000000000000
+      internalID: 4067450093214771667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_226
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 277
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e3baf4d92b1dc480800000000000000
+      internalID: -8877409423996570648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_227
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 272
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5ac7c97f4462cad0800000000000000
+      internalID: -2683472135451063714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_228
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 268
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc0360a588b35f990800000000000000
+      internalID: -7352905359800520497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_229
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 272
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 437077795c5885050800000000000000
+      internalID: 5789524404680984372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_230
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 261
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7773ad6803e2a95a0800000000000000
+      internalID: -6513843125082245257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_231
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 260
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d3ab957927921ef0800000000000000
+      internalID: -138882434172476464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_232
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 260
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f71a228db58d21ae0800000000000000
+      internalID: -1579962630273851009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_233
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 260
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 446665d3c18e53450800000000000000
+      internalID: 6068011280937412164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_234
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 266
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9933ee69fac5f63d0800000000000000
+      internalID: -3211246100070648935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_235
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 259
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3d83162c783611e0800000000000000
+      internalID: -2227530859822215876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_236
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 259
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c9033aef611ac0d0800000000000000
+      internalID: -3401887396156732990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_237
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 259
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155561e225183dc30800000000000000
+      internalID: 4382989052322141521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_238
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 259
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52cef4553a2bc2a60800000000000000
+      internalID: 7650686281576344613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_239
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 259
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42a9c18f0b2c370f0800000000000000
+      internalID: -1120337816952464860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_240
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 244
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51bc59d321c81dab0800000000000000
+      internalID: -4985049302551901419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_241
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 243
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b09b663d9304bae0800000000000000
+      internalID: -1534597599268728654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_242
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 243
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ac97cdc31e380f0800000000000000
+      internalID: -1115800631144494437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_243
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 243
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca5c704534412990800000000000000
+      internalID: -7412568516169278771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_244
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 238
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c2025047f926900800000000000000
+      internalID: 676278214710012976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_245
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 238
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94892328915ac5560800000000000000
+      internalID: 7303894224665221193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_247
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 238
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c11fd00118d9ce9a0800000000000000
+      internalID: -6202409409150324452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_248
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 238
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458b8f0336d8d5bf0800000000000000
+      internalID: -333955340192663468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_249
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 238
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382c6b73f65c87390800000000000000
+      internalID: -7820283671462100349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_250
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 221
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357bdd41efbf66f80800000000000000
+      internalID: -8113520609971030189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_251
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 226
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aec5eb47654539a0800000000000000
+      internalID: -6254016197576765788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_252
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 226
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53eb59b7bf4d74b20800000000000000
+      internalID: 3118695443552648757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_253
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 226
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe43cfc9e807158f0800000000000000
+      internalID: -553537521368419089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_254
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 226
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1b74bce945a3f9f0800000000000000
+      internalID: -435823002002359523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_255
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 226
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51a6e850ad2649f40800000000000000
+      internalID: 5734316914085095957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_256
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 226
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec230c3ca1505d90800000000000000
+      internalID: -7111094011434947346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_257
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 226
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f766f6edf131ec990800000000000000
+      internalID: -7363927313107425665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_258
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 226
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7652b41f0cf7e1170800000000000000
+      internalID: 8151092842245858663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_259
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 226
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d6ead2c899c4980800000000000000
+      internalID: -8553292764942537459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_260
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 226
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f289d769f4770bbb0800000000000000
+      internalID: -4922303209005017041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_261
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 226
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ceb7aac542ef4940800000000000000
+      internalID: 5282689677309492936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_262
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 203
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a18fdbda7d97b340800000000000000
+      internalID: 4879541872279650720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_263
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 203
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1535283c32b5ae8c0800000000000000
+      internalID: -3969259912411589807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_264
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 203
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b78fe511b1cca4f0800000000000000
+      internalID: -816064466139510860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_265
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 140
+        width: 112
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe1c910890ce9eb0800000000000000
+      internalID: -4711116401088389390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_266
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 217
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4015f80b04ddda910800000000000000
+      internalID: 1850378291828969732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_267
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 217
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56cea6294afa48f90800000000000000
+      internalID: -6952238803387224987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_268
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 217
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae80a9561dc9eaf0800000000000000
+      internalID: -366536398777315679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_269
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 217
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1029487d387900bf0800000000000000
+      internalID: -360121377677340159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_270
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 217
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c6f562f396b3cb0800000000000000
+      internalID: -4883193651005526886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_271
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 217
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e3c78623eff7fb50800000000000000
+      internalID: 6627046727768064995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_272
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 217
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d6c4461bb43c1430800000000000000
+      internalID: 3754934167457285849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_273
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 217
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd06b261b1289190800000000000000
+      internalID: -7955571696000954922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_274
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 208
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85195db49757c1780800000000000000
+      internalID: -8710958415417601704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_275
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 208
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c051bd51026847e60800000000000000
+      internalID: 7959133913834263820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_276
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 208
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aacb631acd66edf40800000000000000
+      internalID: 5755150471609629866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_277
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 208
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b31853c59c6bb80800000000000000
+      internalID: -8379288658804393166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_278
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 208
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9303b73dbf1582e0800000000000000
+      internalID: -2124256751691562085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_279
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 208
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d12a68a047414990800000000000000
+      internalID: -7403557969391377962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_280
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 208
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90f4cc2be85bcec30800000000000000
+      internalID: 4390083361269108489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_281
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 208
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0b5851bc4a400730800000000000000
+      internalID: 3963249365339364106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_282
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 137
+        width: 64
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae58372934c9ca00800000000000000
+      internalID: 777368160448306861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_283
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 198
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 933cb3ad5e9030aa0800000000000000
+      internalID: -6196097779518160071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_284
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 198
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be6593b1a7db00170800000000000000
+      internalID: 8142716458426259179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_285
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 198
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e97e994e22835b10800000000000000
+      internalID: 1969060597406267878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_286
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 198
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a8968ccb52cb7c40800000000000000
+      internalID: 5511212268547119266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_287
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 189
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a9092556f73364d0800000000000000
+      internalID: -3142606583844238938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_288
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 189
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c00d77915c2b817a0800000000000000
+      internalID: -6406173910328946676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_289
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 189
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e4906aefaade73a0800000000000000
+      internalID: -6665649949375425310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_290
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 189
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68814516f7f9e4080800000000000000
+      internalID: -9201241619228780410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_291
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 180
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff9a6c45fe6676910800000000000000
+      internalID: 1830544951654918655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_292
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 180
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec0b9b2d1b21a0250800000000000000
+      internalID: 5911558015831093454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_293
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 180
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9c91a88993a07100800000000000000
+      internalID: 103762671247137949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_294
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 180
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb05326fcc3f0dfb0800000000000000
+      internalID: -4624928755681111876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_295
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 171
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 143b9f2c9ec822db0800000000000000
+      internalID: -4818133715706596543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_296
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 171
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8c0614c0830f270800000000000000
+      internalID: 8282181340021967073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_297
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 171
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0026d30f9c2dbc080800000000000000
+      internalID: -9166000851821698560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_298
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 171
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64bb50de296237380800000000000000
+      internalID: -8974787219935610042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_299
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 162
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec53b96414c33f9b0800000000000000
+      internalID: -5047624506297076274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_300
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 162
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43602b64da9f5d210800000000000000
+      internalID: 1357265385332803124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_301
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 162
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c9edfbc659d5f70800000000000000
+      internalID: 9177655909958982679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_302
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 162
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b71533ff9b565d390800000000000000
+      internalID: -7794211730569866885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_303
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 153
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6104f0a01df9135f0800000000000000
+      internalID: -778665540392632298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_304
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 153
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04cac17c76ce577a0800000000000000
+      internalID: -6379933366634107840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_305
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 153
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb03be58af0183ef0800000000000000
+      internalID: -128333921205407556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_306
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 153
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31272e3331cdcae40800000000000000
+      internalID: 5669148005985579539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_307
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 122
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d83e549ed927f6b50800000000000000
+      internalID: 6588610802415428493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_308
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 122
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e6dc2844e52590a0800000000000000
+      internalID: -6875547593717524766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_309
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 122
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d98f1e209d2cce5c0800000000000000
+      internalID: -4184755716421977955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_316
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 20
+        width: 112
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe2f3d4057ec12b60800000000000000
+      internalID: 7719678238277235439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_320
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 79
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37cb2e47ba3115a10800000000000000
+      internalID: 1896318545221041267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_321
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 79
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd672309a96e88ad0800000000000000
+      internalID: -2699654425090033953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_322
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 79
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de42ce6879f01f460800000000000000
+      internalID: 7273612016658162925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_323
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 80
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e5f4b78a4254d10800000000000000
+      internalID: 2109132306534850174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_324
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 80
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b90d4ab027ef2a270800000000000000
+      internalID: 8260444432325988507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_326
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 62
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a97a787ca433fdd80800000000000000
+      internalID: -8223797998287083622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_327
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 62
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22aac8b22d7818150800000000000000
+      internalID: 5873124725811358242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_328
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 62
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb31b01bbb14945e0800000000000000
+      internalID: -1924935091339193413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_329
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 62
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa7e234a3d64cf6d0800000000000000
+      internalID: -2955409380655044694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_330
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 63
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7527164eacebb2990800000000000000
+      internalID: -7409618983283756457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_331
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 63
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f44c90ab385c5f150800000000000000
+      internalID: 5905843655918863439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_332
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 45
+        width: 6
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5fc9627bcc65a330800000000000000
+      internalID: 3721500288145280861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_333
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 45
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f443276014748520800000000000000
+      internalID: 2703413290127803636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_334
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 45
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7923d005655fc2fd0800000000000000
+      internalID: -2365245953217318249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_335
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 17
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263536afed44c6a60800000000000000
+      internalID: 7668579989979353954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_336
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 318
+        width: 16
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffbdc646f2c43cc00800000000000000
+      internalID: 919662515345742847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Map_Buildings_2_11
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 104
+        width: 47
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afe3b0cad82ab87b0800000000000000
+      internalID: -5220900613645451526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
