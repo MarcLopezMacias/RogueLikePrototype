@@ -36,7 +36,7 @@ public class Spawner : MonoBehaviour
     {
         if (NumberOfEnemiesToSpawn > 0 && !Active)
         {
-            Debug.Log("STARTED");
+            Debug.Log("STARTED SPAWNING");
             StartCoroutine(Spawn());
         }
     }

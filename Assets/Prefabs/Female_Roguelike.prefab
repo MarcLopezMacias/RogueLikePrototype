@@ -110,7 +110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Red
   Height: 1.69
-  Speed: 3
+  Speed: 5
   Weight: 50
   Health: 100
   MaxHealth: 300
