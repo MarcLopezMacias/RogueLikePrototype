@@ -14,6 +14,7 @@ public class Enemy : Character
     [SerializeField]
     protected GameObject[] Drops;
 
+    [SerializeField]
     protected float AggroRange;
 
     // Start is called before the first frame update

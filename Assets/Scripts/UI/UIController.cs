@@ -5,17 +5,11 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-
-    /*
-     * UI: comptador de vides. Comptador d'enemics a l'escena. 
-     * Comptador de punts per enemic 5.
-     */
-
     public Text FrameText;
     private int FrameCount;
 
     public Text LifesText;
-    public Text EnemiesText;
+
     public Text MaxScoreText;
 
     public Text GameOverText;
@@ -23,6 +17,7 @@ public class UIController : MonoBehaviour
     private string GameOverString;
     public int GameOverScreenTime;
 
+    public Text EnemiesText;
     public Text EnemiesSlainText;
 
     private bool mainLoop;

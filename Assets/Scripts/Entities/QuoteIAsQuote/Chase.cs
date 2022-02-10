@@ -5,18 +5,18 @@ using UnityEngine;
 public class Chase : MonoBehaviour
 {
     [SerializeField]
-    float MoveSpeed;
-
-    [SerializeField]
     private int MoveSpeedDividingFactor;
 
     private bool Chasing;
 
     float AggroRange;
 
+    float MoveSpeed;
+
     // Start is called before the first frame update
     void Start()
     {
+        MoveSpeed = gameObject.GetComponent<Enemy>().GetSpeed();
         MoveSpeed /= MoveSpeedDividingFactor;
         Chasing = false;
         // TO FIX
@@ -24,11 +24,11 @@ public class Chase : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // TO FIX
         ColliderDistance2D Distance = gameObject.GetComponent<BoxCollider2D>().Distance(GameManager.Instance.Player.GetComponent<BoxCollider2D>());
-        while (Distance.distance < AggroRange)
+        if (Distance.distance < AggroRange)
         {
             Vector3 target = GameManager.Instance.Player.transform.position;
             transform.LookAt(target);
