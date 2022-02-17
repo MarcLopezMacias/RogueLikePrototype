@@ -48,7 +48,7 @@ MonoBehaviour:
   RCRangeInSeconds: {x: 3, y: 5}
   EnemiesToSpawn:
   - {fileID: 4771413154113129611, guid: 18403ba03c13283428c8ea9b02d0c5e1, type: 3}
-  NumberOfEnemiesToSpawn: 5
+  NumberOfEnemiesToSpawn: 0
   RangeX: {x: -4, y: 4}
   RangeY: {x: -4, y: 4}
   _active: 1

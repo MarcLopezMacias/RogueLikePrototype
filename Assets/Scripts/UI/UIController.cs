@@ -28,18 +28,19 @@ public class UIController : MonoBehaviour
     {
         mainLoop = true;
         FrameCount = 0;
-        GameOverString = "GAME OVER";
+        GameOverString = "G A M E  O V E R";
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     void FixedUpdate()
     {
-        if(mainLoop)
+        FrameCount++;
+        if (mainLoop)
         {
             LifesText.text = "Lifes: " + GameManager.Instance.Player.GetComponent<Player>().GetLifes();
             HealthText.text = "HP: " + GameManager.Instance.Player.GetComponent<Player>().GetHealth()
@@ -57,6 +58,7 @@ public class UIController : MonoBehaviour
         {
             FrameText.text = "Frames: " + FrameCount;
             LifesText.text = "";
+            HealthText.text = "";
             EnemiesText.text = "";
             MaxScoreText.text = "";
 

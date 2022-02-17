@@ -54,11 +54,11 @@ public class Character : MonoBehaviour, IKillable, IDamageable<float>, IHealable
 
     public void Kill()
     {
-        Lifes -= 1;
-        if(CompareTag("Enemy") && Lifes <= 0)
+        if(CompareTag("Enemy"))
         {
+            if(Lifes <= 0)
             gameObject.GetComponent<Enemy>().Die();
-        } else
+        } else if(CompareTag("Player"))
         {
             gameObject.GetComponent<Player>().DecreaseLifes(1);
         }

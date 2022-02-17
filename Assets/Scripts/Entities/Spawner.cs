@@ -17,6 +17,7 @@ public class Spawner : MonoBehaviour
 
     [SerializeField]
     private int NumberOfEnemiesToSpawn;
+    private int enemiesSpawned;
 
     [SerializeField]
     private Vector2 RangeX, RangeY;
@@ -28,15 +29,18 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(Spawn());
+        if (NumberOfEnemiesToSpawn > 0)
+        {
+            StartCoroutine(Spawn());
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (NumberOfEnemiesToSpawn > 0 && !Active)
+        if (enemiesSpawned < NumberOfEnemiesToSpawn && !Active)
         {
-            Debug.Log("STARTED SPAWNING");
+            // Debug.Log("SPAWNING");
             StartCoroutine(Spawn());
         }
     }
@@ -48,7 +52,7 @@ public class Spawner : MonoBehaviour
         float PosX = Random.Range(RangeX.x, RangeX.y);
         float PosY = Random.Range(RangeY.x, RangeY.y);
         Instantiate(GetRandomEnemy(), new Vector3(transform.position.x + PosX, transform.position.y + PosY, 0), Quaternion.identity);
-        NumberOfEnemiesToSpawn -= 1;
+        enemiesSpawned++;
         yield return new WaitForSeconds(Cooldown);
         Active = false;
     }

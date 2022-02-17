@@ -67,6 +67,10 @@ public class Player : Character
         if (Lifes <= 0)
         {
             GameManager.Instance.GameOver();
+        } else
+        {
+            Health = MaxHealth;
+            GameManager.Instance.ResetStage();
         }
     }
 

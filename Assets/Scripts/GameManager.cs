@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public static ScoreManager ScoreManager;
     public static EnemyManager EnemyManager;
 
+    private static Spawner spawner;
+
     private static GameObject MainCamera;
 
     private void Awake()
@@ -38,7 +40,11 @@ public class GameManager : MonoBehaviour
         UIController = GameObject.Find("Canvas").GetComponent<UIController>();
         ScoreManager = gameObject.GetComponent<ScoreManager>();
 
+        EnemyManager = gameObject.GetComponent<EnemyManager>();
+
         MainCamera = GameObject.FindWithTag("MainCamera");
+
+        spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
     }
 
     // Update is called once per frame
@@ -54,6 +60,7 @@ public class GameManager : MonoBehaviour
     {
         ResetCameraPosition();
         ResetPlayerPosition();
+        ResetSpawners();
     }
 
     public void ResetPlayerPosition()
@@ -64,6 +71,11 @@ public class GameManager : MonoBehaviour
     public void ResetCameraPosition()
     {
         MainCamera.GetComponent<FollowPlayer>().ResetPosition();
+    }
+
+    public void ResetSpawners()
+    {
+
     }
 
     public void GameOver()

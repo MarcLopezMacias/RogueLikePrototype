@@ -31,7 +31,7 @@ public class ManualMovement : MonoBehaviour
         verticalInput = Input.GetAxis("Vertical");
         ToMove = new Vector3(horizontalInput, verticalInput, 0) * Speed * Time.deltaTime;
         transform.Translate(ToMove);
-        ShowMyMoves(horizontalInput, verticalInput);
+        // ShowMyMoves(horizontalInput, verticalInput);
     }
 
     public bool GetMoving()
