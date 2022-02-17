@@ -7,8 +7,6 @@ public class Chase : MonoBehaviour
     [SerializeField]
     private int MoveSpeedDividingFactor;
 
-    private bool Chasing;
-
     float AggroRange;
 
     float MoveSpeed;
@@ -18,7 +16,6 @@ public class Chase : MonoBehaviour
     {
         MoveSpeed = gameObject.GetComponent<Enemy>().GetSpeed();
         MoveSpeed /= MoveSpeedDividingFactor;
-        Chasing = false;
         // TO FIX
         AggroRange = gameObject.GetComponent<Enemy>().GetAggroRange();
     }

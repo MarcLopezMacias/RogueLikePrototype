@@ -29,9 +29,9 @@ public class Enemy : Character
 
     }
 
-    protected void Die()
+    public void Die()
     {
-        GameManager.Instance.GetComponent<DropManager>().AttemptDrop(Drops);
+        if(Drops.Length != 0) GameManager.Instance.GetComponent<DropManager>().AttemptDrop(Drops);
         GameManager.Instance.GetComponent<XPManager>().IncreaseXP(XP);
         GameManager.Instance.GetComponent<ScoreManager>().IncreaseScore(Score);
         GameManager.Instance.GetComponent<EnemyManager>().IncreaseEnemiesSlain(1);

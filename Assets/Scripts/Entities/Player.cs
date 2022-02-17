@@ -54,13 +54,18 @@ public class Player : Character
         transform.position = StartingPosition;
     }
 
-    protected void DecreaseLifes(int amount)
+    public void DecreaseLifes(int amount)
     {
         Lifes -= amount;
         if (Lifes <= 0)
         {
             GameManager.Instance.GameOver();
         }
+    }
+
+    public void IncreaseLifes(int amount)
+    {
+        if (Lifes < MaxLifes) Lifes += amount;
     }
 
 }

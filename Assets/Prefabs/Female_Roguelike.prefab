@@ -108,13 +108,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40f845287d8c36042a2b32de3919276d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Red
+  Name: Brandon
   Height: 1.69
   Speed: 5
   Weight: 50
-  Health: 100
-  MaxHealth: 300
-  Lifes: 3
+  Health: 5
+  MaxHealth: 5
+  Lifes: 2
   MaxLifes: 5
-  PlayerKind: 0
-  BumpDamage: 0
+  PlayerKind: 1
+  BumpDamage: 1

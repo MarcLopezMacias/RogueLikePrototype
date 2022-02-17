@@ -55,15 +55,13 @@ public class Character : MonoBehaviour, IKillable, IDamageable<float>, IHealable
     public void Kill()
     {
         Lifes -= 1;
-        if(Lifes <= 0 && CompareTag("Enemy"))
+        if(CompareTag("Enemy") && Lifes <= 0)
         {
-            Destroy(this.gameObject);
+            gameObject.GetComponent<Enemy>().Die();
+        } else
+        {
+            gameObject.GetComponent<Player>().DecreaseLifes(1);
         }
-    }
-
-    public void IncreaseLifes(int amount)
-    {
-        if (Lifes < MaxLifes) Lifes += amount;
     }
 
     public void Heal(float amountHealed)
@@ -83,6 +81,16 @@ public class Character : MonoBehaviour, IKillable, IDamageable<float>, IHealable
         {
             Kill();
         }
+    }
+
+    public float GetHealth()
+    {
+        return Health;
+    }
+
+    public float GetMaxHealth()
+    {
+        return MaxHealth;
     }
 
 }

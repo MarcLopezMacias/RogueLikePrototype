@@ -25,12 +25,13 @@ public class ManualMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
         ToMove = new Vector3(horizontalInput, verticalInput, 0) * Speed * Time.deltaTime;
-        transform.Translate(ToMove);  
+        transform.Translate(ToMove);
+        ShowMyMoves(horizontalInput, verticalInput);
     }
 
     public bool GetMoving()
@@ -71,5 +72,13 @@ public class ManualMovement : MonoBehaviour
     public Vector3 GetToMove()
     {
         return ToMove;
+    }
+
+    private void ShowMyMoves(float horizontal, float vertical)
+    {
+        if(horizontal != 0 || vertical != 0) {
+            Debug.Log("Should Move!! HORIZONTAL: " + horizontal + ". VERTICAL: " + vertical);
+        }
+
     }
 }

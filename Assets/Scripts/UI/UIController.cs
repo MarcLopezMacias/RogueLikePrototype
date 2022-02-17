@@ -9,6 +9,7 @@ public class UIController : MonoBehaviour
     private int FrameCount;
 
     public Text LifesText;
+    public Text HealthText;
 
     public Text MaxScoreText;
 
@@ -41,6 +42,9 @@ public class UIController : MonoBehaviour
         if(mainLoop)
         {
             LifesText.text = "Lifes: " + GameManager.Instance.Player.GetComponent<Player>().GetLifes();
+            HealthText.text = "HP: " + GameManager.Instance.Player.GetComponent<Player>().GetHealth()
+            //   + " / " + GameManager.Instance.Player.GetComponent<Player>().GetMaxHealth();
+            ;
 
             EnemiesText.text = "Threats: " + GameManager.Instance.GetComponent<EnemyManager>().GetNumberOfEnemiesAlive();
 
