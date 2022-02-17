@@ -71,6 +71,7 @@ public class UIController : MonoBehaviour
 
     public void GameOver()
     {
+        mainLoop = false;
         StartCoroutine(DisplayGameOverScreen());
     }
 

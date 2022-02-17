@@ -21,6 +21,13 @@ public class Player : Character
     [SerializeField]
     private float BumpDamage;
 
+    [SerializeField]
+    private int Level;
+    [SerializeField]
+    private int XP;
+    [SerializeField]
+    private int XPRequiredToLevelUp;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -66,6 +73,41 @@ public class Player : Character
     public void IncreaseLifes(int amount)
     {
         if (Lifes < MaxLifes) Lifes += amount;
+    }
+
+    public void IncreaseXP(int value)
+    {
+        XP += value;
+        CheckIncreaseLevel();
+    }
+
+    private void CheckIncreaseLevel()
+    {
+        if(XP >= XPRequiredToLevelUp)
+        {
+            IncreaseLevel();
+            DecreaseXP(XPRequiredToLevelUp);
+        }
+    }
+
+    private void IncreaseLevel()
+    {
+        Level += 1;
+    }
+
+    public void DecreaseXP(int value)
+    {
+        XP -= value;
+    }
+
+    public void ResetXP()
+    {
+        XP = 0;
+    }
+
+    public float GetBumpDamage()
+    {
+        return BumpDamage;
     }
 
 }

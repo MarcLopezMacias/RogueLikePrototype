@@ -15,7 +15,6 @@ public class GameManager : MonoBehaviour
 
     public static UIController UIController;
     public static ScoreManager ScoreManager;
-    public static XPManager XPManager;
     public static EnemyManager EnemyManager;
 
     private static GameObject MainCamera;
@@ -38,7 +37,6 @@ public class GameManager : MonoBehaviour
 
         UIController = GameObject.Find("Canvas").GetComponent<UIController>();
         ScoreManager = gameObject.GetComponent<ScoreManager>();
-        XPManager = gameObject.GetComponent<XPManager>();
 
         MainCamera = GameObject.FindWithTag("MainCamera");
     }
@@ -76,7 +74,7 @@ public class GameManager : MonoBehaviour
 
     private void ResetGame()
     {
-        GoToStartScreen();
+        GoToStartMenu();
     }
 
     private IEnumerator WaitForGameOverScreen()
@@ -85,14 +83,14 @@ public class GameManager : MonoBehaviour
         ResetGame();
     }
 
-    private void GoToStartScreen()
+    private void GoToStartMenu()
     {
-        SceneManager.LoadScene("E5_Start");
+        SceneManager.LoadScene("RogueLikeStartMenu");
     }
 
-    public void GoToGameScreen()
+    public void GoToInGameScene()
     {
-        SceneManager.LoadScene("E5");
+        SceneManager.LoadScene("RogueLikeInGame");
     }
 
     public bool SuccessfulRol(float DropChance)

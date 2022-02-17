@@ -28,8 +28,8 @@ public class Cat : Enemy, IDropper<GameObject>, IAttack<int>
         if (CollidedWithPlayer(collision))
         {
             Attack(AttackDamage);
+            Damage(GameManager.Instance.Player.GetComponent<Player>().GetBumpDamage());
         }
-        Damage(1);
     }
 
     private bool InPlayerRange()

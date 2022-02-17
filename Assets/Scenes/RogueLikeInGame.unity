@@ -234,7 +234,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.875, y: 1.3125}
+    oldSize: {x: 0.61904764, y: 1}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -113773,6 +113773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FrameText: {fileID: 1225166472}
   LifesText: {fileID: 1978202446}
+  HealthText: {fileID: 217225954}
   MaxScoreText: {fileID: 1512794989}
   GameOverText: {fileID: 1885574464}
   GameOverScoreText: {fileID: 1296504390}
@@ -114598,6 +114599,7 @@ GameObject:
   - component: {fileID: 1069299646}
   - component: {fileID: 1069299645}
   - component: {fileID: 1069299644}
+  - component: {fileID: 1069299647}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -114670,6 +114672,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1069299647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069299643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bff254ac05e1334d9ba39eb9d1a2fec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1225166470
 GameObject:
   m_ObjectHideFlags: 0
@@ -115292,12 +115306,12 @@ PrefabInstance:
     - target: {fileID: 6218338651961857552, guid: 1947d4f232f191d4a955766039a94d24,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 6218338651961857552, guid: 1947d4f232f191d4a955766039a94d24,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 6218338651961857552, guid: 1947d4f232f191d4a955766039a94d24,
         type: 3}
