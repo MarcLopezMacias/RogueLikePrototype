@@ -20,7 +20,7 @@ public class Character : MonoBehaviour, IKillable, IDamageable<float>, IHealable
     // Start is called before the first frame update
     void Start()
     {
-        
+        Animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame

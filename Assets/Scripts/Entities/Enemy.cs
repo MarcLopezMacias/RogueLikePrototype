@@ -4,7 +4,6 @@ using UnityEngine;
 public class Enemy : Character
 
 {
-    // EXP OR SCORE AWARDED
     [SerializeField]
     protected int XP;
 
@@ -17,14 +16,11 @@ public class Enemy : Character
     [SerializeField]
     protected float AggroRange;
 
-    // Start is called before the first frame update
     void Start()
     {
         GameManager.Instance.GetComponent<EnemyManager>().EnemiesInGame.Add(this.gameObject);
-        Animator = gameObject.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
 
@@ -33,11 +29,11 @@ public class Enemy : Character
     public void Die()
     {
         if(Drops.Length != 0) GameManager.Instance.GetComponent<DropManager>().AttemptDrop(Drops);
-        Animator.SetBool("Alive", false);
         GameManager.Instance.Player.GetComponent<Player>().IncreaseXP(XP);
         GameManager.Instance.GetComponent<ScoreManager>().IncreaseScore(Score);
         GameManager.Instance.GetComponent<EnemyManager>().IncreaseEnemiesSlain(1);
         GameManager.Instance.GetComponent<EnemyManager>().Remove(this.gameObject);
+        // Animator.SetBool("Alive", false);
         Destroy(this.gameObject);
     }
 

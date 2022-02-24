@@ -8,7 +8,7 @@ using UnityEngine;
  *   del personatge a l'usuari.
  *  */
 
-public class ManualMovement : MonoBehaviour
+public class PlayerUserMovement : MonoBehaviour
 {
     private float Speed;
 

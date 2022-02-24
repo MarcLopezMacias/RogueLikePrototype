@@ -18,7 +18,6 @@ public class Player : Character
 
     private Vector2 StartingPosition;
 
-    [SerializeField]
     private float BumpDamage;
 
     [SerializeField]
