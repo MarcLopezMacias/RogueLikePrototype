@@ -45,9 +45,9 @@ public class Cat : Enemy, IDropper<GameObject>, IAttack<int>
         }
     }
 
-    public void Attack(int damageDone)
+    public void Attack(int AttackDamage)
     {
-        GameManager.Instance.Player.GetComponent<Player>().Damage(damageDone);
+        GameManager.Instance.Player.GetComponent<Player>().Damage(AttackDamage);
     }
 
     public void Drop(GameObject drop)

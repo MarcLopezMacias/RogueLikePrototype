@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    public Text FrameText;
-    private int FrameCount;
-
     public Text LifesText;
     public Text HealthText;
 
@@ -27,7 +24,6 @@ public class UIController : MonoBehaviour
     void Start()
     {
         mainLoop = true;
-        FrameCount = 0;
         GameOverString = "G A M E  O V E R";
     }
 
@@ -39,7 +35,6 @@ public class UIController : MonoBehaviour
 
     void FixedUpdate()
     {
-        FrameCount++;
         if (mainLoop)
         {
             LifesText.text = "Lifes: " + GameManager.Instance.Player.GetComponent<Player>().GetLifes();
@@ -56,7 +51,6 @@ public class UIController : MonoBehaviour
             EnemiesSlainText.text = "";
         } else
         {
-            FrameText.text = "Frames: " + FrameCount;
             LifesText.text = "";
             HealthText.text = "";
             EnemiesText.text = "";
@@ -67,8 +61,6 @@ public class UIController : MonoBehaviour
 
             EnemiesSlainText.text = "Enemies Slain: " + GameManager.Instance.GetComponent<EnemyManager>().GetEnemiesSlain();
         }
-        FrameCount++;
-        FrameText.text = "Frames: " + FrameCount;
     }
 
     public void GameOver()

@@ -21,6 +21,7 @@ public class Enemy : Character
     void Start()
     {
         GameManager.Instance.GetComponent<EnemyManager>().EnemiesInGame.Add(this.gameObject);
+        Animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -32,6 +33,7 @@ public class Enemy : Character
     public void Die()
     {
         if(Drops.Length != 0) GameManager.Instance.GetComponent<DropManager>().AttemptDrop(Drops);
+        Animator.SetBool("Alive", false);
         GameManager.Instance.Player.GetComponent<Player>().IncreaseXP(XP);
         GameManager.Instance.GetComponent<ScoreManager>().IncreaseScore(Score);
         GameManager.Instance.GetComponent<EnemyManager>().IncreaseEnemiesSlain(1);

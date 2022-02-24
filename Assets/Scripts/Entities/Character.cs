@@ -15,6 +15,8 @@ public class Character : MonoBehaviour, IKillable, IDamageable<float>, IHealable
     [SerializeField]
     protected int Lifes, MaxLifes;
 
+    protected Animator Animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +58,7 @@ public class Character : MonoBehaviour, IKillable, IDamageable<float>, IHealable
     {
         if(CompareTag("Enemy"))
         {
+            Lifes -= 1;
             if(Lifes <= 0)
             gameObject.GetComponent<Enemy>().Die();
         } else if(CompareTag("Player"))

@@ -11,6 +11,16 @@ public class Chase : MonoBehaviour
 
     float MoveSpeed;
 
+    private Animator Animator;
+
+    private Rigidbody2D EnemyRigidBody;
+
+    Vector3 target;
+
+    ColliderDistance2D Distance;
+
+    Vector2 faceDirection;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,20 +28,42 @@ public class Chase : MonoBehaviour
         MoveSpeed /= MoveSpeedDividingFactor;
         // TO FIX
         AggroRange = gameObject.GetComponent<Enemy>().GetAggroRange();
+
+        Animator = gameObject.GetComponent<Animator>();
+
+        EnemyRigidBody = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        // TO FIX
-        ColliderDistance2D Distance = gameObject.GetComponent<BoxCollider2D>().Distance(GameManager.Instance.Player.GetComponent<BoxCollider2D>());
+        Move();
+        Animate();
+    }
+
+    private void Move()
+    {
+        Distance = gameObject.GetComponent<BoxCollider2D>().Distance(GameManager.Instance.Player.GetComponent<BoxCollider2D>());
+        
+        //ShowDistanceFromPlayer();
+
         if (Distance.distance < AggroRange)
         {
-            Vector3 target = GameManager.Instance.Player.transform.position;
-            transform.LookAt(target);
-            transform.Rotate(new Vector3(0, -90, 0), Space.Self);//correcting the original rotation
-            transform.Translate(new Vector3(MoveSpeed * Time.deltaTime, 0, 0));
+            target = GameManager.Instance.Player.transform.position;
+            faceDirection = target - gameObject.transform.position;
+            EnemyRigidBody.velocity = new Vector2(faceDirection.x, faceDirection.y).normalized;
         }
+    }
+
+    private void Animate()
+    {
+        Animator.SetFloat("Horizontal", faceDirection.x);
+        Animator.SetFloat("Vertical", faceDirection.y);
+    }
+
+    private void ShowDistanceFromPlayer()
+    {
+        Debug.Log("Enemy distance from Player: " + Distance.distance);
     }
 
 }
