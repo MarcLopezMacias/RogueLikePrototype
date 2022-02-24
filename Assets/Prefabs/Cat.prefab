@@ -111,8 +111,8 @@ MonoBehaviour:
   Height: 1
   Speed: 1
   Weight: 3
-  Health: 5
-  MaxHealth: 5
+  Health: 1
+  MaxHealth: 1
   Lifes: 1
   MaxLifes: 1
   XP: 1

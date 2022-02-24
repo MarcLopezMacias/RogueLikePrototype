@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d0d5e88db3b6db489530bdee00bbb2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Animator: {fileID: -1993025202229793514}
 --- !u!114 &6218338651961857565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,7 +118,7 @@ MonoBehaviour:
   MaxHealth: 5
   Lifes: 2
   MaxLifes: 5
-  PlayerKind: 1
+  PlayerKind: 0
   BumpDamage: 1
   Level: 0
   XP: 0

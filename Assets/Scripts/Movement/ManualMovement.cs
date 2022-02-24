@@ -10,58 +10,76 @@ using UnityEngine;
 
 public class ManualMovement : MonoBehaviour
 {
+    private float Speed;
 
-    float Speed;
+    private float horizontalInput;
+    private float verticalInput;
 
-    float horizontalInput;
-    float verticalInput;
+    private Vector3 MousePosition;
 
-    Vector3 ToMove;
+    private Vector2 moveDirection;
+    private Vector2 faceDirection;
+
+    private Rigidbody2D PlayerRigidBody;
+    [SerializeField]
+    private Animator Animator;
 
     // Start is called before the first frame update
     void Start()
     {
         Speed = gameObject.GetComponent<Player>().GetSpeed();
+        PlayerRigidBody = gameObject.GetComponent<Rigidbody2D>();
+
+        Animator = gameObject.GetComponent<Animator>();
+    }
+
+    void Update()
+    {
+        ProcessInputs();
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-        verticalInput = Input.GetAxis("Vertical");
-        ToMove = new Vector3(horizontalInput, verticalInput, 0) * Speed * Time.deltaTime;
-        transform.Translate(ToMove);
-        // ShowMyMoves(horizontalInput, verticalInput);
+        Move();
+        Animate();
+        
+        // ShowInputs();
     }
 
-    public bool GetMoving()
+    private void ProcessInputs()
     {
-        if (MovingX() || MovingY()) return true;
-        else return false;
+        // ProcessKeyboard
+        horizontalInput = Input.GetAxisRaw("Horizontal");
+        verticalInput = Input.GetAxisRaw("Vertical");
+
+        moveDirection = new Vector2(horizontalInput, verticalInput).normalized;
+
+        // ProcessMouse
+        MousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        faceDirection = MousePosition - gameObject.transform.position;
+        faceDirection = faceDirection.normalized;
     }
 
-    public bool MovingX()
+    private void Move()
     {
-        if (horizontalInput > 0 || horizontalInput < 0) return true;
-        else return false;
+        PlayerRigidBody.velocity = new Vector2(moveDirection.x * Speed, moveDirection.y * Speed);
     }
 
-    public bool MovingY()
+    private void Animate()
     {
-        if (verticalInput > 0 || verticalInput < 0) return true;
-        else return false;
-    }
+        if(moveDirection.x != 0 || moveDirection.y != 0)
+        {
+            Animator.SetFloat("Horizontal", faceDirection.x);
+            Animator.SetFloat("Vertical", faceDirection.y);
+        } else
+        {
+            if (faceDirection.x > 0 && faceDirection.x > faceDirection.y) Animator.SetFloat("Horizontal", 0.1f);
+            else if (faceDirection.x < 0 && faceDirection.x < faceDirection.y) Animator.SetFloat("Horizontal", -0.1f);
+            else if (faceDirection.y > 0 && faceDirection.y > faceDirection.x) Animator.SetFloat("Vertical", 0.1f);
+            else if (faceDirection.y < 0 && faceDirection.y < faceDirection.x) Animator.SetFloat("Vertical", -0.1f);
 
-    public bool FacingRight()
-    {
-        if (horizontalInput > 0) return true;
-        else return false;
-    }
-
-    public bool FacingLeft()
-    {
-        if (horizontalInput < 0) return true;
-        else return false;
+        }
     }
 
     private void OnEnable()
@@ -69,16 +87,15 @@ public class ManualMovement : MonoBehaviour
         Start();
     }
 
-    public Vector3 GetToMove()
+    private void ShowInputs()
     {
-        return ToMove;
-    }
-
-    private void ShowMyMoves(float horizontal, float vertical)
-    {
-        if(horizontal != 0 || vertical != 0) {
-            Debug.Log("Should Move!! HORIZONTAL: " + horizontal + ". VERTICAL: " + vertical);
+        // Keyboard Inputs
+        if(horizontalInput != 0 || verticalInput != 0) {
+            Debug.Log("Should Move!! HORIZONTAL: " + horizontalInput + ". VERTICAL: " + verticalInput);
         }
+
+        // Mouse inputs
+        Debug.Log("Should be facing: " + faceDirection);
 
     }
 }
