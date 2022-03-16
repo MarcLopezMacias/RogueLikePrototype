@@ -119,10 +119,15 @@ MonoBehaviour:
   Lifes: 2
   MaxLifes: 5
   PlayerKind: 0
-  BumpDamage: 1
   Level: 0
   XP: 0
   XPRequiredToLevelUp: 0
+  WeaponSlots:
+  - {fileID: 11400000, guid: 5134aa13493dfe44f8ad54437246ba97, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!95 &-1993025202229793514
 Animator:
   serializedVersion: 3

@@ -16,10 +16,11 @@ MonoBehaviour:
   DropChance: 20
   Price: 5
   Type: 0
-  Image: {fileID: 0}
+  Image: {fileID: 21300022, guid: a0e7f1167efba544bb8d6e3198ae44f9, type: 3}
   Damage: 5
   Bullet: 7
   MaxCapacity: 28
   FireRate: 1
   BulletXShoot: 1
   ReloadTime: 2
+  firePoint: {fileID: 0}

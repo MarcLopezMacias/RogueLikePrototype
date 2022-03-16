@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("GameManager DESTROYED");
         }
         _instance = this;
-        DontDestroyOnLoad(_instance);
+        DontDestroyOnLoad(gameObject);
     }
 
     // Start is called before the first frame update
