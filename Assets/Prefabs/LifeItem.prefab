@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 4478123318757848858}
   - component: {fileID: 4478123318757848853}
   - component: {fileID: 6812721616300216654}
-  - component: {fileID: 8329028988093786761}
+  - component: {fileID: 6904840905367918406}
   m_Layer: 0
   m_Name: LifeItem
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -93,7 +93,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -109,7 +109,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 1.1}
   m_EdgeRadius: 0
---- !u!114 &8329028988093786761
+--- !u!114 &6904840905367918406
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,6 +118,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4478123318757848859}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43e3c8994ab86984db18eefb74791b78, type: 3}
+  m_Script: {fileID: 11500000, guid: d53d90da88c8f0b40a8b722953ff158d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

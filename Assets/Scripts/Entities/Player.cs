@@ -27,9 +27,6 @@ public class Player : Character
     [SerializeField]
     private int XPRequiredToLevelUp;
 
-    [SerializeField]
-    public List<Item> WeaponSlots;
-
     // Start is called before the first frame update
     void Start()
     {

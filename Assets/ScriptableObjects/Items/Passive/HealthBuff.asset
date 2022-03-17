@@ -16,5 +16,5 @@ MonoBehaviour:
   DropChance: 2
   Price: 250
   Type: 1
-  Image: {fileID: 0}
+  Image: {fileID: 21300000, guid: 222d62d87db5931498bb85845842b0d3, type: 3}
   AmountToBuff: 50

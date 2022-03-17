@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 6218338651961857566}
   - component: {fileID: 6218338651961857565}
   - component: {fileID: -1993025202229793514}
+  - component: {fileID: 1966739194564788153}
+  - component: {fileID: 3898928212851950416}
+  - component: {fileID: 8233246417891329288}
   m_Layer: 0
   m_Name: Brandon
   m_TagString: Player
@@ -119,15 +122,9 @@ MonoBehaviour:
   Lifes: 2
   MaxLifes: 5
   PlayerKind: 0
-  Level: 0
+  Level: 1
   XP: 0
-  XPRequiredToLevelUp: 0
-  WeaponSlots:
-  - {fileID: 11400000, guid: 5134aa13493dfe44f8ad54437246ba97, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  XPRequiredToLevelUp: 10
 --- !u!95 &-1993025202229793514
 Animator:
   serializedVersion: 3
@@ -147,3 +144,64 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1966739194564788153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6218338651961857564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c86ebdb346ba134c8f5f7bd840080e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityToSpawn: {fileID: 0}
+  ScriptableObjectInstance: {fileID: 0}
+--- !u!61 &3898928212851950416
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6218338651961857564}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.009091318, y: -0.009091139}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.61904764, y: 1}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6931734, y: 1.0579429}
+  m_EdgeRadius: 0
+--- !u!50 &8233246417891329288
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6218338651961857564}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
