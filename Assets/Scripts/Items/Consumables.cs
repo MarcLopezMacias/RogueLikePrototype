@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "ConsumableData", menuName = "ScriptableObjects/ConsumableData", order = 2)]
+[CreateAssetMenu(fileName = "New Consumable", menuName = "ScriptableObjects/ConsumableData", order = 2)]
 public class Consumables : Item
 {
 

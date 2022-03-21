@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cat : Enemy, IDropper<GameObject>, IAttack<int>
+public class Cat : Enemy, IAttack<int>
 {
     private Vector3 playerPosition, ownPosition;
 
@@ -50,8 +50,4 @@ public class Cat : Enemy, IDropper<GameObject>, IAttack<int>
         GameManager.Instance.Player.GetComponent<Player>().Damage(AttackDamage);
     }
 
-    public void Drop(GameObject drop)
-    {
-        throw new System.NotImplementedException();
-    }
 }

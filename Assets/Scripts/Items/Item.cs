@@ -4,10 +4,17 @@ using UnityEngine;
 
 public abstract class Item : ScriptableObject
 {
+    [Header("Name")]
     public string Name;
+
+    [Header("Type")]
+    public ItemType Type;
+
+    [Header("Item Stats")]
     public int DropChance;
     public int Price;
-    public ItemType Type;
+
+    [Header("Image")]
     public Sprite Image;
 
     public enum ItemType

@@ -13,14 +13,13 @@ MonoBehaviour:
   m_Name: EscopetaDeBolas
   m_EditorClassIdentifier: 
   Name: EscopetaDeBolas
+  Type: 0
   DropChance: 5
   Price: 25
-  Type: 0
   Image: {fileID: 21300000, guid: 4f2abf352097c5a4196021775f71ab2b, type: 3}
   Damage: 8
   Bullet: 8
   MaxCapacity: 64
-  FireRate: 1.8
+  FireRate: 2
   BulletXShoot: 5
-  ReloadTime: 4
-  firePoint: {fileID: 0}
+  ReloadTime: 5

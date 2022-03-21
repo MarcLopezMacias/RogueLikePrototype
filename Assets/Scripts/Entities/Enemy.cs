@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class Enemy : Character
+public class Enemy : Character, IDropper<Item>
 
 {
     [SerializeField]
@@ -28,7 +28,6 @@ public class Enemy : Character
 
     public void Die()
     {
-        if(Drops.Length != 0) GameManager.Instance.GetComponent<DropManager>().AttemptDrop(Drops);
         GameManager.Instance.Player.GetComponent<Player>().IncreaseXP(XP);
         GameManager.Instance.GetComponent<ScoreManager>().IncreaseScore(Score);
         GameManager.Instance.GetComponent<EnemyManager>().IncreaseEnemiesSlain(1);
@@ -46,6 +45,11 @@ public class Enemy : Character
     public float GetAggroRange()
     {
         return AggroRange;
+    }
+
+    public void Drop(Item drop)
+    {
+        Instantiate(drop, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
     }
 
 }
