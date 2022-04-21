@@ -1,26 +1,17 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Item : ScriptableObject
+public class Item : MonoBehaviour, ICollectible
 {
-    [Header("Name")]
-    public string Name;
+    public static event HandleItemCollected OnItemCollected;
+    public delegate void HandleItemCollected(ItemData itemData);
+    public ItemData specificItemData;
 
-    [Header("Type")]
-    public ItemType Type;
-
-    [Header("Item Stats")]
-    public int DropChance;
-    public int Price;
-
-    [Header("Image")]
-    public Sprite Image;
-
-    public enum ItemType
+    public void Collect()
     {
-        Active,
-        Passive,
-        Consumable
+        Destroy(gameObject);
+        OnItemCollected?.Invoke(specificItemData);
     }
 }

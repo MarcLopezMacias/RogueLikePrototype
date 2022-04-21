@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActiveItem : Item
+public class ActiveItem : ItemData
 {
 
     public enum ActiveType

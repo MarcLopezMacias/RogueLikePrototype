@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class Enemy : Character, IDropper<Item>
+public class Enemy : Character, IDropper<ItemData>
 
 {
     [SerializeField]
@@ -47,7 +47,7 @@ public class Enemy : Character, IDropper<Item>
         return AggroRange;
     }
 
-    public void Drop(Item drop)
+    public void Drop(ItemData drop)
     {
         Instantiate(drop, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
     }

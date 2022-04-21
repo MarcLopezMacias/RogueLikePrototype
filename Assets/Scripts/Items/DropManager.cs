@@ -4,22 +4,10 @@ using UnityEngine;
 
 public class DropManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public bool AttemptDrop(GameObject[] Drops)
     {
         foreach(GameObject Drop in Drops) {
-            if (Drop.GetComponent<Item>().DropChance <= Random.Range(0, 100)) return true; else return false;
+            if (Drop.GetComponent<ItemData>().DropChance <= Random.Range(0, 100)) return true; else return false;
         }
         return false;
     }
