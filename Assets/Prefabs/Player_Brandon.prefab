@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7199622230542040798}
   - component: {fileID: 7199622230542040793}
   - component: {fileID: 7199622230542040792}
+  - component: {fileID: 2907020127234096676}
   m_Layer: 0
   m_Name: Player_Brandon
   m_TagString: Player
@@ -203,5 +204,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f30679c336a044c9040f0ee3a9b25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Inventory:
-  - {fileID: 11400000, guid: 5134aa13493dfe44f8ad54437246ba97, type: 2}
+  inventory: []
+--- !u!114 &2907020127234096676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7199622230542040795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b5b99569b47793419235c6c59a48a6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

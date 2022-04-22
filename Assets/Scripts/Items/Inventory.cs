@@ -33,7 +33,7 @@ public class Inventory : MonoBehaviour
             InventoryItem newItem = new InventoryItem(itemData);
             inventory.Add(newItem);
             itemDictionary.Add(itemData, newItem);
-            Debug.Log($"Added {item.itemData.Name} for the first time.");
+            Debug.Log($"Added {newItem.itemData.Name} for the first time.");
             OnInventoryChange?.Invoke(inventory);
         }
     }

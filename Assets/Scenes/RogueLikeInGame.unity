@@ -113695,12 +113695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f30679c336a044c9040f0ee3a9b25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  inventory: []
 --- !u!4 &573017121
 Transform:
   m_ObjectHideFlags: 0
@@ -113713,7 +113708,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &969627188
 GameObject:
@@ -115438,7 +115433,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8783873179061282, guid: 839890f148c875c4691942c0d62f0ab2, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8783873179061282, guid: 839890f148c875c4691942c0d62f0ab2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -115480,6 +115475,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8783873179061293, guid: 839890f148c875c4691942c0d62f0ab2, type: 3}
+      propertyPath: specificItemData
+      value: 
+      objectReference: {fileID: 11400000, guid: 0f249a573938ac3488f35ed549318f7d,
+        type: 2}
     - target: {fileID: 8783873179061294, guid: 839890f148c875c4691942c0d62f0ab2, type: 3}
       propertyPath: m_Name
       value: ItemPrefab

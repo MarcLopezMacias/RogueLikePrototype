@@ -19,8 +19,9 @@ public class InventorySlot : MonoBehaviour
 
     public void DrawSlot(InventoryItem item)
     {
-        if (item == null)
+        if (item.itemData == null)
         {
+            Debug.Log($"{item.itemData.Name} was null");
             ClearSlot();
             return;
         }
@@ -29,11 +30,8 @@ public class InventorySlot : MonoBehaviour
         labelText.enabled = true;
         stackSizeText.enabled = true;
 
-        icon.sprite = item.itemData.Image;
+        icon.sprite = item.itemData.Icon;
         labelText.text = item.itemData.Name;
         stackSizeText.text = item.stackSize.ToString();
-
     }
-
-
 }

@@ -14,8 +14,8 @@ public abstract class ItemData : ScriptableObject
     public int DropChance;
     public int Price;
 
-    [Header("Image")]
-    public Sprite Image;
+    [Header("Icon")]
+    public Sprite Icon;
 
     public enum ItemType
     {

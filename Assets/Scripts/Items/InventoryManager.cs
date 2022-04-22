@@ -42,6 +42,7 @@ public class InventoryManager : MonoBehaviour
         for(int i = 0; i < inventory.Count; i++)
         {
             inventorySlots[i].DrawSlot(inventory[i]);
+            Debug.Log($"Drawn {inventory[i].itemData.Name} in slot {i}.");
         }
     }
 
