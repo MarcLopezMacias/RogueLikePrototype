@@ -24,9 +24,17 @@ public class Inventory : MonoBehaviour
     {
         if(itemDictionary.TryGetValue(itemData, out InventoryItem item))
         {
-            item.AddToStack();
-            Debug.Log($"{item.itemData.Name} stack size is now {item.stackSize}");
-            OnInventoryChange?.Invoke(inventory);
+            if(itemData.Type.ToString() == "ActiveType")
+            {
+                Debug.Log("Active Item");
+            }
+            else
+            {
+                item.AddToStack();
+                Debug.Log($"{item.itemData.Name} stack size is now {item.stackSize}");
+                OnInventoryChange?.Invoke(inventory);
+            }
+
         }
         else
         {

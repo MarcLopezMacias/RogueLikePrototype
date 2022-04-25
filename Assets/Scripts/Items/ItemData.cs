@@ -9,6 +9,12 @@ public abstract class ItemData : ScriptableObject
 
     [Header("Type")]
     public ItemType Type;
+    public enum ItemType
+    {
+        Active,
+        Passive,
+        Consumable
+    }
 
     [Header("Item Stats")]
     public int DropChance;
@@ -17,10 +23,4 @@ public abstract class ItemData : ScriptableObject
     [Header("Icon")]
     public Sprite Icon;
 
-    public enum ItemType
-    {
-        Active,
-        Passive,
-        Consumable
-    }
 }

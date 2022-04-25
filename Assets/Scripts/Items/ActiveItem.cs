@@ -5,10 +5,12 @@ using UnityEngine;
 public class ActiveItem : ItemData
 {
 
+    [Header("Active Types")]
+    public ActiveType activeTypes;
     public enum ActiveType
     {
-        Weapon,
-        Armor
+        Armor,
+        Weapon
     }
 
 }

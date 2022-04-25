@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public static EnemyManager EnemyManager;
     public static DropManager DropManager;
 
+    public Inventory PlayerInventory;
+
     private static Spawner spawner;
 
     private static GameObject MainCamera;
@@ -47,6 +49,8 @@ public class GameManager : MonoBehaviour
         MainCamera = GameObject.FindWithTag("MainCamera");
 
         spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
+
+        PlayerInventory = GameObject.Find("Inventory").GetComponent<Inventory>();
     }
 
     // Update is called once per frame

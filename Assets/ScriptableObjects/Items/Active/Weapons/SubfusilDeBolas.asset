@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7f8ad3d61dc5dcc4eb6bf225cd84bcd5, type: 3}
-  m_Name: EscopetaDeBolas
+  m_Name: SubfusilDeBolas
   m_EditorClassIdentifier: 
-  Name: EscopetaDeBolas
+  Name: Subfusil de Bolas
   Type: 0
-  DropChance: 5
-  Price: 25
-  Image: {fileID: 21300000, guid: 4f2abf352097c5a4196021775f71ab2b, type: 3}
-  Damage: 8
-  Bullet: 8
-  MaxCapacity: 64
-  FireRate: 2
-  BulletXShoot: 5
-  ReloadTime: 5
+  DropChance: 10
+  Price: 20
+  Icon: {fileID: 21300020, guid: a0e7f1167efba544bb8d6e3198ae44f9, type: 3}
+  activeTypes: 0
+  Damage: 3
+  Bullet: 30
+  MaxCapacity: 144
+  FireRate: 0.5
+  BulletXShoot: 1
+  ReloadTime: 3
