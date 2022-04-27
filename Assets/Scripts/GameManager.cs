@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         _player = GameObject.FindWithTag("Player");
+        PlayerInventory = _player.GetComponent<Inventory>();
 
         UIController = GameObject.Find("Canvas").GetComponent<UIController>();
         ScoreManager = gameObject.GetComponent<ScoreManager>();

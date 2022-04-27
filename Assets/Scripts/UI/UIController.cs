@@ -18,6 +18,8 @@ public class UIController : MonoBehaviour
     public Text EnemiesText;
     public Text EnemiesSlainText;
 
+    public Text BulletText;
+
     private bool mainLoop;
 
     // Start is called before the first frame update
@@ -37,29 +39,21 @@ public class UIController : MonoBehaviour
     {
         if (mainLoop)
         {
-            LifesText.text = "Lifes: " + GameManager.Instance.Player.GetComponent<Player>().GetLifes();
-            HealthText.text = "HP: " + GameManager.Instance.Player.GetComponent<Player>().GetHealth()
-            //   + " / " + GameManager.Instance.Player.GetComponent<Player>().GetMaxHealth();
-            ;
+            UpdateLifes();
+            UpdateHealth();
 
-            EnemiesText.text = "Threats: " + GameManager.Instance.GetComponent<EnemyManager>().GetNumberOfEnemiesAlive();
+            UpdateThreatsInRoom();
 
-            MaxScoreText.text = "Top Score: " + GameManager.Instance.GetComponent<ScoreManager>().GetScore();
+            UpdateScore();
 
-            GameOverText.text = "";
-            GameOverScoreText.text = "";
-            EnemiesSlainText.text = "";
+            UpdateBullets();
+
+            HideGameOverUI();
+            
         } else
         {
-            LifesText.text = "";
-            HealthText.text = "";
-            EnemiesText.text = "";
-            MaxScoreText.text = "";
-
-            GameOverText.text = GameOverString;
-            GameOverScoreText.text = "Final Score: " + GameManager.Instance.GetComponent<ScoreManager>().GetScore();
-
-            EnemiesSlainText.text = "Enemies Slain: " + GameManager.Instance.GetComponent<EnemyManager>().GetEnemiesSlain();
+            HideRegularUI();
+            ShowGameOverUI();
         }
     }
 
@@ -74,5 +68,58 @@ public class UIController : MonoBehaviour
         mainLoop = false;
         yield return new WaitForSeconds(GameOverScreenTime);
         
+    }
+
+    private void UpdateLifes()
+    {
+        LifesText.text = "Lifes: " + GameManager.Instance.Player.GetComponent<Player>().GetLifes();
+    }
+
+    private void UpdateHealth()
+    {
+        HealthText.text = "HP: " + GameManager.Instance.Player.GetComponent<Player>().GetHealth()
+//   + " / " + GameManager.Instance.Player.GetComponent<Player>().GetMaxHealth();
+;
+    }
+
+    private void UpdateThreatsInRoom()
+    {
+        EnemiesText.text = "Threats: " + GameManager.Instance.GetComponent<EnemyManager>().GetNumberOfEnemiesAlive();
+
+    }
+
+    private void UpdateScore()
+    {
+        MaxScoreText.text = "Top Score: " + GameManager.Instance.GetComponent<ScoreManager>().GetScore();
+
+    }
+
+    private void HideGameOverUI()
+    {
+        GameOverText.text = "";
+        GameOverScoreText.text = "";
+        EnemiesSlainText.text = "";
+    }
+
+    private void HideRegularUI()
+    {
+        LifesText.text = "";
+        HealthText.text = "";
+        EnemiesText.text = "";
+        MaxScoreText.text = "";
+    }
+
+    private void ShowGameOverUI()
+    {
+        GameOverText.text = GameOverString;
+        GameOverScoreText.text = "Final Score: " + GameManager.Instance.GetComponent<ScoreManager>().GetScore();
+
+        EnemiesSlainText.text = "Enemies Slain: " + GameManager.Instance.GetComponent<EnemyManager>().GetEnemiesSlain();
+    }
+
+    private void UpdateBullets()
+    {
+        Weapon[] bulletThing = GameManager.Instance.Player.GetComponentsInChildren<Weapon>();
+        BulletText.text = bulletThing[0].currentWeapon.CurrentBullets + " " + bulletThing[0].currentWeapon.TotalBulletsLeft;
     }
 }

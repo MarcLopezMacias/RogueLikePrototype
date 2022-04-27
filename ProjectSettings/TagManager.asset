@@ -5,10 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - onFloor
-  - Void
-  - Jumping
   - Item
+  - Bullet
   layers:
   - Default
   - TransparentFX

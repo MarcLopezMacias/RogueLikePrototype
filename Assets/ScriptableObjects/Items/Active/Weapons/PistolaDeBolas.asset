@@ -19,8 +19,14 @@ MonoBehaviour:
   Icon: {fileID: 21300022, guid: a0e7f1167efba544bb8d6e3198ae44f9, type: 3}
   activeTypes: 1
   Damage: 5
-  Bullet: 7
+  CurrentBullets: 7
+  MaxReloadBullets: 7
   MaxCapacity: 28
   FireRate: 1
+  FireForce: 1
   BulletXShoot: 1
   ReloadTime: 2
+  Reloading: 0
+  automaticReload: 1
+  BulletType: {fileID: 3932570784292595814, guid: b02dff4d3e478fa4399f604e27f7a22c,
+    type: 3}
