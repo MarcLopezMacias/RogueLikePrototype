@@ -17,9 +17,49 @@ public class WeaponScriptableObject : ActiveItem
     public float FireForce;
     public int BulletXShoot;
 
-    public float ReloadTime;
-    public bool Reloading;
-    public bool automaticReload;
-
     public GameObject BulletType;
+
+    public bool CanShoot()
+    {
+        return HasBullets(); // && !Reloading;
+    }
+
+    public bool HasBullets()
+    {
+        return CurrentBullets > 0;
+    }
+
+    public void UseBullet()
+    {
+        CurrentBullets--;
+    }
+
+    public void ResetWeapon()
+    {
+        CurrentBullets = MaxReloadBullets;
+        TotalBulletsLeft = MaxCapacity;
+    }
+
+    public void Resupply()
+    {
+        if(CanReload())
+        {
+            TotalBulletsLeft -= (MaxReloadBullets - CurrentBullets);
+            CurrentBullets = MaxReloadBullets;
+        } 
+        else
+        {
+            CurrentBullets += TotalBulletsLeft;
+            TotalBulletsLeft = 0;
+        }
+
+        
+    }
+
+    private bool CanReload()
+    {
+        return TotalBulletsLeft - (MaxReloadBullets - CurrentBullets) >= 0;
+    }
+
+
 }

@@ -24,14 +24,21 @@ public class Inventory : MonoBehaviour
     {
         if(itemDictionary.TryGetValue(itemData, out InventoryItem item))
         {
-            if(itemData.Type.ToString() == "ActiveType")
+            if(itemData.Type.ToString() == "Active")
             {
-                Debug.Log("Active Item");
+                ActiveItem activeItem = (ActiveItem)itemData;
+                // Debug.Log($"Active Item with type {activeItem.activeType}");
+                if (activeItem.activeType.ToString() == "Weapon")
+                {
+                    WeaponScriptableObject weapon = (WeaponScriptableObject)activeItem;
+                    weapon.ResetWeapon();
+                    // Debug.Log("ReloadWeapon");
+                }
             }
             else
             {
                 item.AddToStack();
-                Debug.Log($"{item.itemData.Name} stack size is now {item.stackSize}");
+                // Debug.Log($"{item.itemData.Name} stack size is now {item.stackSize}");
                 OnInventoryChange?.Invoke(inventory);
             }
 
@@ -41,7 +48,7 @@ public class Inventory : MonoBehaviour
             InventoryItem newItem = new InventoryItem(itemData);
             inventory.Add(newItem);
             itemDictionary.Add(itemData, newItem);
-            Debug.Log($"Added {newItem.itemData.Name} for the first time.");
+            // Debug.Log($"Added {newItem.itemData.Name} for the first time.");
             OnInventoryChange?.Invoke(inventory);
         }
     }

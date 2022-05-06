@@ -6,7 +6,7 @@ public class ActiveItem : ItemData
 {
 
     [Header("Active Types")]
-    public ActiveType activeTypes;
+    public ActiveType activeType;
     public enum ActiveType
     {
         Armor,

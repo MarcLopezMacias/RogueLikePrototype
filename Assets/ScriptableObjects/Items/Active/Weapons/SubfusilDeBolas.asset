@@ -17,10 +17,14 @@ MonoBehaviour:
   DropChance: 10
   Price: 20
   Icon: {fileID: 21300020, guid: a0e7f1167efba544bb8d6e3198ae44f9, type: 3}
-  activeTypes: 0
+  activeType: 1
   Damage: 3
-  Bullet: 30
+  CurrentBullets: 0
+  MaxReloadBullets: 30
+  TotalBulletsLeft: 0
   MaxCapacity: 144
   FireRate: 0.5
+  FireForce: 1
   BulletXShoot: 1
-  ReloadTime: 3
+  BulletType: {fileID: 3932570784292595814, guid: b02dff4d3e478fa4399f604e27f7a22c,
+    type: 3}

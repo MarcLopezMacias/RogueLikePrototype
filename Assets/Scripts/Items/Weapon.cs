@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+
     public WeaponScriptableObject currentWeapon;
 
     private Vector2 mousePosition;
@@ -19,8 +20,7 @@ public class Weapon : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         sceneCamera = Camera.main;
 
-        currentWeapon.CurrentBullets = currentWeapon.MaxReloadBullets;
-        currentWeapon.TotalBulletsLeft = currentWeapon.MaxCapacity;
+        currentWeapon.ResetWeapon();
     }
 
     void Update()
@@ -28,6 +28,16 @@ public class Weapon : MonoBehaviour
         UpdateMousePosition();
         UpdateShootingAngle();
         LetItRain();
+        UserAskedForResupply();
+    }
+
+    private void UserAskedForResupply()
+    {
+        if(Input.GetKeyDown("r"))
+        {
+            currentWeapon.Resupply();
+            Debug.Log("User asked for Ammo Resupply");
+        }
     }
 
     private void UpdateMousePosition()
@@ -44,58 +54,19 @@ public class Weapon : MonoBehaviour
 
     private void LetItRain()
     {
-        if(Input.GetMouseButtonDown(0) && CanShoot())
+        if (Input.GetMouseButtonDown(0) && currentWeapon.CanShoot())
         {
             Shoot();
         }
-    }
-
-    private bool CanShoot()
-    {
-        if(HasBullets() && !currentWeapon.Reloading)
-        {
-            return true;
-        } 
-        else
-        {
-            return false;
-        }
-    }
-
-    private bool HasBullets()
-    {
-        return currentWeapon.CurrentBullets > 0;
-    }
-
-    private IEnumerator Reload()
-    {
-        currentWeapon.Reloading = true;
-        yield return new WaitForSeconds(currentWeapon.ReloadTime);
-        currentWeapon.Reloading = false;
-        currentWeapon.CurrentBullets = currentWeapon.MaxReloadBullets;
     }
 
     private void Shoot()
     {
         Debug.Log("Player clicked and shot.");
         // SpawnBullet();
-        UseBullet();
+        currentWeapon.UseBullet();
     }
 
-    private void AutomaticReload()
-    {
-        if (!HasBullets())
-        {
-            Reload();
-        }
-    }
 
-    private void UseBullet()
-    {
-        currentWeapon.CurrentBullets--;
-        if (currentWeapon.automaticReload)
-        {
-            AutomaticReload();
-        }
-    }
+
 }
