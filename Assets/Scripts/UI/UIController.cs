@@ -119,7 +119,15 @@ public class UIController : MonoBehaviour
 
     private void UpdateBullets()
     {
-        Weapon[] bulletThing = GameManager.Instance.Player.GetComponentsInChildren<Weapon>();
-        BulletText.text = bulletThing[0].currentWeapon.CurrentBullets + " " + bulletThing[0].currentWeapon.TotalBulletsLeft;
+        Weapon weaponComponent;
+        weaponComponent = GameManager.Instance.Player.GetComponentInChildren<Weapon>();
+        if (weaponComponent.weaponData != null)
+        {
+            BulletText.text = weaponComponent.weaponData.CurrentBullets + " " + weaponComponent.weaponData.TotalBulletsLeft;
+        }
+        else
+        {
+            BulletText.text = "";
+        }
     }
 }

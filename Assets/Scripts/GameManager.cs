@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
         spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
 
         PlayerInventory = GameObject.Find("Inventory").GetComponent<Inventory>();
+
     }
 
     // Update is called once per frame
@@ -60,6 +61,10 @@ public class GameManager : MonoBehaviour
         if(_player == null)
         {
             _player = GameObject.FindWithTag("Player");
+        }
+        if (PlayerInventory == null)
+        {
+            PlayerInventory = GameObject.Find("Inventory").GetComponent<Inventory>();
         }
     }
 

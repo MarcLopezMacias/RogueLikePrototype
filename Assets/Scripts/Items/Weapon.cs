@@ -5,7 +5,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
 
-    public WeaponScriptableObject currentWeapon;
+    public WeaponScriptableObject weaponData;
 
     private Vector2 mousePosition;
 
@@ -20,7 +20,12 @@ public class Weapon : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         sceneCamera = Camera.main;
 
-        currentWeapon.ResetWeapon();
+        if (weaponData != null)
+        {
+            weaponData.ResetWeapon();
+            SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
+            sr.sprite = weaponData.Icon;
+        }
     }
 
     void Update()
@@ -33,9 +38,9 @@ public class Weapon : MonoBehaviour
 
     private void UserAskedForResupply()
     {
-        if(Input.GetKeyDown("r"))
+        if(Input.GetButtonDown("Reload"))
         {
-            currentWeapon.Resupply();
+            weaponData.Resupply();
             Debug.Log("User asked for Ammo Resupply");
         }
     }
@@ -54,7 +59,7 @@ public class Weapon : MonoBehaviour
 
     private void LetItRain()
     {
-        if (Input.GetMouseButtonDown(0) && currentWeapon.CanShoot())
+        if (Input.GetMouseButtonDown(0) && weaponData.CanShoot())
         {
             Shoot();
         }
@@ -64,7 +69,7 @@ public class Weapon : MonoBehaviour
     {
         Debug.Log("Player clicked and shot.");
         // SpawnBullet();
-        currentWeapon.UseBullet();
+        weaponData.UseBullet();
     }
 
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PassiveItem : MonoBehaviour
+public class PassiveItem : ItemData
 {
 
     [Header("Passive Types")]

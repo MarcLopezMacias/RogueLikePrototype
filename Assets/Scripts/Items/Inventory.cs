@@ -7,8 +7,39 @@ public class Inventory : MonoBehaviour
 {
     public static event Action<List<InventoryItem>> OnInventoryChange;
 
-    public List<InventoryItem> inventory = new List<InventoryItem>();
-    private Dictionary<ItemData, InventoryItem> itemDictionary = new Dictionary<ItemData, InventoryItem>();
+    public List<InventoryItem> fancyInventory = new List<InventoryItem>();
+    private Dictionary<ItemData, InventoryItem> fancyDictionary = new Dictionary<ItemData, InventoryItem>();
+
+    private List<WeaponScriptableObject> weapons = new List<WeaponScriptableObject>();
+
+    private int currentSlot = 1;
+    private Weapon weaponComponent;
+
+    private int timeInterval = 1;
+
+    void Update()
+    {
+        if (Input.GetButtonDown("SwitchWeapon"))
+        {
+            if (CanSwitchWeapon())
+            {
+                SwitchWeapon();
+            }
+        }
+
+        if(Input.GetButtonDown("Heal"))
+        {
+            if(CanHeal())
+            {
+                Heal();
+            }
+        }
+
+        if (weaponComponent == null)
+        {
+            weaponComponent = GameManager.Instance.Player.GetComponentInChildren<Weapon>();
+        }
+    }
 
     private void OnEnable()
     {
@@ -22,49 +53,133 @@ public class Inventory : MonoBehaviour
 
     public void Add(ItemData itemData)
     {
-        if(itemDictionary.TryGetValue(itemData, out InventoryItem item))
+            // ALREADY IN INVENTORY
+        if(fancyDictionary.TryGetValue(itemData, out InventoryItem item))
         {
-            if(itemData.Type.ToString() == "Active")
+            // IF ITS A WEAPON or non-stackable?
+            if (itemData.Type.ToString() == "Active")
             {
                 ActiveItem activeItem = (ActiveItem)itemData;
-                // Debug.Log($"Active Item with type {activeItem.activeType}");
                 if (activeItem.activeType.ToString() == "Weapon")
                 {
                     WeaponScriptableObject weapon = (WeaponScriptableObject)activeItem;
                     weapon.ResetWeapon();
-                    // Debug.Log("ReloadWeapon");
                 }
             }
             else
             {
                 item.AddToStack();
-                // Debug.Log($"{item.itemData.Name} stack size is now {item.stackSize}");
-                OnInventoryChange?.Invoke(inventory);
+                Debug.Log($"{item.itemData.Name} stack size is now {item.stackSize}");
+                OnInventoryChange?.Invoke(fancyInventory);
             }
 
         }
+            // FIRST TIME
         else
         {
+                // ADD IT TO INVENTORY
             InventoryItem newItem = new InventoryItem(itemData);
-            inventory.Add(newItem);
-            itemDictionary.Add(itemData, newItem);
-            // Debug.Log($"Added {newItem.itemData.Name} for the first time.");
-            OnInventoryChange?.Invoke(inventory);
+            fancyInventory.Add(newItem);
+            fancyDictionary.Add(itemData, newItem);
+
+            // IF ITS A WEAPON or non-stackable?
+            if (itemData.Type.ToString() == "Active")
+            {
+                ActiveItem activeItem = (ActiveItem)itemData;
+                if (activeItem.activeType.ToString() == "Weapon")
+                {
+                    WeaponScriptableObject weapon = (WeaponScriptableObject)activeItem;
+                    weapon.ResetWeapon();
+                    currentSlot = fancyInventory.Count;
+                    UpdateWeapon(weapon);
+                    weapons.Add(weapon);
+                }
+            }
+
+            Debug.Log($"Added {newItem.itemData.Name} for the first time.");
+            OnInventoryChange?.Invoke(fancyInventory);
         }
     }
 
     public void Remove(ItemData itemData)
     {
-        if(itemDictionary.TryGetValue(itemData, out InventoryItem item))
+        if(fancyDictionary.TryGetValue(itemData, out InventoryItem item))
         {
             item.RemoveFromStack();
             if(item.stackSize == 0)
             {
-                inventory.Remove(item);
-                itemDictionary.Remove(itemData);
+                fancyInventory.Remove(item);
+                fancyDictionary.Remove(itemData);
+                if (itemData.Type.ToString() == "Active")
+                {
+                    ActiveItem activeItem = (ActiveItem)itemData;
+                    if (activeItem.activeType.ToString() == "Weapon")
+                    {
+                        WeaponScriptableObject weapon = (WeaponScriptableObject)activeItem;
+                        weapons.Remove(weapon);
+                    }
+                }
             }
-            OnInventoryChange?.Invoke(inventory);
+            OnInventoryChange?.Invoke(fancyInventory);
         }
     }
+
+    private bool CanSwitchWeapon()
+    {
+        return weapons.Count > 1;
+    }
+
+    private void SwitchWeapon()
+    {
+        if (currentSlot == weapons.Count)
+        {
+            currentSlot = 0;
+        }
+        else currentSlot += 1;
+
+        weaponComponent.weaponData = weapons[currentSlot];
+        weaponComponent.GetComponent<SpriteRenderer>().sprite = weapons[currentSlot].Icon;
+        
+        Debug.Log($"Switched to slot {currentSlot}");
+    }
+
+    public void UpdateWeapon(WeaponScriptableObject newWeaponData)
+    {
+        if (weaponComponent == null)
+        {
+            Debug.Log("Failed at Updating Weapon. Weapon Component NOT FOUND. Retrying soon.");
+            StartCoroutine(RetrySoon(newWeaponData, timeInterval));
+        }
+        else
+        {
+            Debug.Log($"Weapon Data: {newWeaponData} \n" +
+                $"Weapon Component: {weaponComponent}");
+            weaponComponent.weaponData = newWeaponData;
+            weaponComponent.GetComponent<SpriteRenderer>().sprite = newWeaponData.Icon;
+        }
+    }
+
+    private IEnumerator RetrySoon(WeaponScriptableObject weaponData, int seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        UpdateWeapon(weaponData);
+    }
+
+    private bool CanHeal()
+    {
+        foreach (InventoryItem item in fancyInventory)
+        {
+            if (item.itemData.Type.ToString() == "Consumable") return true;
+        }
+        return false;
+    }
+
+    private void Heal()
+    {
+        // TO DO
+        // GameManager.Instance.Player.Heal();
+        // consumables.Remove("Restore HP");
+    }
+
 
 }

@@ -14,4 +14,9 @@ public class Item : MonoBehaviour, ICollectible
         Destroy(gameObject);
         OnItemCollected?.Invoke(specificItemData);
     }
+
+    void Start()
+    {
+        gameObject.GetComponent<SpriteRenderer>().sprite = specificItemData.Icon;
+    }
 }
