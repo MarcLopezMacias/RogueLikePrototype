@@ -27,7 +27,7 @@ public class PlayerUserMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Speed = gameObject.GetComponent<Player>().GetSpeed();
+        Speed = gameObject.GetComponent<Player>().playerData.Speed;
         PlayerRigidBody = gameObject.GetComponent<Rigidbody2D>();
 
         Animator = gameObject.GetComponent<Animator>();

@@ -31,7 +31,7 @@ public class Growth : Skill
     void Start()
     {
         RegularScale = transform.localScale;
-        MaxHeight = transform.localScale.x * gameObject.GetComponent<Player>().GetHeight() * HeightMultiplier;
+        MaxHeight = transform.localScale.x * gameObject.GetComponent<Player>().playerData.Height * HeightMultiplier;
     }
 
     // Update is called once per frame
@@ -49,7 +49,7 @@ public class Growth : Skill
         for(int i = 0; i < Duration / 3; i++)
         {
             yield return new WaitForSeconds(1);
-            float Height = gameObject.GetComponent<Player>().GetHeight();
+            float Height = gameObject.GetComponent<Player>().playerData.Height;
             if(Height < MaxHeight)
             {
                 Vector3 tempScale = transform.localScale;

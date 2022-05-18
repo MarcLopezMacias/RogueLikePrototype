@@ -23,8 +23,8 @@ public class HealthBarScript : MonoBehaviour
         {
             Start();
         }
-        CurrentHealth = PlayerController.GetHealth();
-        MaxHealth = PlayerController.GetMaxHealth();
+        CurrentHealth = PlayerController.playerData.Health;
+        MaxHealth = PlayerController.playerData.MaxHealth;
         HealthBar.fillAmount = CurrentHealth / MaxHealth;
         
         // Debug.Log("%: " + CurrentHealth / MaxHealth + "Current: " + CurrentHealth + ". Max: " + MaxHealth);

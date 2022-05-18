@@ -21,7 +21,7 @@ public class HorizontalMovement : MonoBehaviour
     private void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        speed = gameObject.GetComponent<Player>().GetSpeed();
+        speed = gameObject.GetComponent<Player>().playerData.Speed;
     }
 
     // get input values each frame

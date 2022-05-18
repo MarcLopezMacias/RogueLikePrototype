@@ -5,14 +5,11 @@ using UnityEngine.UI;
 
 public class DisplayPlayerInfo : MonoBehaviour
 {
-
     GameObject Player;
 
     private Text NameInfo, KindInfo;
 
     string Name, ResultText;
-
-    PlayerKind Kind;
 
     float Height, Speed, Weight;
 
@@ -27,14 +24,10 @@ public class DisplayPlayerInfo : MonoBehaviour
 
         Player = GameObject.Find("Female");
 
-        Name = Player.GetComponent<Player>().GetName();
-        Kind = Player.GetComponent<Player>().GetKind();
-
-        Height = Player.GetComponent<Player>().GetHeight();
-        Speed = Player.GetComponent<Player>().GetSpeed();
-        Weight = Player.GetComponent<Player>().GetWeight();
-
-        ResultText = Name + " the " + Kind.ToString();
+        Name = Player.GetComponent<Player>().playerData.Name;
+        Height = Player.GetComponent<Player>().playerData.Height;
+        Speed = Player.GetComponent<Player>().playerData.Speed;
+        Weight = Player.GetComponent<Player>().playerData.Weight;
 
         NameInfo.text = ResultText;
 

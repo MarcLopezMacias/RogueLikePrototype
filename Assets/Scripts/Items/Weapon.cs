@@ -10,6 +10,7 @@ public class Weapon : MonoBehaviour
     private Vector2 mousePosition;
 
     private float aimAngle;
+    private Vector2 aimDirection;
     public Transform firePoint;
 
     public Rigidbody2D rb;
@@ -52,7 +53,7 @@ public class Weapon : MonoBehaviour
 
     private void UpdateShootingAngle()
     {
-        Vector2 aimDirection = mousePosition - rb.position;
+        aimDirection = mousePosition - rb.position;
         aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
         rb.rotation = aimAngle;
     }
@@ -68,6 +69,14 @@ public class Weapon : MonoBehaviour
     private void Shoot()
     {
         Debug.Log("Player clicked and shot.");
+        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, aimDirection);
+        Debug.Log($"Hit: {hit.collider}");
+        Enemy enemy = hit.collider.transform.gameObject.GetComponent<Enemy>();
+        if (enemy != null)
+        {
+            Debug.Log($"A {enemy}!");
+            enemy.Damage(weaponData.Damage);
+        }
         // SpawnBullet();
         weaponData.UseBullet();
     }

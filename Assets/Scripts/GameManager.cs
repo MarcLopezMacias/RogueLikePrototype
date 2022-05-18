@@ -19,8 +19,8 @@ public class GameManager : MonoBehaviour
     public static DropManager DropManager;
 
     public Inventory PlayerInventory;
+    public Weapon PlayerWeaponComponent;
 
-    private static Spawner spawner;
 
     private static GameObject MainCamera;
 
@@ -41,15 +41,13 @@ public class GameManager : MonoBehaviour
         _player = GameObject.FindWithTag("Player");
         PlayerInventory = _player.GetComponent<Inventory>();
 
-        UIController = GameObject.Find("Canvas").GetComponent<UIController>();
+        UIController = gameObject.GetComponent<UIController>();
         ScoreManager = gameObject.GetComponent<ScoreManager>();
 
         EnemyManager = gameObject.GetComponent<EnemyManager>();
         DropManager = gameObject.GetComponent<DropManager>();
 
         MainCamera = GameObject.FindWithTag("MainCamera");
-
-        spawner = GameObject.Find("Spawner").GetComponent<Spawner>();
 
         PlayerInventory = GameObject.Find("Inventory").GetComponent<Inventory>();
 
@@ -65,6 +63,10 @@ public class GameManager : MonoBehaviour
         if (PlayerInventory == null)
         {
             PlayerInventory = GameObject.Find("Inventory").GetComponent<Inventory>();
+        }
+        if (_player != null && PlayerWeaponComponent == null)
+        {
+            PlayerWeaponComponent = GameManager.Instance.Player.GetComponentInChildren<Weapon>();
         }
     }
 

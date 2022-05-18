@@ -7,8 +7,6 @@ public class Chase : MonoBehaviour
     [SerializeField]
     private int MoveSpeedDividingFactor;
 
-    float AggroRange;
-
     float MoveSpeed;
 
     private Animator Animator;
@@ -24,10 +22,8 @@ public class Chase : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MoveSpeed = gameObject.GetComponent<Enemy>().GetSpeed();
+        MoveSpeed = gameObject.GetComponent<Enemy>().enemyData.Speed;
         MoveSpeed /= MoveSpeedDividingFactor;
-        // TO FIX
-        AggroRange = gameObject.GetComponent<Enemy>().GetAggroRange();
 
         Animator = gameObject.GetComponent<Animator>();
 
@@ -47,7 +43,7 @@ public class Chase : MonoBehaviour
         
         //ShowDistanceFromPlayer();
 
-        if (Distance.distance < AggroRange)
+        if (Distance.distance <= gameObject.GetComponent<Enemy>().enemyData.AggroRange)
         {
             target = GameManager.Instance.Player.transform.position;
             faceDirection = target - gameObject.transform.position;

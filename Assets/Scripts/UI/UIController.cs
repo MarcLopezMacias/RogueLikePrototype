@@ -72,12 +72,12 @@ public class UIController : MonoBehaviour
 
     private void UpdateLifes()
     {
-        LifesText.text = "Lifes: " + GameManager.Instance.Player.GetComponent<Player>().GetLifes();
+        LifesText.text = "Lifes: " + GameManager.Instance.Player.GetComponent<Player>().playerData.Lifes;
     }
 
     private void UpdateHealth()
     {
-        HealthText.text = "HP: " + GameManager.Instance.Player.GetComponent<Player>().GetHealth()
+        HealthText.text = "HP: " + GameManager.Instance.Player.GetComponent<Player>().playerData.Health
 //   + " / " + GameManager.Instance.Player.GetComponent<Player>().GetMaxHealth();
 ;
     }

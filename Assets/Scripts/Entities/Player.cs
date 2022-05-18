@@ -3,51 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum PlayerKind
+public class Player : Character, IKillable, IDamageable<float>, IHealable<float>
 {
-    Sorcerer,
-    Assassin,
-    Barbarian,
-    Flying_Machine
-}
-
-public class Player : Character
-{
-    [SerializeField]
-    private PlayerKind PlayerKind;
-
+    public PlayerData playerData;
     private Vector2 StartingPosition;
-
-    private float BumpDamage;
-
-    [SerializeField]
-    private int Level;
-    [SerializeField]
-    private int XP;
-    [SerializeField]
-    private int XPRequiredToLevelUp;
 
     // Start is called before the first frame update
     void Start()
     {
         StartingPosition = transform.position;
-        BumpDamage = Height * Weight / 100;
+        playerData.BumpDamage = playerData.Height * playerData.Weight / 100;
+        playerData.ResetPlayerData();
     }
 
     // Update is called once per frame
     void Update()
     {
 
-    }
-
-    public PlayerKind GetKind()
-    {
-        return PlayerKind;
-    }
-
-    private bool IsPlayerAlive()
-    {
-        if (Health > 0) return true; else return false;
     }
 
     private void OnDestroy()
@@ -60,59 +32,37 @@ public class Player : Character
         transform.position = StartingPosition;
     }
 
+    // CHEEKY METHODS
     public void DecreaseLifes(int amount)
     {
-        Lifes -= amount;
-        if (Lifes <= 0)
+        playerData.Lifes -= amount;
+        if (playerData.Lifes <= 0)
         {
             GameManager.Instance.GameOver();
         } else
         {
-            Health = MaxHealth;
+            playerData.Health = playerData.MaxHealth;
             GameManager.Instance.ResetStage();
         }
     }
 
-    public void IncreaseLifes(int amount)
+    public void Kill()
     {
-        if (Lifes < MaxLifes) Lifes += amount;
+        DecreaseLifes(1);
     }
 
-    public void IncreaseXP(int value)
+    public void Heal(float amountHealed)
     {
-        XP += value;
-        CheckIncreaseLevel();
+        playerData.Health += amountHealed;
     }
 
-    private void CheckIncreaseLevel()
+    public void Damage(float damageTaken)
     {
-        if(XP >= XPRequiredToLevelUp)
+        playerData.Health -= damageTaken;
+        if (playerData.Health <= 0)
         {
-            IncreaseLevel();
-            DecreaseXP(XPRequiredToLevelUp);
+            Kill();
         }
     }
-
-    private void IncreaseLevel()
-    {
-        Level += 1;
-    }
-
-    public void DecreaseXP(int value)
-    {
-        XP -= value;
-    }
-
-    public void ResetXP()
-    {
-        XP = 0;
-    }
-
-    public float GetBumpDamage()
-    {
-        return BumpDamage;
-    }
-
-
 
 }

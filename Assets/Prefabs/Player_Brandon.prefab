@@ -114,18 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40f845287d8c36042a2b32de3919276d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Brandon
-  Height: 1.69
-  Speed: 5
-  Weight: 60
-  Health: 5
-  MaxHealth: 5
-  Lifes: 2
-  MaxLifes: 5
-  PlayerKind: 1
-  Level: 1
-  XP: 0
-  XPRequiredToLevelUp: 1
+  playerData: {fileID: 11400000, guid: dd5927df585554f4d803517951e74696, type: 2}
 --- !u!95 &7199622230542040799
 Animator:
   serializedVersion: 3
@@ -158,7 +147,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.009091318, y: -0.009091139}
+  m_Offset: {x: 0.0001693964, y: -0.14244509}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -169,7 +158,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6931734, y: 1.0579429}
+  m_Size: {x: 0.52648103, y: 0.7134452}
   m_EdgeRadius: 0
 --- !u!50 &7199622230542040793
 Rigidbody2D:
@@ -204,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02f30679c336a044c9040f0ee3a9b25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventory: []
+  fancyInventory: []
 --- !u!114 &2907020127234096676
 MonoBehaviour:
   m_ObjectHideFlags: 0

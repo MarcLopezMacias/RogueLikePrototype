@@ -37,7 +37,7 @@ public class Inventory : MonoBehaviour
 
         if (weaponComponent == null)
         {
-            weaponComponent = GameManager.Instance.Player.GetComponentInChildren<Weapon>();
+            weaponComponent = GameManager.Instance.PlayerWeaponComponent;
         }
     }
 
