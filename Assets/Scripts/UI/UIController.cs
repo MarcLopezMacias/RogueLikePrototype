@@ -20,12 +20,9 @@ public class UIController : MonoBehaviour
 
     public Text BulletText;
 
-    private bool mainLoop;
-
     // Start is called before the first frame update
     void Start()
-    {
-        mainLoop = true;
+    { 
         GameOverString = "G A M E  O V E R";
     }
 
@@ -37,35 +34,37 @@ public class UIController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (mainLoop)
+        if(GameManager.Instance.InGameScene())
         {
-            UpdateLifes();
-            UpdateHealth();
+            if (GameManager.Instance.MainLoop)
+            {
+                UpdateLifes();
+                UpdateHealth();
 
-            UpdateThreatsInRoom();
+                UpdateThreatsInRoom();
 
-            UpdateScore();
+                UpdateScore();
 
-            UpdateBullets();
+                UpdateBullets();
 
-            HideGameOverUI();
-            
-        } else
-        {
-            HideRegularUI();
-            ShowGameOverUI();
+                HideGameOverUI();
+
+            }
+            else
+            {
+                HideRegularUI();
+                ShowGameOverUI();
+            }
         }
     }
 
     public void GameOver()
     {
-        mainLoop = false;
         StartCoroutine(DisplayGameOverScreen());
     }
 
     private IEnumerator DisplayGameOverScreen()
     {
-        mainLoop = false;
         yield return new WaitForSeconds(GameOverScreenTime);
         
     }

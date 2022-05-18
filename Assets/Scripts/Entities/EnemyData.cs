@@ -24,6 +24,6 @@ public class EnemyData : ScriptableObject
     public void ResetStats()
     {
         if (Health < MaxHealth) Health = MaxHealth;
-        if (Lifes == 0) Lifes = MaxLifes;
+        if (Lifes <= 0) Lifes = MaxLifes;
     }
 }

@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Subfusil de Bolas
   Type: 0
-  DropChance: 10
-  Price: 20
+  DropChance: 1
+  Price: 100
   Icon: {fileID: 21300020, guid: a0e7f1167efba544bb8d6e3198ae44f9, type: 3}
   activeType: 1
   Damage: 3
-  CurrentBullets: 28
+  CurrentBullets: 30
   MaxReloadBullets: 30
   TotalBulletsLeft: 60
   MaxCapacity: 60

@@ -14,9 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: 1 UP
   Type: 2
-  DropChance: 2
-  Price: 50
+  DropChance: 5
+  Price: 30
   Icon: {fileID: 21300000, guid: 222d62d87db5931498bb85845842b0d3, type: 3}
-  consumableTypes: 0
   AmountToConsume: 1
   ItemAmount: 1

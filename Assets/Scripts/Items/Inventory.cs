@@ -29,10 +29,7 @@ public class Inventory : MonoBehaviour
 
         if(Input.GetButtonDown("Heal"))
         {
-            if(CanHeal())
-            {
-                Heal();
-            }
+            AttemptHeal();
         }
 
         if (weaponComponent == null)
@@ -152,8 +149,6 @@ public class Inventory : MonoBehaviour
         }
         else
         {
-            Debug.Log($"Weapon Data: {newWeaponData} \n" +
-                $"Weapon Component: {weaponComponent}");
             weaponComponent.weaponData = newWeaponData;
             weaponComponent.GetComponent<SpriteRenderer>().sprite = newWeaponData.Icon;
         }
@@ -165,20 +160,25 @@ public class Inventory : MonoBehaviour
         UpdateWeapon(weaponData);
     }
 
-    private bool CanHeal()
+    private void AttemptHeal()
+    {
+        Consumables HealthPot = FindThePot();
+        if(HealthPot != null)
+        {
+            GameManager.Instance.Player.GetComponent<Player>().Heal(HealthPot.AmountToConsume);
+        }
+    }
+
+    private Consumables FindThePot()
     {
         foreach (InventoryItem item in fancyInventory)
         {
-            if (item.itemData.Type.ToString() == "Consumable") return true;
+            if (item.itemData.Name.ToString() == "HealthPot")
+            {
+                return (Consumables)item.itemData;
+            }
         }
-        return false;
-    }
-
-    private void Heal()
-    {
-        // TO DO
-        // GameManager.Instance.Player.Heal();
-        // consumables.Remove("Restore HP");
+        return null;
     }
 
 

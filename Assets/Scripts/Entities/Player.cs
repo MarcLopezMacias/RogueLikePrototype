@@ -54,15 +54,18 @@ public class Player : Character, IKillable, IDamageable<float>, IHealable<float>
     public void Heal(float amountHealed)
     {
         playerData.Health += amountHealed;
+        if (playerData.Health > playerData.MaxHealth) playerData.Health = playerData.MaxHealth;
     }
 
     public void Damage(float damageTaken)
     {
         playerData.Health -= damageTaken;
-        if (playerData.Health <= 0)
-        {
-            Kill();
-        }
+        if (playerData.Health <= 0) Kill();
+    }
+
+    public void Reset()
+    {
+        Start();
     }
 
 }

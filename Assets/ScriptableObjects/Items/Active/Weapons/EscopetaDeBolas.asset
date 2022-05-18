@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: EscopetaDeBolas
   Type: 0
-  DropChance: 5
-  Price: 25
+  DropChance: 2
+  Price: 50
   Icon: {fileID: 21300018, guid: a0e7f1167efba544bb8d6e3198ae44f9, type: 3}
   activeType: 1
   Damage: 8

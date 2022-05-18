@@ -10,15 +10,26 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>
     public EnemyData enemyData;
     public Animator animator;
 
+    private bool alive;
+
+    void Awake()
+    {
+        animator = gameObject.GetComponent<Animator>();
+        animator.SetBool("Alive", true);
+    }
+
     void Start()
     {
         GameManager.Instance.GetComponent<EnemyManager>().EnemiesInGame.Add(this.gameObject);
         enemyData.ResetStats();
+        animator.SetBool("Alive", true);
+
     }
 
     void Update()
     {
-
+        alive = enemyData.Health > 0;
+        if (!alive) animator.SetBool("Alive", false);
     }
 
     public void Die()
@@ -27,7 +38,6 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>
         GameManager.Instance.GetComponent<ScoreManager>().IncreaseScore(enemyData.Score);
         GameManager.Instance.GetComponent<EnemyManager>().IncreaseEnemiesSlain(1);
         GameManager.Instance.GetComponent<EnemyManager>().Remove(this.gameObject);
-        // Animator.SetBool("Alive", false);
         AttemptDrop(enemyData.DropList);
         Destroy(this.gameObject);
     }
@@ -52,11 +62,18 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>
         else return false;
     }
 
-    private bool AttemptDrop(GameObject[] Drops)
+    private bool AttemptDrop(GameObject[] dropList)
     {
-        foreach (GameObject Drop in Drops)
+        foreach (GameObject drop in dropList)
         {
-            if (Drop.GetComponent<ItemData>().DropChance <= UnityEngine.Random.Range(0, 100)) return true; else return false;
+            ItemData item = drop.GetComponent<Item>().specificItemData;
+            float chance = item.DropChance;
+            float upToOneHundred = UnityEngine.Random.Range(0, 100);
+            if (upToOneHundred <= chance)
+            {
+                Debug.Log($"Dropped {item.Name}");
+                Drop(drop);
+            }
         }
         return false;
     }

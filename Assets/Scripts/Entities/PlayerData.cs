@@ -82,5 +82,4 @@ public class PlayerData : ScriptableObject
     {
         Lifes = MaxLifes;
     }
-
 }

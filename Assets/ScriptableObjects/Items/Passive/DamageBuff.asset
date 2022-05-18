@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: DamageBuff
   Type: 1
-  DropChance: 5
-  Price: 50
-  Icon: {fileID: 21300000, guid: eab87f10d2afa594c92ed3d29451b618, type: 3}
+  DropChance: 1
+  Price: 100
+  Icon: {fileID: 21300000, guid: 80e159dab3e6f1142bc5062eb184ccaf, type: 3}
   AmountToBuff: 20

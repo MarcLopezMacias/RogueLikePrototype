@@ -68,19 +68,20 @@ public class Weapon : MonoBehaviour
 
     private void Shoot()
     {
-        Debug.Log("Player clicked and shot.");
         RaycastHit2D hit = Physics2D.Raycast(firePoint.position, aimDirection);
-        Debug.Log($"Hit: {hit.collider}");
         Enemy enemy = hit.collider.transform.gameObject.GetComponent<Enemy>();
+        // BULLET FEEDBACK
         if (enemy != null)
         {
-            Debug.Log($"A {enemy}!");
+            IncreaseScore();
             enemy.Damage(weaponData.Damage);
         }
-        // SpawnBullet();
         weaponData.UseBullet();
     }
 
-
+    private void IncreaseScore()
+    {
+        GameManager.Instance.GetComponent<ScoreManager>().IncreaseScore(1);
+    }
 
 }

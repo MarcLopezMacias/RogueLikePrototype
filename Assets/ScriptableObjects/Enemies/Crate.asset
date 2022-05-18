@@ -16,9 +16,9 @@ MonoBehaviour:
   Height: 1
   Speed: 0
   Weight: 5
-  Health: -4
+  Health: -0.16610003
   MaxHealth: 1
-  Lifes: -14
+  Lifes: 0
   MaxLifes: 1
   AttackDamage: 0
   AggroRange: 0
@@ -28,5 +28,4 @@ MonoBehaviour:
   - {fileID: 6302590516226146340, guid: 94084ee3e7b71af4986c5c3472868b7f, type: 3}
   - {fileID: 7935000967339715316, guid: c5e6151dcbb810c459bb2b1043c97df8, type: 3}
   - {fileID: 1213118706352963534, guid: d50533d2ac93b5d4396534ea8f4b925e, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7645452208743938966, guid: 6ae890e212e3d684ebf2a6a341f1e505, type: 3}

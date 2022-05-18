@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Pistola
   Type: 0
-  DropChance: 20
-  Price: 10
+  DropChance: 5
+  Price: 25
   Icon: {fileID: 21300022, guid: a0e7f1167efba544bb8d6e3198ae44f9, type: 3}
   activeType: 1
   Damage: 5
-  CurrentBullets: 0
+  CurrentBullets: 6
   MaxReloadBullets: 7
   TotalBulletsLeft: 21
   MaxCapacity: 21

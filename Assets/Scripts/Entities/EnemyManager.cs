@@ -27,4 +27,12 @@ public class EnemyManager : MonoBehaviour
         return EnemiesSlain;
     }
 
+    public void DisableAll()
+    {
+        foreach(GameObject enemy in EnemiesInGame)
+        {
+            enemy.GetComponent<Enemy>().enabled = false;
+        }
+    }
+
 }
