@@ -1,5 +1,7 @@
 ﻿using System;
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>
 
@@ -11,6 +13,7 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>
     void Start()
     {
         GameManager.Instance.GetComponent<EnemyManager>().EnemiesInGame.Add(this.gameObject);
+        enemyData.ResetStats();
     }
 
     void Update()
@@ -25,6 +28,7 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>
         GameManager.Instance.GetComponent<EnemyManager>().IncreaseEnemiesSlain(1);
         GameManager.Instance.GetComponent<EnemyManager>().Remove(this.gameObject);
         // Animator.SetBool("Alive", false);
+        AttemptDrop(enemyData.DropList);
         Destroy(this.gameObject);
     }
 
@@ -48,9 +52,18 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>
         else return false;
     }
 
-    public void Drop(ItemData drop)
+    private bool AttemptDrop(GameObject[] Drops)
     {
-        Instantiate(drop, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.identity);
+        foreach (GameObject Drop in Drops)
+        {
+            if (Drop.GetComponent<ItemData>().DropChance <= UnityEngine.Random.Range(0, 100)) return true; else return false;
+        }
+        return false;
+    }
+
+    private void Drop(GameObject drop)
+    {
+        Instantiate(drop, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, 0), Quaternion.identity);
     }
 
     public void Kill()

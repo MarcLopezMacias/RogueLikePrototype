@@ -16,7 +16,6 @@ public class GameManager : MonoBehaviour
     public static UIController UIController;
     public static ScoreManager ScoreManager;
     public static EnemyManager EnemyManager;
-    public static DropManager DropManager;
 
     public Inventory PlayerInventory;
     public Weapon PlayerWeaponComponent;
@@ -45,7 +44,6 @@ public class GameManager : MonoBehaviour
         ScoreManager = gameObject.GetComponent<ScoreManager>();
 
         EnemyManager = gameObject.GetComponent<EnemyManager>();
-        DropManager = gameObject.GetComponent<DropManager>();
 
         MainCamera = GameObject.FindWithTag("MainCamera");
 

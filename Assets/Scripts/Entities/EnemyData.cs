@@ -20,4 +20,10 @@ public class EnemyData : ScriptableObject
     public int XP;
     public int Score;
     public GameObject[] DropList;
+
+    public void ResetStats()
+    {
+        if (Health < MaxHealth) Health = MaxHealth;
+        if (Lifes == 0) Lifes = MaxLifes;
+    }
 }
