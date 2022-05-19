@@ -12,8 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a2f3fc7f87e1bd46b88d476a13d6de7, type: 3}
   m_Name: Spike
   m_EditorClassIdentifier: 
-  AttackDamage: 1
+  Name: Spike
+  Height: 0.3
+  Speed: 0
+  Weight: 2
+  Health: 1
+  MaxHealth: 1
+  Lifes: 1
+  MaxLifes: 1
+  AttackDamage: 3
   AggroRange: 0
+  Static: 1
   XP: 1
   Score: 1
   DropList: []

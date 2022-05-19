@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+    // GAME
+    public Canvas GameCanvas;
+
     public Text LifesText;
     public Text HealthText;
 
@@ -20,6 +23,15 @@ public class UIController : MonoBehaviour
 
     public Text BulletText;
 
+    // MENU
+    public Canvas MenuCanvas;
+
+
+    // SHOP
+    public Canvas ShopCanvas;
+
+
+
     // Start is called before the first frame update
     void Start()
     { 
@@ -34,28 +46,37 @@ public class UIController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(GameManager.Instance.InGameScene())
+        if (GameManager.Instance.GameLoop)
         {
-            if (GameManager.Instance.MainLoop)
-            {
-                UpdateLifes();
-                UpdateHealth();
-
-                UpdateThreatsInRoom();
-
-                UpdateScore();
-
-                UpdateBullets();
-
-                HideGameOverUI();
-
-            }
-            else
-            {
-                HideRegularUI();
-                ShowGameOverUI();
-            }
+            UpdateGameCanvas();
         }
+        else if(GameManager.Instance.GameOverLoop)
+        {
+            HideGameUI();
+            ShowGameOverUI();
+        } 
+        else if (GameManager.Instance.MenuLoop)
+        {
+            GoToMenu();
+        } 
+        else if (GameManager.Instance.ShopLoop)
+        {
+            GoToShop();
+        }
+    }
+
+    private void UpdateGameCanvas()
+    {
+        UpdateLifes();
+        UpdateHealth();
+
+        UpdateThreatsInRoom();
+
+        UpdateScore();
+
+        UpdateBullets();
+
+        HideGameOverUI();
     }
 
     public void GameOver()
@@ -100,7 +121,7 @@ public class UIController : MonoBehaviour
         EnemiesSlainText.text = "";
     }
 
-    private void HideRegularUI()
+    private void HideGameUI()
     {
         LifesText.text = "";
         HealthText.text = "";
@@ -128,5 +149,29 @@ public class UIController : MonoBehaviour
         {
             BulletText.text = "";
         }
+    }
+
+    public void GoToMenu()
+    {
+        MenuCanvas.enabled = true;
+        GameCanvas.enabled = false;
+        ShopCanvas.enabled = false;
+        Debug.Log("Going To Menu");
+    }
+
+    public void GoToGame()
+    {
+        MenuCanvas.enabled = false;
+        GameCanvas.enabled = true;
+        ShopCanvas.enabled = false;
+        Debug.Log("Going To Game");
+    }
+
+    public void GoToShop()
+    {
+        MenuCanvas.enabled = false;
+        GameCanvas.enabled = false;
+        ShopCanvas.enabled = true;
+        Debug.Log("Going To Shop");
     }
 }

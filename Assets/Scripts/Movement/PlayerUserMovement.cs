@@ -24,6 +24,15 @@ public class PlayerUserMovement : MonoBehaviour
     [SerializeField]
     private Animator Animator;
 
+    private bool dashOnCooldown;
+    private bool usingDash;
+    [SerializeField]
+    private int dashCooldown = 15;
+    [SerializeField]
+    private float dashDuration = 0.1f;
+    [SerializeField]
+    private float dashMultiplyingFactor = 9000f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +40,8 @@ public class PlayerUserMovement : MonoBehaviour
         PlayerRigidBody = gameObject.GetComponent<Rigidbody2D>();
 
         Animator = gameObject.GetComponent<Animator>();
+
+        dashOnCooldown = false;
     }
 
     void Update()
@@ -59,11 +70,23 @@ public class PlayerUserMovement : MonoBehaviour
         MousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         faceDirection = MousePosition - gameObject.transform.position;
         faceDirection = faceDirection.normalized;
+
+        // Check Skill Use
+        if (Input.GetButtonDown("Dash") && !dashOnCooldown)
+        {
+            StartCoroutine(UseDash());
+        }
     }
 
     private void Move()
     {
         PlayerRigidBody.velocity = new Vector2(moveDirection.x * Speed, moveDirection.y * Speed);
+
+        if (usingDash)
+        {
+            PlayerRigidBody.AddForce(new Vector2(moveDirection.x, moveDirection.y) * dashMultiplyingFactor, ForceMode2D.Impulse);
+            gameObject.GetComponent<Player>().GodMode = true;
+        }
     }
 
     private void Animate()
@@ -97,5 +120,16 @@ public class PlayerUserMovement : MonoBehaviour
         // Mouse inputs
         Debug.Log("Should be facing: " + faceDirection);
 
+    }
+
+    private IEnumerator UseDash()
+    {
+        dashOnCooldown = true;
+        usingDash = true;
+        yield return new WaitForSeconds(dashDuration);
+        usingDash = false;
+        gameObject.GetComponent<Player>().GodMode = false;
+        yield return new WaitForSeconds(dashCooldown - dashDuration);
+        dashOnCooldown = false;
     }
 }

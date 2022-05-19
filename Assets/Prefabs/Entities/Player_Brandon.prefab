@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7199622230542040793}
   - component: {fileID: 7199622230542040792}
   - component: {fileID: 2907020127234096676}
+  - component: {fileID: 1900683248035372259}
   m_Layer: 0
   m_Name: Player_Brandon
   m_TagString: Player
@@ -33,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 7199622230542040795}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1, y: 1, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 2}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -102,6 +103,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animator: {fileID: 7199622230542040799}
+  dashCooldown: 15
+  dashDuration: 0.3
+  dashMultiplyingFactor: 15
 --- !u!114 &7199622230542040796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40f845287d8c36042a2b32de3919276d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GodMode: 0
   playerData: {fileID: 11400000, guid: dd5927df585554f4d803517951e74696, type: 2}
 --- !u!95 &7199622230542040799
 Animator:
@@ -204,5 +209,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b5b99569b47793419235c6c59a48a6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1900683248035372259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7199622230542040795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2ab547872c986e40b5b552b3dbedca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

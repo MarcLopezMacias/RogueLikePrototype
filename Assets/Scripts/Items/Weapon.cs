@@ -31,10 +31,13 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
-        UpdateMousePosition();
-        UpdateShootingAngle();
-        LetItRain();
-        UserAskedForResupply();
+        if (weaponData != null)
+        {
+            UpdateMousePosition();
+            UpdateShootingAngle();
+            LetItRain();
+            UserAskedForResupply();
+        }
     }
 
     private void UserAskedForResupply()

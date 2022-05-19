@@ -22,11 +22,14 @@ public class GameManager : MonoBehaviour
 
     private static GameObject MainCamera;
 
-    public bool MainLoop, PleaseDontDestroy;
+    public bool GameLoop;
+    public bool GameOverLoop;
+    public bool MenuLoop;
+    public bool ShopLoop;
 
     private void Awake()
     {
-        if (_instance != null && _instance != this && !PleaseDontDestroy)
+        if (_instance != null && _instance != this)
         {
             Destroy(this.gameObject);
             Debug.Log("GameManager DESTROYED");
@@ -38,10 +41,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ResetEverything();
-
-        PleaseDontDestroy = true;
-
         _player = GameObject.FindWithTag("Player");
         PlayerInventory = _player.GetComponent<Inventory>();
 
@@ -53,13 +52,15 @@ public class GameManager : MonoBehaviour
         MainCamera = GameObject.FindWithTag("MainCamera");
 
         PlayerInventory = GameObject.Find("Inventory").GetComponent<Inventory>();
+        ResetEverything();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(MainLoop)
+        if(GameLoop)
         {
+            Time.timeScale = 1f;
             if (_player == null)
             {
                 _player = GameObject.FindWithTag("Player");
@@ -72,6 +73,10 @@ public class GameManager : MonoBehaviour
             {
                 PlayerWeaponComponent = GameManager.Instance.Player.GetComponentInChildren<Weapon>();
             }
+        }
+        else
+        {
+            Time.timeScale = 0f;
         }
     }
 
@@ -99,18 +104,15 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        if(MainLoop)
+        if(GameLoop)
         {
-            MainLoop = false;
+            GameLoop = false;
+            GameOverLoop = true;
             EnemyManager.DisableAll();
             UIController.GameOver();
             StartCoroutine(WaitForGameOverScreen());
+            GameOverLoop = false;
         }
-    }
-
-    private void ResetGame()
-    {
-        GoToStartMenu();
     }
 
     private IEnumerator WaitForGameOverScreen()
@@ -119,9 +121,10 @@ public class GameManager : MonoBehaviour
         ResetGame();
     }
 
-    private void GoToStartMenu()
+    private void ResetGame()
     {
-        SceneManager.LoadScene("RogueLikeStartMenu");
+        ResetEverything();
+        UIController.GoToMenu();
     }
 
     public bool SuccessfulRol(float DropChance)
@@ -133,16 +136,19 @@ public class GameManager : MonoBehaviour
         else return false;
     }
 
-    public bool InGameScene()
-    {
-        string sceneName = SceneManager.GetActiveScene().name;
-        string inGameSceneName = "RogueLikeInGame";
-        return  sceneName == inGameSceneName;
-    }
-
     private void ResetEverything()
     {
-        MainLoop = true;
+        UIController.GoToMenu();
+        GameLoop = false;
         if(_player != null) _player.GetComponent<Player>().Reset();
+    }
+
+    public void GoToGame()
+    {
+        UIController.GoToGame();
+        GameLoop = true;
+        GameOverLoop = false;
+        MenuLoop = false;
+        ShopLoop = false;
     }
 }

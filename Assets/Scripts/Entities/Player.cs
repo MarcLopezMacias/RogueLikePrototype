@@ -59,8 +59,11 @@ public class Player : Character, IKillable, IDamageable<float>, IHealable<float>
 
     public void Damage(float damageTaken)
     {
-        playerData.Health -= damageTaken;
-        if (playerData.Health <= 0) Kill();
+        if(!GodMode)
+        {
+            playerData.Health -= damageTaken;
+            if (playerData.Health <= 0) Kill();
+        }
     }
 
     public void Reset()

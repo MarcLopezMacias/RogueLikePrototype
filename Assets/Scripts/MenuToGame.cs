@@ -15,14 +15,8 @@ public class MenuToGame : MonoBehaviour
         stoopidButton.onClick.AddListener(TaskOnClick);
     }
 
-    public void GoToInGameScene()
-    {
-        Debug.Log("Should load Game Scene");
-        SceneManager.LoadScene("RogueLikeInGame");
-    }
-
     void TaskOnClick()
     {
-        GoToInGameScene();
+        GameManager.Instance.GoToGame();
     }
 }
