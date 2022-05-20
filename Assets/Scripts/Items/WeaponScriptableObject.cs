@@ -52,14 +52,10 @@ public class WeaponScriptableObject : ActiveItem
             CurrentBullets += TotalBulletsLeft;
             TotalBulletsLeft = 0;
         }
-
-        
     }
 
     private bool CanReload()
     {
         return TotalBulletsLeft - (MaxReloadBullets - CurrentBullets) >= 0;
     }
-
-
 }

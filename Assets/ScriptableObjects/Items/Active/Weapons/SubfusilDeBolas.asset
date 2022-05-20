@@ -24,7 +24,7 @@ MonoBehaviour:
   TotalBulletsLeft: 60
   MaxCapacity: 60
   FireRate: 0.5
-  FireForce: 1
+  FireForce: 50
   BulletXShoot: 1
   BulletType: {fileID: 3932570784292595814, guid: b02dff4d3e478fa4399f604e27f7a22c,
     type: 3}

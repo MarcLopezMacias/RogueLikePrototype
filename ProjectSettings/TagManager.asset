@@ -8,6 +8,7 @@ TagManager:
   - Item
   - Bullet
   - Spawner
+  - Wall
   layers:
   - Default
   - TransparentFX

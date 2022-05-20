@@ -71,14 +71,17 @@ public class Weapon : MonoBehaviour
 
     private void Shoot()
     {
-        RaycastHit2D hit = Physics2D.Raycast(firePoint.position, aimDirection);
-        Enemy enemy = hit.collider.transform.gameObject.GetComponent<Enemy>();
+        GameObject projectile = Instantiate(weaponData.BulletType, firePoint.position, firePoint.rotation);
+        projectile.GetComponent<Rigidbody2D>().AddForce(firePoint.right * weaponData.FireForce, ForceMode2D.Impulse);
+
+        // RaycastHit2D hit = Physics2D.Raycast(firePoint.position, aimDirection);
+        // Enemy enemy = hit.collider.transform.gameObject.GetComponent<Enemy>();
         // BULLET FEEDBACK
-        if (enemy != null)
-        {
-            IncreaseScore();
-            enemy.Damage(weaponData.Damage);
-        }
+        // if (enemy != null)
+        // {
+        //     IncreaseScore();
+        //     enemy.Damage(weaponData.Damage);
+        // }
         weaponData.UseBullet();
     }
 
