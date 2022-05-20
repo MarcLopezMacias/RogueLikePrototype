@@ -16,16 +16,14 @@ public class GameManager : MonoBehaviour
     public static UIController UIController;
     public static ScoreManager ScoreManager;
     public static EnemyManager EnemyManager;
+    public static SpawnManager SpawnManager;
 
     public Inventory PlayerInventory;
     public Weapon PlayerWeaponComponent;
 
     private static GameObject MainCamera;
 
-    public bool GameLoop;
-    public bool GameOverLoop;
-    public bool MenuLoop;
-    public bool ShopLoop;
+    public bool GameLoop = false, gameOver = false, MenuLoop = true, ShopLoop = false;
 
     private void Awake()
     {
@@ -48,48 +46,59 @@ public class GameManager : MonoBehaviour
         ScoreManager = gameObject.GetComponent<ScoreManager>();
 
         EnemyManager = gameObject.GetComponent<EnemyManager>();
+        SpawnManager = gameObject.GetComponent<SpawnManager>();
 
         MainCamera = GameObject.FindWithTag("MainCamera");
 
         PlayerInventory = GameObject.Find("Inventory").GetComponent<Inventory>();
-        ResetEverything();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(GameLoop)
+        if(GameLoop && !UIController.inGame || gameOver)
         {
             Time.timeScale = 1f;
-            if (_player == null)
-            {
-                _player = GameObject.FindWithTag("Player");
-            }
-            if (PlayerInventory == null)
-            {
-                PlayerInventory = GameObject.Find("Inventory").GetComponent<Inventory>();
-            }
-            if (_player != null && PlayerWeaponComponent == null)
-            {
-                PlayerWeaponComponent = GameManager.Instance.Player.GetComponentInChildren<Weapon>();
-            }
+
+            // REFRESH NULL COMPONENTS
+            if (_player == null) _player = GameObject.FindWithTag("Player");
+            if (PlayerInventory == null) PlayerInventory = GameObject.Find("Inventory").GetComponent<Inventory>();
+            if (_player != null && PlayerWeaponComponent == null) PlayerWeaponComponent = GameManager.Instance.Player.GetComponentInChildren<Weapon>();
+
         }
-        else
+        else Time.timeScale = 0f;
+        
+        if (MenuLoop && !UIController.inMenu) UIController.ShowMenu();
+
+        if (ShopLoop && !UIController.inShop) UIController.ShowShop();
+
+        if (LegitGameOver())
         {
-            Time.timeScale = 0f;
+            ScoreManager.IncreaseScore(5);
+            GameOver();
         }
+    }
+
+    public void StartGame()
+    {
+        MenuLoop = false;
+        ResetStage();
     }
 
     public void ResetStage()
     {
+        MenuLoop = false;
+        GameLoop = true;
         ResetCameraPosition();
-        ResetPlayerPosition();
+        ResetPlayer();
         ResetSpawners();
+        UIController.ShowGame();
     }
 
-    public void ResetPlayerPosition()
+    public void ResetPlayer()
     {
-        Player.GetComponent<Player>().ResetPosition();
+        Player.GetComponent<Player>().Reset();
     }
 
     public void ResetCameraPosition()
@@ -99,7 +108,12 @@ public class GameManager : MonoBehaviour
 
     public void ResetSpawners()
     {
+        SpawnManager.ResetSpawners();
+    }
 
+    public bool LegitGameOver()
+    {
+        return (EnemyManager.EnemiesInGame.Count == 0 && (EnemyManager.GetEnemiesSlain() > 0) && SpawnManager.IsDoneSpawning());
     }
 
     public void GameOver()
@@ -107,24 +121,33 @@ public class GameManager : MonoBehaviour
         if(GameLoop)
         {
             GameLoop = false;
-            GameOverLoop = true;
-            EnemyManager.DisableAll();
-            UIController.GameOver();
+            gameOver = true;
+            if (EnemyManager.GetNumberOfEnemiesAlive() > 0) EnemyManager.DisableAll();
+            UIController.ShowGameOver();
+            Debug.Log("waitin");
             StartCoroutine(WaitForGameOverScreen());
-            GameOverLoop = false;
-        }
+        } 
     }
 
     private IEnumerator WaitForGameOverScreen()
     {
         yield return new WaitForSeconds(UIController.GameOverScreenTime);
+        Debug.Log("Reactivating");
+        gameOver = false;
+        MenuLoop = true;
         ResetGame();
     }
 
     private void ResetGame()
     {
-        ResetEverything();
-        UIController.GoToMenu();
+        UIController.ShowMenu();
+
+        GameLoop = false;
+        gameOver = false;
+        MenuLoop = true;
+        ShopLoop = false;
+
+        if (_player != null) _player.GetComponent<Player>().Reset(); UIController.ShowMenu();
     }
 
     public bool SuccessfulRol(float DropChance)
@@ -136,19 +159,8 @@ public class GameManager : MonoBehaviour
         else return false;
     }
 
-    private void ResetEverything()
+    public void Quit()
     {
-        UIController.GoToMenu();
-        GameLoop = false;
-        if(_player != null) _player.GetComponent<Player>().Reset();
-    }
-
-    public void GoToGame()
-    {
-        UIController.GoToGame();
-        GameLoop = true;
-        GameOverLoop = false;
-        MenuLoop = false;
-        ShopLoop = false;
+        // SAVE AND STUFF ?
     }
 }

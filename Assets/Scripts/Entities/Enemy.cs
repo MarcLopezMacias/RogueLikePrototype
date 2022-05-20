@@ -13,62 +13,60 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>,
 
     private Vector3 faceDirection;
     private Vector3 target;
-    [SerializeField]
+
     private bool shootingCooldown;
     private int shootingCooldownTime;
 
-    private bool alive;
+    private EnemyData enemyInstance;
 
     void Awake()
     {
         animator = gameObject.GetComponent<Animator>();
-        animator.SetBool("Alive", true);
     }
 
     void Start()
     {
         GameManager.Instance.GetComponent<EnemyManager>().EnemiesInGame.Add(this.gameObject);
-        enemyData.ResetStats();
-        animator.SetBool("Alive", true);
-
+        enemyInstance = Instantiate(enemyData);
+        enemyInstance.ResetStats();
     }
 
     void Update()
     {
-        alive = enemyData.Health > 0;
-        if (!alive) animator.SetBool("Alive", false);
+        if (enemyInstance.Health > 0) animator.SetBool("Alive", true);
+        else animator.SetBool("Alive", false);
     }
 
     void FixedUpdate()
     {
         // IF ITS A CRATE OR WHATEVER
-        if (!enemyData.Aggressive && enemyData.Static && alive)
+        if (!enemyInstance.Aggressive && enemyInstance.Static)
         {
             // celebrate
         }
         // IF ITS A REGULAR ENEMY
-        else if (enemyData.Aggressive && !enemyData.Static && alive) 
+        else if (enemyInstance.Aggressive && !enemyInstance.Static) 
         {
             Aim();
             Move();
             Animate();
         }
         // IF ITS A STATIC ENEMY
-        else if(enemyData.Aggressive && enemyData.Static && alive)
+        else if(enemyInstance.Aggressive && enemyInstance.Static)
         {
             Aim();
-            Shoot(enemyData.AttackDamage);
+            Shoot(enemyInstance.AttackDamage);
             Animate();
         }
     }
 
     public void Die()
     {
-        GameManager.Instance.Player.GetComponent<Player>().playerData.IncreaseXP(enemyData.XP);
-        GameManager.Instance.GetComponent<ScoreManager>().IncreaseScore(enemyData.Score);
+        GameManager.Instance.Player.GetComponent<Player>().playerData.IncreaseXP(enemyInstance.XP);
+        GameManager.Instance.GetComponent<ScoreManager>().IncreaseScore(enemyInstance.Score);
         GameManager.Instance.GetComponent<EnemyManager>().IncreaseEnemiesSlain(1);
         GameManager.Instance.GetComponent<EnemyManager>().Remove(this.gameObject);
-        AttemptDrop(enemyData.DropList);
+        AttemptDrop(enemyInstance.DropList);
         Destroy(this.gameObject);
     }
 
@@ -76,7 +74,7 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>,
     {
         if (CollidedWithPlayer(collision))
         {
-            Attack(enemyData.AttackDamage);
+            Attack(enemyInstance.AttackDamage);
             Damage(GameManager.Instance.Player.GetComponent<Player>().playerData.BumpDamage);
         }
     }
@@ -119,20 +117,20 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>,
 
     public void Kill()
     {
-        enemyData.Lifes -= 1;
-        if (enemyData.Lifes <= 0)
+        enemyInstance.Lifes -= 1;
+        if (enemyInstance.Lifes <= 0)
             gameObject.GetComponent<Enemy>().Die();
     }
 
     public void Heal(float amountHealed)
     {
-        enemyData.Health += amountHealed;
+        enemyInstance.Health += amountHealed;
     }
 
     public void Damage(float damageTaken)
     {
-        enemyData.Health -= damageTaken;
-        if (enemyData.Health <= 0)
+        enemyInstance.Health -= damageTaken;
+        if (enemyInstance.Health <= 0)
         {
             Kill();
         }
@@ -146,7 +144,7 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>,
     private void Aim()
     {
         ColliderDistance2D Distance = gameObject.GetComponent<BoxCollider2D>().Distance(GameManager.Instance.Player.GetComponent<BoxCollider2D>());
-        if (Distance.distance <= enemyData.AggroRange)
+        if (Distance.distance <= enemyInstance.AggroRange)
         {
             target = GameManager.Instance.Player.transform.position;
             faceDirection = target - gameObject.transform.position;

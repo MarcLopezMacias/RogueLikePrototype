@@ -7,6 +7,15 @@ public class EnemyManager : MonoBehaviour
     private int EnemiesSlain;
     public List<GameObject> EnemiesInGame;
 
+    void FixedUpdate()
+    {
+        if (EnemiesInGame.Count == 0 && GetEnemiesSlain() > 0)
+        {
+            GameManager.Instance.GetComponent<ScoreManager>().IncreaseScore(5);
+            GameManager.Instance.GameOver();
+        }
+    }
+
     public int GetNumberOfEnemiesAlive()
     {
         return EnemiesInGame.Count;

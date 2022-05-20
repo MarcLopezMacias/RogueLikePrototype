@@ -5,6 +5,12 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+
+    public bool inGame, inMenu, inShop;
+
+    [SerializeField]
+    public Button playButton, shopButton, quitButton;
+
     // GAME
     public Canvas GameCanvas;
 
@@ -36,36 +42,31 @@ public class UIController : MonoBehaviour
     void Start()
     { 
         GameOverString = "G A M E  O V E R";
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        playButton.onClick.AddListener(() => GameManager.Instance.StartGame());
+        shopButton.onClick.AddListener(() => ShowShop());
+        quitButton.onClick.AddListener(() => GameManager.Instance.Quit());
+
+        ShowMenu();
     }
 
     void FixedUpdate()
     {
         if (GameManager.Instance.GameLoop)
         {
-            UpdateGameCanvas();
+            ShowGameUI();
         }
-        else if(GameManager.Instance.GameOverLoop)
-        {
-            HideGameUI();
-            ShowGameOverUI();
-        } 
         else if (GameManager.Instance.MenuLoop)
         {
-            GoToMenu();
+            ShowMenu();
         } 
         else if (GameManager.Instance.ShopLoop)
         {
-            GoToShop();
+            ShowShop();
         }
     }
 
-    private void UpdateGameCanvas()
+    private void ShowGameUI()
     {
         UpdateLifes();
         UpdateHealth();
@@ -77,17 +78,16 @@ public class UIController : MonoBehaviour
         UpdateBullets();
 
         HideGameOverUI();
+
+        MenuCanvas.enabled = false;
+        GameCanvas.enabled = true;
+        ShopCanvas.enabled = false;
     }
 
-    public void GameOver()
+    public void ShowGameOver()
     {
-        StartCoroutine(DisplayGameOverScreen());
-    }
-
-    private IEnumerator DisplayGameOverScreen()
-    {
-        yield return new WaitForSeconds(GameOverScreenTime);
-        
+        ShowGameOverUI();
+        HideGameUI();
     }
 
     private void UpdateLifes()
@@ -126,7 +126,9 @@ public class UIController : MonoBehaviour
         LifesText.text = "";
         HealthText.text = "";
         EnemiesText.text = "";
+        EnemiesSlainText.text = "";
         MaxScoreText.text = "";
+        BulletText.text = "";
     }
 
     private void ShowGameOverUI()
@@ -135,6 +137,7 @@ public class UIController : MonoBehaviour
         GameOverScoreText.text = "Final Score: " + GameManager.Instance.GetComponent<ScoreManager>().GetScore();
 
         EnemiesSlainText.text = "Enemies Slain: " + GameManager.Instance.GetComponent<EnemyManager>().GetEnemiesSlain();
+        HideGameUI();
     }
 
     private void UpdateBullets()
@@ -151,27 +154,50 @@ public class UIController : MonoBehaviour
         }
     }
 
-    public void GoToMenu()
+    public void ShowMenu()
     {
         MenuCanvas.enabled = true;
-        GameCanvas.enabled = false;
-        ShopCanvas.enabled = false;
-        Debug.Log("Going To Menu");
+        HideGame();
+        HideShop();
+        GameManager.Instance.MenuLoop = true;
     }
 
-    public void GoToGame()
+    public void ShowGame()
     {
-        MenuCanvas.enabled = false;
         GameCanvas.enabled = true;
-        ShopCanvas.enabled = false;
-        Debug.Log("Going To Game");
+        ShowGameUI();
+        HideGameOverUI();
+
+        HideMenu();
+        HideShop();
+
+        GameManager.Instance.GameLoop = true;
     }
 
-    public void GoToShop()
+    public void ShowShop()
+    {
+        ShopCanvas.enabled = true;
+        HideGame();
+        HideMenu();
+
+        GameManager.Instance.ShopLoop = true;
+    }
+
+    private void HideShop()
+    {
+        ShopCanvas.enabled = false;
+        GameManager.Instance.ShopLoop = false;
+    }
+
+    private void HideMenu()
     {
         MenuCanvas.enabled = false;
+        GameManager.Instance.MenuLoop = false;
+    }
+
+    private void HideGame()
+    {
         GameCanvas.enabled = false;
-        ShopCanvas.enabled = true;
-        Debug.Log("Going To Shop");
+        GameManager.Instance.GameLoop = false;
     }
 }

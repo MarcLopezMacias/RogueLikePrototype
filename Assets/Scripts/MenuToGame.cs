@@ -17,6 +17,6 @@ public class MenuToGame : MonoBehaviour
 
     void TaskOnClick()
     {
-        GameManager.Instance.GoToGame();
+        GameManager.Instance.StartGame();
     }
 }

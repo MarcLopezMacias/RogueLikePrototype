@@ -51,7 +51,6 @@ MonoBehaviour:
   enemyData: {fileID: 11400000, guid: 3ff41a9ac549cf74cb46d116bf2a44a7, type: 2}
   animator: {fileID: 5085810929497992350}
   rb: {fileID: 3770803137837003759}
-  shootingCooldown: 0
 --- !u!212 &4006998109740147056
 SpriteRenderer:
   m_ObjectHideFlags: 0

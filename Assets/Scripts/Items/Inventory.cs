@@ -166,6 +166,7 @@ public class Inventory : MonoBehaviour
         if(HealthPot != null)
         {
             GameManager.Instance.Player.GetComponent<Player>().Heal(HealthPot.AmountToConsume);
+            Remove(HealthPot);
         }
     }
 
@@ -173,13 +174,12 @@ public class Inventory : MonoBehaviour
     {
         foreach (InventoryItem item in fancyInventory)
         {
-            if (item.itemData.Name.ToString() == "HealthPot")
+            if (item.itemData.Name.ToString() == "Restore HP")
             {
                 return (Consumables)item.itemData;
             }
         }
         return null;
     }
-
 
 }
