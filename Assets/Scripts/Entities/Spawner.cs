@@ -29,10 +29,12 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (NumberOfEnemiesToSpawn > 0)
-        {
-            StartCoroutine(Spawn());
-        }
+        if (NumberOfEnemiesToSpawn > 0) StartCoroutine(Spawn());
+    }
+
+    void OnEnable()
+    {
+        Start();
     }
 
     // Update is called once per frame

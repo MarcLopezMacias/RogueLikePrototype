@@ -51,6 +51,8 @@ MonoBehaviour:
   enemyData: {fileID: 11400000, guid: d4fe8673e5fef8b48bab7afc146d0a02, type: 2}
   animator: {fileID: 2723037460912317986}
   rb: {fileID: 2723037460912317985}
+  bulletType: {fileID: 3932570784292595814, guid: b02dff4d3e478fa4399f604e27f7a22c,
+    type: 3}
 --- !u!212 &2723037460912317988
 SpriteRenderer:
   m_ObjectHideFlags: 0

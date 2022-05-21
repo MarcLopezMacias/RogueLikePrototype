@@ -16,14 +16,14 @@ MonoBehaviour:
   Height: 1.5
   Speed: 0
   Weight: 60
-  Health: -5
+  Health: 20
   MaxHealth: 20
-  Lifes: -1
+  Lifes: 1
   MaxLifes: 1
   AttackDamage: 2
   AggroRange: 10
   Static: 1
-  Aggressive: 0
+  Aggressive: 1
   XP: 2
   Score: 2
   DropList:

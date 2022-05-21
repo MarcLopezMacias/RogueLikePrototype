@@ -14,10 +14,14 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>,
     private Vector3 faceDirection;
     private Vector3 target;
 
-    private bool shootingCooldown;
-    private int shootingCooldownTime;
+    private int minShootingCDTime = 1, maxShootingCDTime = 3;
+    private int hitMissChance = 60;
+    private bool canShoot = true;
 
     private EnemyData enemyInstance;
+
+    [SerializeField]
+    public GameObject bulletType;
 
     void Awake()
     {
@@ -26,9 +30,14 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>,
 
     void Start()
     {
-        GameManager.Instance.GetComponent<EnemyManager>().EnemiesInGame.Add(this.gameObject);
         enemyInstance = Instantiate(enemyData);
         enemyInstance.ResetStats();
+        if (GameManager.Instance.GetComponent<EnemyManager>() != null) GameManager.Instance.GetComponent<EnemyManager>().EnemiesInGame.Add(this.gameObject);
+    }
+
+    void OnEnable()
+    {
+        Start();
     }
 
     void Update()
@@ -49,14 +58,14 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>,
         {
             Aim();
             Move();
-            Animate();
+            Animate(false);
         }
         // IF ITS A STATIC ENEMY
         else if(enemyInstance.Aggressive && enemyInstance.Static)
         {
             Aim();
-            Shoot(enemyInstance.AttackDamage);
-            Animate();
+            if (canShoot && UnityEngine.Random.Range(0, 100) <= hitMissChance) Shoot(enemyInstance.AttackDamage);
+            Animate(true);
         }
     }
 
@@ -156,36 +165,40 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>,
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(faceDirection.x, faceDirection.y).normalized;
     }
 
-    private void Animate()
+    private void Animate(bool isStatic)
     {
-        animator.SetFloat("Horizontal", faceDirection.x);
-        animator.SetFloat("Vertical", faceDirection.y);
+        if (!isStatic)
+        {
+            animator.SetFloat("Horizontal", faceDirection.x);
+            animator.SetFloat("Vertical", faceDirection.y);
+        }
+        else
+        {
+            float aimAngle = Mathf.Atan2(faceDirection.y, faceDirection.x) * Mathf.Rad2Deg;
+            rb.rotation = aimAngle;
+        }
     }
 
     public void Shoot(int amount)
     {
-        // "ANIMATE"
-        float aimAngle = Mathf.Atan2(faceDirection.y, faceDirection.x) * Mathf.Rad2Deg;
-        rb.rotation = aimAngle;
+        GameObject projectile = Instantiate(bulletType, gameObject.transform.position, gameObject.transform.rotation);
+        projectile.GetComponent<Rigidbody2D>().AddForce(faceDirection * amount, ForceMode2D.Impulse);
 
-        // ATTEMPT SHOT
-        if (!shootingCooldown)
-        {
-            Debug.Log("Shootin Machine");
-            StartCoroutine(ShootingCooldown());
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, target);
-            Player player = hit.collider.transform.gameObject.GetComponent<Player>();
-            if (player != null)
-            {
-                player.Damage(amount);
-            }
-        }
+        StartCoroutine(ShootCD());
+
+        // RaycastHit2D hit = Physics2D.Raycast(transform.position, target);
+        // Player player = hit.collider.transform.gameObject.GetComponent<Player>();
+        // if (player != null)
+        // {
+        //     player.Damage(amount);
+        // }
     }
 
-    private IEnumerator ShootingCooldown()
+    private IEnumerator ShootCD()
     {
-        shootingCooldown = true;
-        yield return new WaitForSeconds(shootingCooldownTime);
-        shootingCooldown = false;
+        canShoot = false;
+        float shootingCD = UnityEngine.Random.Range(minShootingCDTime, maxShootingCDTime);
+        yield return new WaitForSeconds(shootingCD);
+        canShoot = true;
     }
 }

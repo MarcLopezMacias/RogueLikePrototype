@@ -44,4 +44,12 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
+    void OnEnable()
+    {
+        if (EnemiesInGame.Count == 0)
+        {
+            DisableAll();
+        }
+    }
+
 }

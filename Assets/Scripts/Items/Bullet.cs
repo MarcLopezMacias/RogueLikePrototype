@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public Rigidbody2D rb;
     [SerializeField]
-    public Animation impactEffect;
+    public GameObject impactEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -26,10 +26,18 @@ public class Bullet : MonoBehaviour
         {
             case "Enemy":
                 GameManager.Instance.GetComponent<ScoreManager>().IncreaseScore(1);
-                collider.GetComponent<Enemy>().Damage(GameManager.Instance.Player.GetComponentInChildren<Weapon>().weaponData.Damage);
+                Weapon wep = GameManager.Instance.Player.GetComponentInChildren<Weapon>();
+                if (wep != null) 
+                    collider.GetComponent<Enemy>().Damage(wep.weaponData.Damage);
+                else
+                    collider.GetComponent<Enemy>().Damage(1);
                 Impact();
                 break;
             case "Wall":
+                Impact();
+                break;
+            case "Player":
+                collider.GetComponent<Player>().Damage(2);
                 Impact();
                 break;
 
@@ -39,9 +47,8 @@ public class Bullet : MonoBehaviour
 
     private void Impact()
     {
-        animation.Play();
-        // (impactEffect, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        Instantiate(impactEffect, transform.position, Quaternion.identity);
+        Destroy(this.gameObject);
     }
 
 

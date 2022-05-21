@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public List<GameObject> spawners;
+    public List<GameObject> sceneSpawners;
 
     [SerializeField]
     public GameObject[] spawnersToSpawn;
@@ -25,6 +25,11 @@ public class SpawnManager : MonoBehaviour
         if (numberOfSpawnersToSpawn > 0) Spawn();
     }
 
+    void OnEnable()
+    {
+        Start();
+    }
+
     void Update()
     {
         if (spawnersSpawned < numberOfSpawnersToSpawn)
@@ -36,20 +41,28 @@ public class SpawnManager : MonoBehaviour
 
     public void Remove(GameObject toRemove)
     {
-        spawners.Remove(toRemove);
+        sceneSpawners.Remove(toRemove);
     }
 
     public void DisableAll()
     {
-        foreach (GameObject spawner in spawners)
+        foreach (GameObject spawner in sceneSpawners)
         {
             spawner.GetComponent<Spawner>().enabled = false;
         }
     }
 
+    public void EnableAll()
+    {
+        foreach (GameObject spawner in sceneSpawners)
+        {
+            spawner.GetComponent<Spawner>().enabled = true;
+        }
+    }
+
     public void ResetSpawners()
     {
-        foreach (GameObject spawner in spawners)
+        foreach (GameObject spawner in sceneSpawners)
         {
             spawner.GetComponent<Spawner>().Reset();
         }
@@ -58,7 +71,7 @@ public class SpawnManager : MonoBehaviour
     private int CalculateIt()
     {
         int number = 0;
-        foreach (GameObject spawner in spawners)
+        foreach (GameObject spawner in sceneSpawners)
         {
             number += spawner.GetComponent<Spawner>().NumberOfEnemiesToSpawn;
         }
@@ -68,7 +81,7 @@ public class SpawnManager : MonoBehaviour
     private int CalculateOt()
     {
         int number = 0;
-        foreach (GameObject spawner in spawners)
+        foreach (GameObject spawner in sceneSpawners)
         {
             number += spawner.GetComponent<Spawner>().enemiesSpawned;
         }

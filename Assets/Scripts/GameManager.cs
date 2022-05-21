@@ -52,12 +52,13 @@ public class GameManager : MonoBehaviour
 
         PlayerInventory = GameObject.Find("Inventory").GetComponent<Inventory>();
 
+        DisableEverything();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(GameLoop && !UIController.inGame || gameOver)
+        if (GameLoop)
         {
             Time.timeScale = 1f;
 
@@ -65,9 +66,16 @@ public class GameManager : MonoBehaviour
             if (_player == null) _player = GameObject.FindWithTag("Player");
             if (PlayerInventory == null) PlayerInventory = GameObject.Find("Inventory").GetComponent<Inventory>();
             if (_player != null && PlayerWeaponComponent == null) PlayerWeaponComponent = GameManager.Instance.Player.GetComponentInChildren<Weapon>();
-
+        } 
+        else if (gameOver)
+        {
+            DisableSpawners();
         }
-        else Time.timeScale = 0f;
+        else
+        {
+            Time.timeScale = 0f;
+            DisableSpawners();
+        }
         
         if (MenuLoop && !UIController.inMenu) UIController.ShowMenu();
 
@@ -90,6 +98,7 @@ public class GameManager : MonoBehaviour
     {
         MenuLoop = false;
         GameLoop = true;
+        EnableSpawners();
         ResetCameraPosition();
         ResetPlayer();
         ResetSpawners();
@@ -109,6 +118,28 @@ public class GameManager : MonoBehaviour
     public void ResetSpawners()
     {
         SpawnManager.ResetSpawners();
+    }
+
+    private void EnableSpawners()
+    {
+        SpawnManager.enabled = true;
+    }
+
+    private void DisableSpawners()
+    {
+        SpawnManager.DisableAll();
+        SpawnManager.enabled = false;
+    }
+
+    private void DisableEverything()
+    {
+        DisableSpawners();
+        DisableEnemies();
+    }
+
+    private void DisableEnemies()
+    {
+        EnemyManager.DisableAll();
     }
 
     public bool LegitGameOver()
