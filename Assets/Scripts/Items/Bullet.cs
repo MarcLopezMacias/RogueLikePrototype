@@ -37,6 +37,7 @@ public class Bullet : MonoBehaviour
                 Impact();
                 break;
             case "Player":
+                Debug.Log("Hit player");
                 collider.GetComponent<Player>().Damage(2);
                 Impact();
                 break;
@@ -48,7 +49,14 @@ public class Bullet : MonoBehaviour
     private void Impact()
     {
         Instantiate(impactEffect, transform.position, Quaternion.identity);
-        Destroy(this.gameObject);
+        StartCoroutine(WaitNDestroy());
+        
+    }
+
+    private IEnumerator WaitNDestroy()
+    {
+        Destroy(gameObject);
+        yield return new WaitForSeconds(1);
     }
 
 

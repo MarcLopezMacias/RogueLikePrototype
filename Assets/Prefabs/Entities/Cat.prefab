@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7527428002037570906}
   - component: {fileID: 7527428002037570904}
   - component: {fileID: 7527428002037570905}
-  - component: {fileID: 7527428002037570902}
   - component: {fileID: 3044922739082451243}
   - component: {fileID: 3044922739082451242}
   - component: {fileID: 3044922740221392059}
@@ -83,19 +82,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.8}
   m_EdgeRadius: 0
---- !u!114 &7527428002037570902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7527428002037570903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 685f218de8b917f4580650428d182e88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MoveSpeedDividingFactor: 1
 --- !u!212 &3044922739082451243
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -177,5 +163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2f16642dff8056409f6db5bef3aab3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GodMode: 0
   enemyData: {fileID: 11400000, guid: 3857150679c473a4e80f07c9ae1bf87d, type: 2}
   animator: {fileID: 3044922739082451242}
+  rb: {fileID: 7527428002037570904}
+  bulletType: {fileID: 0}

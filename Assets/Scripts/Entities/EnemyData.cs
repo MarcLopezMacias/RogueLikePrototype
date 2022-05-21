@@ -15,6 +15,7 @@ public class EnemyData : ScriptableObject
     public int Lifes, MaxLifes;
     public int AttackDamage;
     public float AggroRange;
+
     public bool Static;
     public bool Aggressive;
 

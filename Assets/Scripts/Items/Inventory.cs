@@ -85,11 +85,10 @@ public class Inventory : MonoBehaviour
                 ActiveItem activeItem = (ActiveItem)itemData;
                 if (activeItem.activeType.ToString() == "Weapon")
                 {
-                    WeaponScriptableObject weapon = (WeaponScriptableObject)activeItem;
-                    weapon.ResetWeapon();
+                    WeaponScriptableObject instance = Instantiate((WeaponScriptableObject)activeItem);
+                    UpdateWeapon(instance);
                     currentSlot = fancyInventory.Count;
-                    UpdateWeapon(weapon);
-                    weapons.Add(weapon);
+                    weapons.Add(instance);
                 }
             }
 
@@ -151,6 +150,7 @@ public class Inventory : MonoBehaviour
         {
             weaponComponent.weaponData = newWeaponData;
             weaponComponent.GetComponent<SpriteRenderer>().sprite = newWeaponData.Icon;
+            weaponComponent.weaponData.ResetWeapon();
         }
     }
 
@@ -182,4 +182,13 @@ public class Inventory : MonoBehaviour
         return null;
     }
 
+    public List<ItemData> GetInventoryItems()
+    {
+        List<ItemData> items = new List<ItemData>();
+        foreach (InventoryItem item in fancyInventory)
+        {
+            items.Add(item.itemData);
+        }
+        return items;
+    }
 }

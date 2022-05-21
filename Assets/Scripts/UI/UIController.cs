@@ -21,6 +21,8 @@ public class UIController : MonoBehaviour
 
     public Text GameOverText;
     public Text GameOverScoreText;
+    public Text GameOverHighestScoreText;
+    public Text SetHighScoreText;
     private string GameOverString;
     public int GameOverScreenTime;
 
@@ -31,7 +33,10 @@ public class UIController : MonoBehaviour
 
     // MENU
     public Canvas MenuCanvas;
+    public Text HighestScoreText;
+    public Text lastScoresText;
 
+    private bool showingMenu;
 
     // SHOP
     public Canvas ShopCanvas;
@@ -46,8 +51,6 @@ public class UIController : MonoBehaviour
         playButton.onClick.AddListener(() => GameManager.Instance.StartGame());
         shopButton.onClick.AddListener(() => ShowShop());
         quitButton.onClick.AddListener(() => GameManager.Instance.Quit());
-
-        ShowMenu();
     }
 
     void FixedUpdate()
@@ -58,7 +61,7 @@ public class UIController : MonoBehaviour
         }
         else if (GameManager.Instance.MenuLoop)
         {
-            ShowMenu();
+            if (!showingMenu) ShowMenu();
         } 
         else if (GameManager.Instance.ShopLoop)
         {
@@ -119,6 +122,8 @@ public class UIController : MonoBehaviour
         GameOverText.text = "";
         GameOverScoreText.text = "";
         EnemiesSlainText.text = "";
+        GameOverHighestScoreText.text = "";
+        SetHighScoreText.enabled = false;
     }
 
     private void HideGameUI()
@@ -135,8 +140,9 @@ public class UIController : MonoBehaviour
     {
         GameOverText.text = GameOverString;
         GameOverScoreText.text = "Final Score: " + GameManager.Instance.GetComponent<ScoreManager>().GetScore();
-
+        GameOverHighestScoreText.text = ($"Highest Score: {GameManager.Instance.GetComponent<ScoreManager>().maxScore}");
         EnemiesSlainText.text = "Enemies Slain: " + GameManager.Instance.GetComponent<EnemyManager>().GetEnemiesSlain();
+        GameOverHighestScoreText.text = $"Highest Score\n{GameManager.Instance.GetComponent<ScoreManager>().maxScore}";
         HideGameUI();
     }
 
@@ -156,10 +162,24 @@ public class UIController : MonoBehaviour
 
     public void ShowMenu()
     {
+        showingMenu = true;
         MenuCanvas.enabled = true;
         HideGame();
         HideShop();
-        GameManager.Instance.MenuLoop = true;
+        StartCoroutine(UpdateMenu());
+    }
+
+    public IEnumerator UpdateMenu()
+    {
+        int highestScore = GameManager.Instance.GetComponent<ScoreManager>().maxScore;
+        HighestScoreText.text = ($"Highest Score\n" +
+        $"{highestScore}");
+       
+        string lastScores = GameManager.Instance.GetComponent<ScoreManager>().lastScores.ToString();
+        lastScoresText.text = ($"Latest scores\n" +
+        $"{lastScores}");
+
+        yield return new WaitForSeconds(1);
     }
 
     public void ShowGame()
@@ -170,8 +190,6 @@ public class UIController : MonoBehaviour
 
         HideMenu();
         HideShop();
-
-        GameManager.Instance.GameLoop = true;
     }
 
     public void ShowShop()
@@ -179,25 +197,25 @@ public class UIController : MonoBehaviour
         ShopCanvas.enabled = true;
         HideGame();
         HideMenu();
-
-        GameManager.Instance.ShopLoop = true;
     }
 
     private void HideShop()
     {
         ShopCanvas.enabled = false;
-        GameManager.Instance.ShopLoop = false;
     }
 
     private void HideMenu()
     {
         MenuCanvas.enabled = false;
-        GameManager.Instance.MenuLoop = false;
     }
 
     private void HideGame()
     {
         GameCanvas.enabled = false;
-        GameManager.Instance.GameLoop = false;
+    }
+
+    public void SetHighScore()
+    {
+        SetHighScoreText.enabled = true;
     }
 }

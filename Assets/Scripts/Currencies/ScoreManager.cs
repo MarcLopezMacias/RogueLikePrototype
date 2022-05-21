@@ -6,6 +6,8 @@ public class ScoreManager : MonoBehaviour
 {
 
     private int Score;
+    public List<int> lastScores;
+    public int maxScore;
 
     // Start is called before the first frame update
     void Start()
@@ -37,5 +39,17 @@ public class ScoreManager : MonoBehaviour
     public int GetScore()
     {
         return Score;
+    }
+
+    public void RecordScore()
+    {
+        if (Score > maxScore) SetHighestScore();
+        lastScores.Add(Score);
+    }
+
+    private void SetHighestScore()
+    {
+        GameManager.Instance.GetComponent<UIController>().SetHighScore();
+        maxScore = Score;
     }
 }

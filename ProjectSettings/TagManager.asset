@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - Spawner
   - Wall
+  - Particle
   layers:
   - Default
   - TransparentFX

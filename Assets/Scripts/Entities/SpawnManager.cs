@@ -22,7 +22,7 @@ public class SpawnManager : MonoBehaviour
 
     void Start()
     {
-        if (numberOfSpawnersToSpawn > 0) Spawn();
+        if (numberOfSpawnersToSpawn > 0 && spawnersSpawned < numberOfSpawnersToSpawn) Spawn();
     }
 
     void OnEnable()
@@ -106,4 +106,13 @@ public class SpawnManager : MonoBehaviour
         return doneSpawningEnemies;
     }
 
+    public int GetEnemiesSpawned()
+    {
+        return enemiesSpawned;
+    }
+
+    public int GetEnemiesToSpawn()
+    {
+        return enemiesToSpawn;
+    }
 }

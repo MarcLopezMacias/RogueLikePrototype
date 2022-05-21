@@ -14,7 +14,7 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>,
     private Vector3 faceDirection;
     private Vector3 target;
 
-    private int minShootingCDTime = 1, maxShootingCDTime = 3;
+    private int minShootingCDTime = 1, maxShootingCDTime = 20;
     private int hitMissChance = 60;
     private bool canShoot = true;
 
@@ -22,6 +22,8 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>,
 
     [SerializeField]
     public GameObject bulletType;
+    [SerializeField]
+    public Transform firePoint;
 
     void Awake()
     {
@@ -32,7 +34,7 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>,
     {
         enemyInstance = Instantiate(enemyData);
         enemyInstance.ResetStats();
-        if (GameManager.Instance.GetComponent<EnemyManager>() != null) GameManager.Instance.GetComponent<EnemyManager>().EnemiesInGame.Add(this.gameObject);
+        GameManager.Instance.GetComponent<EnemyManager>().EnemiesInGame.Add(this.gameObject);
     }
 
     void OnEnable()
@@ -152,10 +154,12 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>,
 
     private void Aim()
     {
-        ColliderDistance2D Distance = gameObject.GetComponent<BoxCollider2D>().Distance(GameManager.Instance.Player.GetComponent<BoxCollider2D>());
+        // ColliderDistance2D Distance = gameObject.GetComponent<BoxCollider2D>().Distance(GameManager.Instance.Player.GetComponent<BoxCollider2D>());
+        ColliderDistance2D Distance = gameObject.GetComponent<BoxCollider2D>().Distance(GameObject.FindWithTag("Player").GetComponent<BoxCollider2D>());
         if (Distance.distance <= enemyInstance.AggroRange)
         {
-            target = GameManager.Instance.Player.transform.position;
+            // target = GameManager.Instance.Player.transform.position;
+            target = GameObject.FindWithTag("Player").transform.position;
             faceDirection = target - gameObject.transform.position;
         }
     }
@@ -181,7 +185,7 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>,
 
     public void Shoot(int amount)
     {
-        GameObject projectile = Instantiate(bulletType, gameObject.transform.position, gameObject.transform.rotation);
+        GameObject projectile = Instantiate(bulletType, firePoint.position, gameObject.transform.rotation);
         projectile.GetComponent<Rigidbody2D>().AddForce(faceDirection * amount, ForceMode2D.Impulse);
 
         StartCoroutine(ShootCD());
@@ -200,5 +204,10 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>,
         float shootingCD = UnityEngine.Random.Range(minShootingCDTime, maxShootingCDTime);
         yield return new WaitForSeconds(shootingCD);
         canShoot = true;
+    }
+
+    public void Reset()
+    {
+        Start();
     }
 }

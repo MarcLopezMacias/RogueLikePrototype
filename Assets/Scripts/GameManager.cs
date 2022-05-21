@@ -52,7 +52,10 @@ public class GameManager : MonoBehaviour
 
         PlayerInventory = GameObject.Find("Inventory").GetComponent<Inventory>();
 
-        DisableEverything();
+        DisableSpawners();
+        DisableEnemies();
+
+        DataSaver.Load();
     }
 
     // Update is called once per frame
@@ -90,7 +93,6 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        MenuLoop = false;
         ResetStage();
     }
 
@@ -98,10 +100,10 @@ public class GameManager : MonoBehaviour
     {
         MenuLoop = false;
         GameLoop = true;
-        EnableSpawners();
+        ResetEnemies();
+        ResetSpawners();
         ResetCameraPosition();
         ResetPlayer();
-        ResetSpawners();
         UIController.ShowGame();
     }
 
@@ -117,7 +119,14 @@ public class GameManager : MonoBehaviour
 
     public void ResetSpawners()
     {
+        EnableSpawners();
         SpawnManager.ResetSpawners();
+    }
+
+    private void ResetEnemies()
+    {
+        EnableEnemies();
+        // EnemyManager.ResetEnemies();
     }
 
     private void EnableSpawners()
@@ -125,16 +134,15 @@ public class GameManager : MonoBehaviour
         SpawnManager.enabled = true;
     }
 
+    private void EnableEnemies()
+    {
+        EnemyManager.enabled = true;
+    }
+
     private void DisableSpawners()
     {
         SpawnManager.DisableAll();
         SpawnManager.enabled = false;
-    }
-
-    private void DisableEverything()
-    {
-        DisableSpawners();
-        DisableEnemies();
     }
 
     private void DisableEnemies()
@@ -153,6 +161,7 @@ public class GameManager : MonoBehaviour
         {
             GameLoop = false;
             gameOver = true;
+            ScoreManager.RecordScore();
             if (EnemyManager.GetNumberOfEnemiesAlive() > 0) EnemyManager.DisableAll();
             UIController.ShowGameOver();
             Debug.Log("waitin");
@@ -172,6 +181,7 @@ public class GameManager : MonoBehaviour
     private void ResetGame()
     {
         UIController.ShowMenu();
+        ScoreManager.ResetScore();
 
         GameLoop = false;
         gameOver = false;
@@ -192,6 +202,7 @@ public class GameManager : MonoBehaviour
 
     public void Quit()
     {
+        DataSaver.Save();
         // SAVE AND STUFF ?
     }
 }

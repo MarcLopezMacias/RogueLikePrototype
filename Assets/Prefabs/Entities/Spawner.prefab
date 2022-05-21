@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5042975805230334073}
   m_Layer: 0
   m_Name: Spawner
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,15 +44,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Cooldown: 0
-  RandomCooldown: 0
-  RCRangeInSeconds: {x: 0, y: 0}
+  RandomCooldown: 1
+  RCRangeInSeconds: {x: 0, y: 2}
   EnemiesToSpawn:
   - {fileID: 1622410281043307655, guid: 4b1607a439305c14c94826d31c6f866f, type: 3}
   - {fileID: 1622410281043307655, guid: 3a878a26ce7119149b0b187e6d9237b7, type: 3}
   - {fileID: 2723037460912317984, guid: ecaecb3681317344bb8f34bd92b5438a, type: 3}
   - {fileID: 7527428002037570903, guid: 40803083e65985e478a331549020ac1c, type: 3}
-  NumberOfEnemiesToSpawn: 3
+  NumberOfEnemiesToSpawn: 4
   enemiesSpawned: 0
   RangeX: {x: -5, y: 5}
   RangeY: {x: -5, y: 5}
-  _active: 1
+  _active: 0
