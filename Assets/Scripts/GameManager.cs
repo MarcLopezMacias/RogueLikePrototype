@@ -27,6 +27,9 @@ public class GameManager : MonoBehaviour
 
     public bool GameLoop = false, gameOver = false, MenuLoop = true, ShopLoop = false;
 
+    [SerializeField]
+    public Transform[] spawnPoints;
+
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -72,6 +75,13 @@ public class GameManager : MonoBehaviour
             if (_player == null) _player = GameObject.FindWithTag("Player");
             if (PlayerInventory == null) PlayerInventory = GameObject.Find("Inventory").GetComponent<Inventory>();
             if (_player != null && PlayerWeaponComponent == null) PlayerWeaponComponent = GameManager.Instance.Player.GetComponentInChildren<Weapon>();
+
+            if (LegitGameOver())
+            {
+                Debug.Log("Player finished round");
+                ScoreManager.IncreaseScore(5);
+                GameOver();
+            }
         } 
         else if (gameOver)
         {
@@ -86,12 +96,7 @@ public class GameManager : MonoBehaviour
         if (MenuLoop && !UIController.inMenu) UIController.ShowMenu();
 
         if (ShopLoop && !UIController.inShop) UIController.ShowShop();
-
-        if (LegitGameOver())
-        {
-            ScoreManager.IncreaseScore(5);
-            GameOver();
-        }
+        
     }
 
     public void StartGame()
@@ -103,15 +108,25 @@ public class GameManager : MonoBehaviour
     {
         Transform spawnPoint = GetNewSpawnPoint();
         ScoreManager.ResetScore();
-        SpawnEnemies(spawnPoint);
         SpawnSpawners(spawnPoint);
-        ResetCameraPosition(spawnPoint);
-        ResetPlayer(spawnPoint);
+        SetCameraPosition(spawnPoint);
+        SetPlayerLocation(spawnPoint);
 
         MenuLoop = false;
         GameLoop = true;
 
         UIController.ShowGame();
+    }
+
+    private void SpawnSpawners(Transform location)
+    {
+
+    }
+
+    private void SpawnEnemies(Transform location)
+    {
+        EnableEnemies();
+        EnemyManager.ResetEnemies();
     }
 
     public void ResetStage()
@@ -128,9 +143,20 @@ public class GameManager : MonoBehaviour
         UIController.ShowGame();
     }
 
+    public void SetPlayerLocation(Transform location)
+    {
+        Player.GetComponent<Player>().SetLocation(location);
+        
+    }
+
     public void ResetPlayer()
     {
         Player.GetComponent<Player>().Reset();
+    }
+
+    public void SetCameraPosition(Transform location)
+    {
+        MainCamera.GetComponent<FollowPlayer>().SetNewPosition(location);
     }
 
     public void ResetCameraPosition()
@@ -173,7 +199,7 @@ public class GameManager : MonoBehaviour
 
     public bool LegitGameOver()
     {
-        return (EnemyManager.EnemiesInGame.Count == 0 && (EnemyManager.GetEnemiesSlain() > 0) && SpawnManager.IsDoneSpawning());
+        return (EnemyManager.EnemiesInGame.Count == 0 && (EnemyManager.GetEnemiesSlain() == SpawnManager.GetEnemiesSpawned()) && SpawnManager.IsDoneSpawning());
     }
 
     public void GameOver()
@@ -208,7 +234,7 @@ public class GameManager : MonoBehaviour
         MenuLoop = true;
         ShopLoop = false;
 
-        ResetStage();
+        LoadNewStage();
     }
 
     public bool SuccessfulRol(float DropChance)
@@ -224,5 +250,10 @@ public class GameManager : MonoBehaviour
     {
         DataSaver.Save();
         // SAVE AND STUFF ?
+    }
+
+    private Transform GetNewSpawnPoint()
+    {
+        return spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
     }
 }

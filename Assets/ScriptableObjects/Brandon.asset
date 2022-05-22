@@ -17,11 +17,11 @@ MonoBehaviour:
   Speed: 5
   Weight: 69
   Kind: 1
-  Level: 80
-  XP: 68901
+  Level: 83
+  XP: 68875
   XPRequiredToLevelUp: 10
   BumpDamage: 1.1661
   Health: 5
   MaxHealth: 5
-  Lifes: 1
-  MaxLifes: 1
+  Lifes: 5
+  MaxLifes: 5

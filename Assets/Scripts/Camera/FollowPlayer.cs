@@ -30,13 +30,8 @@ public class FollowPlayer : MonoBehaviour
         gameObject.transform.position = initialPosition;
     }
 
-    public void SetNewInitialPosition(float x, float y, float z)
+    public void SetNewPosition(Transform location)
     {
-        initialPosition = new Vector3(x, y, z);
-    }
-
-    public void SetNewInitialPosition(Vector3 newInitialPosition)
-    {
-        initialPosition = newInitialPosition;
+        gameObject.transform.position = location.position;
     }
 }

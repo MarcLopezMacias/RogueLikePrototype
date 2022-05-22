@@ -5,8 +5,7 @@ using UnityEngine;
 public class SoundController : MonoBehaviour
 {
 
-    public AudioSource effects;
-    public AudioSource music;
+    public AudioSource source;
 
     [SerializeField]
     public AudioClip damage;
@@ -21,8 +20,9 @@ public class SoundController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        effects = gameObject.GetComponent<AudioSource>();
-        music = gameObject.GetComponent<AudioSource>();
+        source = gameObject.GetComponent<AudioSource>();
+        source.clip = backgroundMusic;
+        source.Play();
     }
 
     // Update is called once per frame
@@ -33,19 +33,16 @@ public class SoundController : MonoBehaviour
 
     public void PlayDamage()
     {
-        effects.clip = damage;
-        effects.Play();
+        source.PlayOneShot(damage);
     }
 
     public void PlayDeathPlayer()
     {
-        effects.clip = deathPlayer;
-        effects.Play();
+        source.PlayOneShot(deathPlayer);
     }
 
     public void PlayDeathEnemy()
     {
-        effects.clip = deathEnemy;
-        effects.Play();
+        source.PlayOneShot(deathEnemy);
     }
 }

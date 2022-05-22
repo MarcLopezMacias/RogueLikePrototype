@@ -130,7 +130,7 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>,
     {
         enemyInstance.Lifes -= 1;
         if (enemyInstance.Lifes <= 0)
-            gameObject.GetComponent<Enemy>().Die();
+            Die();
     }
 
     public void Heal(float amountHealed)
