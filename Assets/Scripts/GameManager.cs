@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
     private GameObject _player;
 
     public static UIController UIController;
+    public static SoundController SoundController;
+
     public static ScoreManager ScoreManager;
     public static EnemyManager EnemyManager;
     public static SpawnManager SpawnManager;
@@ -36,13 +38,14 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         _player = GameObject.FindWithTag("Player");
         PlayerInventory = _player.GetComponent<Inventory>();
 
         UIController = gameObject.GetComponent<UIController>();
+        SoundController = gameObject.GetComponent < SoundController>();
+
         ScoreManager = gameObject.GetComponent<ScoreManager>();
 
         EnemyManager = gameObject.GetComponent<EnemyManager>();
@@ -56,9 +59,9 @@ public class GameManager : MonoBehaviour
         DisableEnemies();
 
         DataSaver.Load();
+
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (GameLoop)
@@ -93,17 +96,35 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        ResetStage();
+        LoadNewStage();
+    }
+
+    public void LoadNewStage()
+    {
+        Transform spawnPoint = GetNewSpawnPoint();
+        ScoreManager.ResetScore();
+        SpawnEnemies(spawnPoint);
+        SpawnSpawners(spawnPoint);
+        ResetCameraPosition(spawnPoint);
+        ResetPlayer(spawnPoint);
+
+        MenuLoop = false;
+        GameLoop = true;
+
+        UIController.ShowGame();
     }
 
     public void ResetStage()
     {
-        MenuLoop = false;
-        GameLoop = true;
+        ScoreManager.ResetScore();
         ResetEnemies();
         ResetSpawners();
         ResetCameraPosition();
         ResetPlayer();
+
+        MenuLoop = false;
+        GameLoop = true;
+
         UIController.ShowGame();
     }
 
@@ -126,7 +147,7 @@ public class GameManager : MonoBehaviour
     private void ResetEnemies()
     {
         EnableEnemies();
-        // EnemyManager.ResetEnemies();
+        EnemyManager.ResetEnemies();
     }
 
     private void EnableSpawners()
@@ -181,14 +202,13 @@ public class GameManager : MonoBehaviour
     private void ResetGame()
     {
         UIController.ShowMenu();
-        ScoreManager.ResetScore();
-
+        
         GameLoop = false;
         gameOver = false;
         MenuLoop = true;
         ShopLoop = false;
 
-        if (_player != null) _player.GetComponent<Player>().Reset(); UIController.ShowMenu();
+        ResetStage();
     }
 
     public bool SuccessfulRol(float DropChance)

@@ -48,6 +48,7 @@ public class Player : Character, IKillable, IDamageable<float>, IHealable<float>
 
     public void Kill()
     {
+        GameManager.Instance.GetComponent<SoundController>().PlayDeathPlayer();
         DecreaseLifes(1);
     }
 
