@@ -1,18 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class SoundController : MonoBehaviour
 {
 
-    public AudioSource source;
+    [SerializeField]
+    public AudioMixer mixer;
 
     [SerializeField]
-    public AudioClip damage;
+    public AudioSource musicSource, effectsSource;
+
     [SerializeField]
-    public AudioClip deathPlayer;
-    [SerializeField]
-    public AudioClip deathEnemy;
+    public AudioClip damage, deathPlayer, deathEnemy;
 
     [SerializeField]
     public AudioClip backgroundMusic;
@@ -20,9 +21,8 @@ public class SoundController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        source = gameObject.GetComponent<AudioSource>();
-        source.clip = backgroundMusic;
-        source.Play();
+        musicSource.clip = backgroundMusic;
+        musicSource.Play();
     }
 
     // Update is called once per frame
@@ -33,16 +33,26 @@ public class SoundController : MonoBehaviour
 
     public void PlayDamage()
     {
-        source.PlayOneShot(damage);
+        effectsSource.PlayOneShot(damage);
     }
 
     public void PlayDeathPlayer()
     {
-        source.PlayOneShot(deathPlayer);
+        effectsSource.PlayOneShot(deathPlayer);
     }
 
     public void PlayDeathEnemy()
     {
-        source.PlayOneShot(deathEnemy);
+        effectsSource.PlayOneShot(deathEnemy);
+    }
+
+    public void MuteMusic()
+    {
+        musicSource.volume = 0;
+    }
+
+    public void MuteEffects()
+    {
+        effectsSource.volume = 0;
     }
 }

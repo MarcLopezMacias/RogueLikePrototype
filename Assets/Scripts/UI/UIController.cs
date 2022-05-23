@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class UIController : MonoBehaviour
 {
-
-    public bool inGame, inMenu, inShop;
+   [SerializeField]
+    public bool inGame, inMenu, inShop, inOptions, musicMuted, effectsMuted;
 
     [SerializeField]
     public Button playButton, shopButton, quitButton;
@@ -23,7 +24,7 @@ public class UIController : MonoBehaviour
     public Text GameOverScoreText;
     public Text GameOverHighestScoreText;
     public Text SetHighScoreText;
-    private string GameOverString;
+    private string GameOverString = "G A M E  O V E R";
     public int GameOverScreenTime;
 
     public Text EnemiesText;
@@ -34,9 +35,20 @@ public class UIController : MonoBehaviour
     // MENU
     public Canvas MenuCanvas;
     public Text HighestScoreText;
+    public Text RoomsCompletedText;
     public Text lastScoresText;
 
     private bool showingMenu;
+
+    public Button optionsButton;
+
+    public Button muteMusicButton, muteEffectsButton;
+
+    // CONFIG
+    public GameObject optionsPanel;
+    public Slider musicSlider;
+    public Slider effectsSlider;
+    public Button closeOptionsButton;
 
     // SHOP
     public Canvas ShopCanvas;
@@ -46,18 +58,32 @@ public class UIController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     { 
-        GameOverString = "G A M E  O V E R";
-
         playButton.onClick.AddListener(() => GameManager.Instance.StartGame());
         shopButton.onClick.AddListener(() => ShowShop());
         quitButton.onClick.AddListener(() => GameManager.Instance.Quit());
+
+        optionsButton.onClick.AddListener(() => OpenOptions());
+        closeOptionsButton.onClick.AddListener(() => CloseOptions());
+
+        muteMusicButton.onClick.AddListener(() => MuteMusic());
+        muteEffectsButton.onClick.AddListener(() => MuteEffects());
+
+        CloseOptions();
     }
 
     void FixedUpdate()
     {
         if (GameManager.Instance.GameLoop)
         {
-            ShowGameUI();
+            ShowGame();
+        }
+        else if(GameManager.Instance.gameOver)
+        {
+            ShowGameOver();
+        }
+        else if (GameManager.Instance.OptionsLoop)
+        {
+            UpdateVolumeValues();
         }
         else if (GameManager.Instance.MenuLoop)
         {
@@ -67,10 +93,13 @@ public class UIController : MonoBehaviour
         {
             ShowShop();
         }
+
     }
 
     private void ShowGameUI()
     {
+        GameCanvas.enabled = true;
+
         UpdateLifes();
         UpdateHealth();
 
@@ -81,10 +110,6 @@ public class UIController : MonoBehaviour
         UpdateBullets();
 
         HideGameOverUI();
-
-        MenuCanvas.enabled = false;
-        GameCanvas.enabled = true;
-        ShopCanvas.enabled = false;
     }
 
     public void ShowGameOver()
@@ -179,12 +204,15 @@ public class UIController : MonoBehaviour
         lastScoresText.text = ($"Latest scores\n" +
         $"{lastScores}");
 
+        int roomsCompleted = GameManager.Instance.GetComponent<StageManager>().GetRoomsCompleted();
+        RoomsCompletedText.text = ($"Rooms Completed\n" +
+            $"{roomsCompleted}");
+
         yield return new WaitForSeconds(1);
     }
 
     public void ShowGame()
     {
-        GameCanvas.enabled = true;
         ShowGameUI();
         HideGameOverUI();
 
@@ -217,5 +245,61 @@ public class UIController : MonoBehaviour
     public void SetHighScore()
     {
         SetHighScoreText.enabled = true;
+    }
+
+    private void OpenOptions()
+    {
+        ShowPanel();
+    }
+
+    public void ShowPanel()
+    {
+        GameManager.Instance.OptionsLoop = true;
+        GameManager.Instance.MenuLoop = false;
+        optionsPanel.gameObject.SetActive(true);
+        UpdateVolumeValues();
+    }
+
+    private void CloseOptions()
+    {
+        HidePanel();
+        ShowMenu();
+    }
+
+    private void HidePanel()
+    {
+        GameManager.Instance.OptionsLoop = false;
+        GameManager.Instance.MenuLoop = true;
+        optionsPanel.gameObject.SetActive(false);
+    }
+
+    private void UpdateVolumeValues()
+    {
+        UpdateMusic();
+        UpdateSFX();
+    }
+
+    private void UpdateMusic()
+    {
+        AudioSource music = GameManager.Instance.GetComponent<SoundController>().musicSource;
+        if (!musicMuted) music.volume = musicSlider.value;
+        else music.volume = 0;
+    }
+
+    private void UpdateSFX()
+    {
+        AudioSource effects = GameManager.Instance.GetComponent<SoundController>().effectsSource;
+        if (!effectsMuted) effects.volume = effectsSlider.value;
+        else effects.volume = 0;
+    }
+
+    private void MuteMusic()
+    {
+        musicMuted = !musicMuted;
+    }
+
+    private void MuteEffects()
+    {
+        effectsMuted = !effectsMuted;
     }
 }

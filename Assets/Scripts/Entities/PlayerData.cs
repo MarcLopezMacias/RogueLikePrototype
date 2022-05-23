@@ -73,12 +73,12 @@ public class PlayerData : ScriptableObject
         ResetLifes();
     }
 
-    private void ResetHealth()
+    public void ResetHealth()
     {
         Health = MaxHealth;
     }
 
-    private void ResetLifes()
+    public void ResetLifes()
     {
         Lifes = MaxLifes;
     }

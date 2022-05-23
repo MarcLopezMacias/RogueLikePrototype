@@ -42,8 +42,7 @@ public class Player : Character, IKillable, IDamageable<float>, IHealable<float>
             GameManager.Instance.GameOver();
         } else
         {
-            playerData.Health = playerData.MaxHealth;
-            GameManager.Instance.ResetStage();
+            playerData.ResetHealth();
         }
     }
 

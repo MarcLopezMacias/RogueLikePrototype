@@ -35,7 +35,6 @@ public class SpawnManager : MonoBehaviour
         {
             Spawn();
         }
-        enemiesSpawned = GetNumberOfEnemiesSpawned();
     }
 
     public void Remove(GameObject toRemove)
@@ -115,20 +114,12 @@ public class SpawnManager : MonoBehaviour
     public bool IsDoneSpawning()
     {
         int toSpawn = GetNumberOfEnemiesToSpawn(), spawned = GetNumberOfEnemiesSpawned();
+
         if (toSpawn == 0 || spawned == 0)
-        {
-            Debug.Log($"NO SPAWNS YET");
             return false;
-        }
         if (toSpawn == spawned)
-        {
-            Debug.Log($"TRU");
             return true;
-        }
         else
-        {
-            Debug.Log($"To spawn: {toSpawn}. spawned {spawned}");
             return false;
-        }
     }
 }

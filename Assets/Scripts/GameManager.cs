@@ -19,16 +19,12 @@ public class GameManager : MonoBehaviour
     public static ScoreManager ScoreManager;
     public static EnemyManager EnemyManager;
     public static SpawnManager SpawnManager;
+    public static StageManager StageManager;
 
     public Inventory PlayerInventory;
     public Weapon PlayerWeaponComponent;
 
-    private static GameObject MainCamera;
-
-    public bool GameLoop = false, gameOver = false, MenuLoop = true, ShopLoop = false;
-
-    [SerializeField]
-    public Transform[] spawnPoints;
+    public bool GameLoop = false, gameOver = false, MenuLoop = true, ShopLoop = false, OptionsLoop = false;
 
     private void Awake()
     {
@@ -54,12 +50,12 @@ public class GameManager : MonoBehaviour
         EnemyManager = gameObject.GetComponent<EnemyManager>();
         SpawnManager = gameObject.GetComponent<SpawnManager>();
 
-        MainCamera = GameObject.FindWithTag("MainCamera");
+        StageManager = gameObject.GetComponent<StageManager>();
 
         PlayerInventory = GameObject.Find("Inventory").GetComponent<Inventory>();
 
-        DisableSpawners();
-        DisableEnemies();
+        StageManager.DisableSpawners();
+        StageManager.DisableEnemies();
 
         DataSaver.Load();
 
@@ -78,137 +74,38 @@ public class GameManager : MonoBehaviour
 
             if (LegitGameOver())
             {
-                Debug.Log("Player finished round");
-                ScoreManager.IncreaseScore(5);
+                StageManager.RoomCompleted();
                 GameOver();
             }
         } 
         else if (gameOver)
         {
-            DisableSpawners();
+            StageManager.DisableSpawners();
         }
         else
         {
             Time.timeScale = 0f;
-            DisableSpawners();
+            StageManager.DisableSpawners();
         }
-        
-        if (MenuLoop && !UIController.inMenu) UIController.ShowMenu();
 
-        if (ShopLoop && !UIController.inShop) UIController.ShowShop();
+        if (MenuLoop && !UIController.inMenu) UIController.ShowMenu();
+        else if (OptionsLoop && !UIController.inOptions) UIController.ShowPanel();
+        else if (ShopLoop && !UIController.inShop) UIController.ShowShop();
         
     }
 
     public void StartGame()
     {
-        LoadNewStage();
-    }
-
-    public void LoadNewStage()
-    {
-        Transform spawnPoint = GetNewSpawnPoint();
-        ScoreManager.ResetScore();
-        SpawnSpawners(spawnPoint);
-        EnableSpawners();
-        SetCameraPosition(spawnPoint);
-        SetPlayerLocation(spawnPoint);
-
         MenuLoop = false;
         GameLoop = true;
 
-        UIController.ShowGame();
-    }
-
-    private void SpawnSpawners(Transform location)
-    {
-        SpawnManager.StartSpawning();
-    }
-
-    private void SpawnEnemies(Transform location)
-    {
-        EnableEnemies();
-        EnemyManager.ResetEnemies();
-    }
-
-    public void ResetStage()
-    {
-        ScoreManager.ResetScore();
-        ResetEnemies();
-        ResetSpawners();
-        ResetCameraPosition();
-        ResetPlayerPosition();
-
-        MenuLoop = false;
-        GameLoop = true;
+        StageManager.LoadNewStage();
 
         UIController.ShowGame();
-    }
-
-    private void SetPlayerLocation(Transform location)
-    {
-        Player.GetComponent<Player>().SetLocation(location);
-        
-    }
-
-    private void ResetPlayer()
-    {
-        Player.GetComponent<Player>().Reset();
-    }
-
-    private void ResetPlayerPosition()
-    {
-        Player.GetComponent<Player>().ResetPosition();
-    }
-
-    private void SetCameraPosition(Transform location)
-    {
-        MainCamera.GetComponent<FollowPlayer>().SetNewPosition(location);
-    }
-
-    private void ResetCameraPosition()
-    {
-        MainCamera.GetComponent<FollowPlayer>().ResetPosition();
-    }
-
-    public void ResetSpawners()
-    {
-        EnableSpawners();
-        SpawnManager.ResetSpawners();
-    }
-
-    private void ResetEnemies()
-    {
-        EnableEnemies();
-        EnemyManager.ResetEnemies();
-    }
-
-    private void EnableSpawners()
-    {
-        SpawnManager.enabled = true;
-        StartCoroutine(SpawnManager.EnableAll());
-    }
-
-    private void EnableEnemies()
-    {
-        EnemyManager.enabled = true;
-    }
-
-    private void DisableSpawners()
-    {
-        SpawnManager.DisableAll();
-        SpawnManager.enabled = false;
-    }
-
-    private void DisableEnemies()
-    {
-        EnemyManager.DisableAll();
     }
 
     public bool LegitGameOver()
     {
-        Debug.Log($"Enemy Count= {EnemyManager.EnemiesInGame.Count}" +
-            $"Enemies Slain {EnemyManager.GetEnemiesSlain()} vs {SpawnManager.GetNumberOfEnemiesSpawned()} Enemies Spawned" +
-            $"Done Spawning: {SpawnManager.IsDoneSpawning()}");
         return (EnemyManager.GetNumberOfEnemiesAlive() == 0 && (EnemyManager.GetEnemiesSlain() == SpawnManager.GetNumberOfEnemiesSpawned()) && SpawnManager.IsDoneSpawning());
     }
 
@@ -243,8 +140,6 @@ public class GameManager : MonoBehaviour
         gameOver = false;
         MenuLoop = true;
         ShopLoop = false;
-
-        LoadNewStage();
     }
 
     public bool SuccessfulRol(float DropChance)
@@ -262,8 +157,5 @@ public class GameManager : MonoBehaviour
         // SAVE AND STUFF ?
     }
 
-    private Transform GetNewSpawnPoint()
-    {
-        return spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
-    }
+
 }

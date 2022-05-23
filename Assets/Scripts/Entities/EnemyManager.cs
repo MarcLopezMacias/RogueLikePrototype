@@ -30,6 +30,7 @@ public class EnemyManager : MonoBehaviour
     {
         Debug.Log($"Updating enemies in game");
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        EnemiesInGame.Clear();
         foreach (GameObject enemy in enemies)
         {
             EnemiesInGame.Add(enemy);
