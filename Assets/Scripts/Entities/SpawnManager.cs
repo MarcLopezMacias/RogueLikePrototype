@@ -11,14 +11,13 @@ public class SpawnManager : MonoBehaviour
 
     [SerializeField]
     public int numberOfSpawnersToSpawn;
-    public int spawnersSpawned;
+    private int spawnersSpawned;
 
     private Vector2 RangeX, RangeY;
 
     private int enemiesToSpawn, enemiesSpawned;
-    private bool doneSpawningEnemies;
 
-    private bool doneSpawningSpawners;
+    public bool spawnedEverything;
 
     void Start()
     {
@@ -36,7 +35,7 @@ public class SpawnManager : MonoBehaviour
         {
             Spawn();
         }
-        enemiesSpawned = CalculateOt();
+        enemiesSpawned = GetNumberOfEnemiesSpawned();
     }
 
     public void Remove(GameObject toRemove)
@@ -52,8 +51,9 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-    public void EnableAll()
+    public IEnumerator EnableAll()
     {
+        yield return new WaitForSeconds(0.1f);
         foreach (GameObject spawner in sceneSpawners)
         {
             spawner.GetComponent<Spawner>().enabled = true;
@@ -68,7 +68,7 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-    private int CalculateIt()
+    private int GetNumberOfEnemiesToSpawn()
     {
         int number = 0;
         foreach (GameObject spawner in sceneSpawners)
@@ -78,7 +78,7 @@ public class SpawnManager : MonoBehaviour
         return number;
     }
 
-    private int CalculateOt()
+    public int GetNumberOfEnemiesSpawned()
     {
         int number = 0;
         foreach (GameObject spawner in sceneSpawners)
@@ -90,9 +90,10 @@ public class SpawnManager : MonoBehaviour
 
     private void Spawn()
     {
+        GameObject spawner = GetRandomSpawner();
         float PosX = Random.Range(RangeX.x, RangeX.y);
         float PosY = Random.Range(RangeY.x, RangeY.y);
-        Instantiate(GetRandomSpawner(), new Vector3(transform.position.x + PosX, transform.position.y + PosY, 0), Quaternion.identity);
+        Instantiate(spawner, new Vector3(transform.position.x + PosX, transform.position.y + PosY, 0), Quaternion.identity);
         spawnersSpawned++;
     }
 
@@ -101,18 +102,33 @@ public class SpawnManager : MonoBehaviour
         return spawnersToSpawn[Random.Range(0, spawnersToSpawn.Length)];
     }
 
-    public bool IsDoneSpawning()
-    {
-        return doneSpawningEnemies;
-    }
-
-    public int GetEnemiesSpawned()
-    {
-        return enemiesSpawned;
-    }
-
     public int GetEnemiesToSpawn()
     {
         return enemiesToSpawn;
+    }
+
+    public void StartSpawning()
+    {
+        Start();
+    }
+
+    public bool IsDoneSpawning()
+    {
+        int toSpawn = GetNumberOfEnemiesToSpawn(), spawned = GetNumberOfEnemiesSpawned();
+        if (toSpawn == 0 || spawned == 0)
+        {
+            Debug.Log($"NO SPAWNS YET");
+            return false;
+        }
+        if (toSpawn == spawned)
+        {
+            Debug.Log($"TRU");
+            return true;
+        }
+        else
+        {
+            Debug.Log($"To spawn: {toSpawn}. spawned {spawned}");
+            return false;
+        }
     }
 }

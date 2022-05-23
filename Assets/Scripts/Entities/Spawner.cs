@@ -29,12 +29,13 @@ public class Spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (NumberOfEnemiesToSpawn > 0 && NumberOfEnemiesToSpawn < enemiesSpawned) StartCoroutine(Spawn());
+        GameManager.Instance.GetComponent<SpawnManager>().sceneSpawners.Add(gameObject);
+        GetMovin();
     }
 
     void OnEnable()
     {
-        Start();
+        GetMovin();
     }
 
     // Update is called once per frame
@@ -52,9 +53,10 @@ public class Spawner : MonoBehaviour
         if (RandomCooldown) Cooldown = Random.Range(RCRangeInSeconds.x, RCRangeInSeconds.y);
         float PosX = Random.Range(RangeX.x, RangeX.y);
         float PosY = Random.Range(RangeY.x, RangeY.y);
+        yield return new WaitForSeconds(Cooldown);
         Instantiate(GetRandomEnemy(), new Vector3(transform.position.x + PosX, transform.position.y + PosY, 0), Quaternion.identity);
         enemiesSpawned++;
-        yield return new WaitForSeconds(Cooldown);
+        if (enemiesSpawned == NumberOfEnemiesToSpawn) 
         Active = false;
     }
 
@@ -65,7 +67,13 @@ public class Spawner : MonoBehaviour
 
     public void Reset()
     {
-        Start();
+        enemiesSpawned = 0;
+        GetMovin();
+    }
+
+    private void GetMovin()
+    {
+        if (NumberOfEnemiesToSpawn > 0 && NumberOfEnemiesToSpawn < enemiesSpawned) StartCoroutine(Spawn());
     }
 
 

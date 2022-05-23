@@ -116,6 +116,10 @@ public class Inventory : MonoBehaviour
                     }
                 }
             }
+            else
+            {
+                Debug.Log("Item used. Not deleted because still have more left.");
+            }
             OnInventoryChange?.Invoke(fancyInventory);
         }
     }

@@ -15,21 +15,13 @@ public class EnemyManager : MonoBehaviour
     void FixedUpdate()
     {
         if ((EnemiesInGame.Count == 0 &&
-            GameManager.Instance.GetComponent<SpawnManager>().GetEnemiesSpawned() > 0 &&
+            GameManager.Instance.GetComponent<SpawnManager>().GetNumberOfEnemiesSpawned() > 0 &&
             EnemiesSlain == 0)
             ||
             (EnemiesInGame.Count > 0 &&
-            GameManager.Instance.GetComponent<SpawnManager>().GetEnemiesSpawned() == GameManager.Instance.GetComponent<SpawnManager>().GetEnemiesToSpawn()))
+            GameManager.Instance.GetComponent<SpawnManager>().GetNumberOfEnemiesSpawned() == GameManager.Instance.GetComponent<SpawnManager>().GetEnemiesToSpawn()))
         {
             EnemiesInGame.Clear();
-            
-        }
-
-
-        if (EnemiesInGame.Count == 0 && GetEnemiesSlain() > 0)
-        {
-            GameManager.Instance.GetComponent<ScoreManager>().IncreaseScore(5);
-            GameManager.Instance.GameOver();
         }
         
     }

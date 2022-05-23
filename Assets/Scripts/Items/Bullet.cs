@@ -55,8 +55,8 @@ public class Bullet : MonoBehaviour
 
     private IEnumerator WaitNDestroy()
     {
-        Destroy(gameObject);
         yield return new WaitForSeconds(1);
+        Destroy(gameObject);
     }
 
 

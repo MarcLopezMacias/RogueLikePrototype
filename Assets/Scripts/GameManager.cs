@@ -109,6 +109,7 @@ public class GameManager : MonoBehaviour
         Transform spawnPoint = GetNewSpawnPoint();
         ScoreManager.ResetScore();
         SpawnSpawners(spawnPoint);
+        EnableSpawners();
         SetCameraPosition(spawnPoint);
         SetPlayerLocation(spawnPoint);
 
@@ -120,7 +121,7 @@ public class GameManager : MonoBehaviour
 
     private void SpawnSpawners(Transform location)
     {
-
+        SpawnManager.StartSpawning();
     }
 
     private void SpawnEnemies(Transform location)
@@ -135,7 +136,7 @@ public class GameManager : MonoBehaviour
         ResetEnemies();
         ResetSpawners();
         ResetCameraPosition();
-        ResetPlayer();
+        ResetPlayerPosition();
 
         MenuLoop = false;
         GameLoop = true;
@@ -143,23 +144,28 @@ public class GameManager : MonoBehaviour
         UIController.ShowGame();
     }
 
-    public void SetPlayerLocation(Transform location)
+    private void SetPlayerLocation(Transform location)
     {
         Player.GetComponent<Player>().SetLocation(location);
         
     }
 
-    public void ResetPlayer()
+    private void ResetPlayer()
     {
         Player.GetComponent<Player>().Reset();
     }
 
-    public void SetCameraPosition(Transform location)
+    private void ResetPlayerPosition()
+    {
+        Player.GetComponent<Player>().ResetPosition();
+    }
+
+    private void SetCameraPosition(Transform location)
     {
         MainCamera.GetComponent<FollowPlayer>().SetNewPosition(location);
     }
 
-    public void ResetCameraPosition()
+    private void ResetCameraPosition()
     {
         MainCamera.GetComponent<FollowPlayer>().ResetPosition();
     }
@@ -179,6 +185,7 @@ public class GameManager : MonoBehaviour
     private void EnableSpawners()
     {
         SpawnManager.enabled = true;
+        StartCoroutine(SpawnManager.EnableAll());
     }
 
     private void EnableEnemies()
@@ -199,7 +206,10 @@ public class GameManager : MonoBehaviour
 
     public bool LegitGameOver()
     {
-        return (EnemyManager.EnemiesInGame.Count == 0 && (EnemyManager.GetEnemiesSlain() == SpawnManager.GetEnemiesSpawned()) && SpawnManager.IsDoneSpawning());
+        Debug.Log($"Enemy Count= {EnemyManager.EnemiesInGame.Count}" +
+            $"Enemies Slain {EnemyManager.GetEnemiesSlain()} vs {SpawnManager.GetNumberOfEnemiesSpawned()} Enemies Spawned" +
+            $"Done Spawning: {SpawnManager.IsDoneSpawning()}");
+        return (EnemyManager.GetNumberOfEnemiesAlive() == 0 && (EnemyManager.GetEnemiesSlain() == SpawnManager.GetNumberOfEnemiesSpawned()) && SpawnManager.IsDoneSpawning());
     }
 
     public void GameOver()

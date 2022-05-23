@@ -37,11 +37,6 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>,
         GameManager.Instance.GetComponent<EnemyManager>().EnemiesInGame.Add(this.gameObject);
     }
 
-    void OnEnable()
-    {
-        Start();
-    }
-
     void Update()
     {
         if (enemyInstance.Health > 0) animator.SetBool("Alive", true);
