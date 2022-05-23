@@ -40,7 +40,7 @@ public class StageManager : MonoBehaviour
     private void SpawnSpawners(Transform location)
     {
         SpawnManager manager = GameManager.Instance.GetComponent<SpawnManager>();
-        manager.StartSpawning();
+        manager.StartSpawning(location);
     }
 
     private void EnableSpawners()

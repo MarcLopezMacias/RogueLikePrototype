@@ -51,7 +51,8 @@ MonoBehaviour:
   enemyData: {fileID: 11400000, guid: d9423cc5cb3aacc4282db1006afc8db2, type: 2}
   animator: {fileID: 5085810929497992350}
   rb: {fileID: 554208987206419989}
-  shootingCooldown: 0
+  bulletType: {fileID: 0}
+  firePoint: {fileID: 0}
 --- !u!212 &4006998109740147056
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -91,7 +92,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 68a41ff097730fb45a9b2adce184a79d, type: 3}
+  m_Sprite: {fileID: 8784655706012980590, guid: 7389b68dc24a12e47bbc1007ddcde5ef,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -119,7 +121,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6, y: 1.6}
+    oldSize: {x: 0.16, y: 0.16}
     newSize: {x: 1.6, y: 1.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

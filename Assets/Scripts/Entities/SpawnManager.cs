@@ -19,24 +19,6 @@ public class SpawnManager : MonoBehaviour
 
     public bool spawnedEverything;
 
-    void Start()
-    {
-        if (numberOfSpawnersToSpawn > 0 && spawnersSpawned < numberOfSpawnersToSpawn) Spawn();
-    }
-
-    void OnEnable()
-    {
-        Start();
-    }
-
-    void Update()
-    {
-        if (spawnersSpawned < numberOfSpawnersToSpawn)
-        {
-            Spawn();
-        }
-    }
-
     public void Remove(GameObject toRemove)
     {
         sceneSpawners.Remove(toRemove);
@@ -87,13 +69,14 @@ public class SpawnManager : MonoBehaviour
         return number;
     }
 
-    private void Spawn()
+    private void Spawn(Transform location)
     {
         GameObject spawner = GetRandomSpawner();
         float PosX = Random.Range(RangeX.x, RangeX.y);
         float PosY = Random.Range(RangeY.x, RangeY.y);
-        Instantiate(spawner, new Vector3(transform.position.x + PosX, transform.position.y + PosY, 0), Quaternion.identity);
+        Instantiate(spawner, new Vector3(location.position.x + PosX, location.position.y + PosY, 0), Quaternion.identity);
         spawnersSpawned++;
+        if (spawnersSpawned < numberOfSpawnersToSpawn) Spawn(location);
     }
 
     private GameObject GetRandomSpawner()
@@ -106,9 +89,9 @@ public class SpawnManager : MonoBehaviour
         return enemiesToSpawn;
     }
 
-    public void StartSpawning()
+    public void StartSpawning(Transform location)
     {
-        Start();
+        Spawn(location);
     }
 
     public bool IsDoneSpawning()
