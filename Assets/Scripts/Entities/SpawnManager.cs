@@ -41,12 +41,12 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-    public void ResetSpawners()
+    public void DestroySpawners()
     {
         foreach (GameObject spawner in sceneSpawners)
         {
-            spawner.GetComponent<Spawner>().Reset();
-        }
+            spawner.GetComponent<Spawner>().Destroy();
+        } 
     }
 
     private int GetNumberOfEnemiesToSpawn()
@@ -91,6 +91,7 @@ public class SpawnManager : MonoBehaviour
 
     public void StartSpawning(Transform location)
     {
+        OnEnable();
         Spawn(location);
     }
 
@@ -104,5 +105,13 @@ public class SpawnManager : MonoBehaviour
             return true;
         else
             return false;
+    }
+
+    void OnEnable()
+    {
+        sceneSpawners = new List<GameObject>();
+        spawnersSpawned = 0;
+        enemiesSpawned = 0;
+        spawnedEverything = false;
     }
 }

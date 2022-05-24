@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    private int EnemiesSlain = 0;
+    public int enemiesSlain = 0;
     public List<GameObject> EnemiesInGame;
 
     void Start()
@@ -14,16 +14,7 @@ public class EnemyManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        if ((EnemiesInGame.Count == 0 &&
-            GameManager.Instance.GetComponent<SpawnManager>().GetNumberOfEnemiesSpawned() > 0 &&
-            EnemiesSlain == 0)
-            ||
-            (EnemiesInGame.Count > 0 &&
-            GameManager.Instance.GetComponent<SpawnManager>().GetNumberOfEnemiesSpawned() == GameManager.Instance.GetComponent<SpawnManager>().GetEnemiesToSpawn()))
-        {
-            EnemiesInGame.Clear();
-        }
-        
+       
     }
 
     private IEnumerator UpdateEnemiesInGame()
@@ -45,7 +36,7 @@ public class EnemyManager : MonoBehaviour
 
     public void IncreaseEnemiesSlain(int value)
     {
-        EnemiesSlain += value;
+        enemiesSlain += value;
     }
 
     public void Remove(GameObject toRemove)
@@ -55,7 +46,7 @@ public class EnemyManager : MonoBehaviour
 
     public int GetEnemiesSlain()
     {
-        return EnemiesSlain;
+        return enemiesSlain;
     }
 
     public void DisableAll()

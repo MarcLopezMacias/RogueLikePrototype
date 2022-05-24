@@ -5,6 +5,9 @@ public class Spawner : MonoBehaviour
 {
 
     [SerializeField]
+    public int gracePeriod;
+
+    [SerializeField]
     private float Cooldown;
 
     [SerializeField]
@@ -31,11 +34,13 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         GameManager.Instance.GetComponent<SpawnManager>().sceneSpawners.Add(gameObject);
-        GetMovin();
+        StartCoroutine(GetMovin());
     }
 
     void OnEnable()
     {
+        enemiesSpawned = 0;
+        doneSpawning = false;
         GetMovin();
     }
 
@@ -49,10 +54,13 @@ public class Spawner : MonoBehaviour
     {
         active = true;
         if (RandomCooldown) Cooldown = Random.Range(RCRangeInSeconds.x, RCRangeInSeconds.y);
+        yield return new WaitForSeconds(Cooldown);
+
         float PosX = Random.Range(RangeX.x, RangeX.y);
         float PosY = Random.Range(RangeY.x, RangeY.y);
-        yield return new WaitForSeconds(Cooldown);
+
         Instantiate(GetRandomEnemy(), new Vector3(transform.position.x + PosX, transform.position.y + PosY, 0), Quaternion.identity);
+
         enemiesSpawned++;
         if (enemiesSpawned == NumberOfEnemiesToSpawn) doneSpawning = true;
         active = false;
@@ -63,15 +71,15 @@ public class Spawner : MonoBehaviour
         return EnemiesToSpawn[Random.Range(0, EnemiesToSpawn.Length)];
     }
 
-    public void Reset()
+    private IEnumerator GetMovin()
     {
-        enemiesSpawned = 0;
-        GetMovin();
+        yield return new WaitForSeconds(gracePeriod);
+        if (NumberOfEnemiesToSpawn > 0 && NumberOfEnemiesToSpawn < enemiesSpawned) StartCoroutine(Spawn());
     }
 
-    private void GetMovin()
+    public void Destroy()
     {
-        if (NumberOfEnemiesToSpawn > 0 && NumberOfEnemiesToSpawn < enemiesSpawned) StartCoroutine(Spawn());
+        Destroy(gameObject);
     }
 
 

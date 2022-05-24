@@ -74,18 +74,16 @@ public class GameManager : MonoBehaviour
 
             if (LegitGameOver())
             {
-                StageManager.RoomCompleted();
                 GameOver();
             }
         } 
         else if (gameOver)
         {
-            StageManager.DisableSpawners();
+            // SMTH ?
         }
         else
         {
             Time.timeScale = 0f;
-            StageManager.DisableSpawners();
         }
 
         if (MenuLoop && !UIController.inMenu) UIController.ShowMenu();
@@ -106,6 +104,11 @@ public class GameManager : MonoBehaviour
 
     public bool LegitGameOver()
     {
+        Debug.Log($"Enemies Alive. {EnemyManager.GetNumberOfEnemiesAlive()}. Should be 0.");
+        Debug.Log($"Enemies Slain. {EnemyManager.GetEnemiesSlain()}. Should be 0.");
+        Debug.Log($"Enemies Spawned. {SpawnManager.GetNumberOfEnemiesSpawned()}. Should be equal to enemies slain.");
+        Debug.Log($"Done spawning. {SpawnManager.IsDoneSpawning()}.");
+        
         return (EnemyManager.GetNumberOfEnemiesAlive() == 0 && (EnemyManager.GetEnemiesSlain() == SpawnManager.GetNumberOfEnemiesSpawned()) && SpawnManager.IsDoneSpawning());
     }
 
@@ -116,7 +119,7 @@ public class GameManager : MonoBehaviour
             GameLoop = false;
             gameOver = true;
             ScoreManager.RecordScore();
-            if (EnemyManager.GetNumberOfEnemiesAlive() > 0) EnemyManager.DisableAll();
+            // if (EnemyManager.GetNumberOfEnemiesAlive() > 0) EnemyManager.DisableAll();
             UIController.ShowGameOver();
             Debug.Log("waitin");
             StartCoroutine(WaitForGameOverScreen());
@@ -129,6 +132,9 @@ public class GameManager : MonoBehaviour
         Debug.Log("Reactivating");
         gameOver = false;
         MenuLoop = true;
+
+        StageManager.RoomCompleted();
+
         ResetGame();
     }
 

@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef557f69af77dcd4fb77a8bac268c002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gracePeriod: 2
   Cooldown: 0
   RandomCooldown: 1
   RCRangeInSeconds: {x: 0, y: 2}
@@ -55,4 +56,5 @@ MonoBehaviour:
   enemiesSpawned: 0
   RangeX: {x: -5, y: 5}
   RangeY: {x: -5, y: 5}
-  _active: 0
+  active: 0
+  doneSpawning: 0

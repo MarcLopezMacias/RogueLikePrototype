@@ -50,7 +50,6 @@ public class Bullet : MonoBehaviour
     {
         Instantiate(impactEffect, transform.position, Quaternion.identity);
         StartCoroutine(WaitNDestroy());
-        
     }
 
     private IEnumerator WaitNDestroy()

@@ -67,14 +67,10 @@ public class StageManager : MonoBehaviour
 
     public void RoomCompleted()
     {
-        roomsCompleted++;
+        GameManager.Instance.GetComponent<SpawnManager>().DestroySpawners();
+        GameManager.Instance.GetComponent<EnemyManager>().enemiesSlain = 0;
         GameManager.Instance.GetComponent<ScoreManager>().IncreaseScore(5);
-    }
-
-    public void ResetSpawners()
-    {
-        EnableSpawners();
-        GameManager.Instance.GetComponent<SpawnManager>().ResetSpawners();
+        roomsCompleted++;
     }
 
     private void SpawnEnemies(Transform location)
