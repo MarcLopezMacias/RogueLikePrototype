@@ -38,7 +38,6 @@ public class Player : Character, IKillable, IDamageable<float>, IHealable<float>
         playerData.Lifes -= amount;
         if (playerData.Lifes <= 0)
         {
-            Debug.Log("Game Over. Player ran out of Lifes!");
             GameManager.Instance.GameOver();
         } else
         {

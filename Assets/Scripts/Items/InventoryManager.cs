@@ -7,6 +7,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField]
     public static int InventorySize = 5;
 
+    [SerializeField]
     public GameObject slotPrefab;
     public List<InventorySlot> inventorySlots = new List<InventorySlot>(InventorySize);
 

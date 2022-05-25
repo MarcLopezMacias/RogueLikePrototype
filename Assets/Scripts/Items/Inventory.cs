@@ -8,7 +8,7 @@ public class Inventory : MonoBehaviour
     public static event Action<List<InventoryItem>> OnInventoryChange;
 
     public List<InventoryItem> fancyInventory = new List<InventoryItem>();
-    private Dictionary<ItemData, InventoryItem> fancyDictionary = new Dictionary<ItemData, InventoryItem>();
+    protected Dictionary<ItemData, InventoryItem> fancyDictionary = new Dictionary<ItemData, InventoryItem>();
 
     private List<WeaponScriptableObject> weapons = new List<WeaponScriptableObject>();
 
@@ -41,11 +41,13 @@ public class Inventory : MonoBehaviour
     private void OnEnable()
     {
         Item.OnItemCollected += Add;
+        Item.OnItemBought += Add;
     }
 
     private void OnDisable()
     {
         Item.OnItemCollected -= Add;
+        Item.OnItemBought -= Add;
     }
 
     public void Add(ItemData itemData)

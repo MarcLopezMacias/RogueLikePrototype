@@ -49,6 +49,7 @@ public class ScoreManager : MonoBehaviour
 
     private void SetHighestScore()
     {
+        Debug.Log("Recording Score");
         GameManager.Instance.GetComponent<UIController>().SetHighScore();
         maxScore = Score;
     }

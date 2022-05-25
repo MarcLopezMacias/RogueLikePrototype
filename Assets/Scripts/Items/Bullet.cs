@@ -8,6 +8,11 @@ public class Bullet : MonoBehaviour
     [SerializeField]
     public GameObject impactEffect;
 
+    private bool selfDestructing = false;
+
+    [SerializeField]
+    public int bulletLifeTime = 4;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +22,10 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(!selfDestructing)
+        {
+            StartCoroutine(WaitNDestroy());
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -54,7 +62,8 @@ public class Bullet : MonoBehaviour
 
     private IEnumerator WaitNDestroy()
     {
-        yield return new WaitForSeconds(1);
+        selfDestructing = true;
+        yield return new WaitForSeconds(bulletLifeTime);
         Destroy(gameObject);
     }
 

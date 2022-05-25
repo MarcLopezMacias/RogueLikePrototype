@@ -19,7 +19,7 @@ public class Spawner : MonoBehaviour
     public GameObject[] EnemiesToSpawn;
 
     [SerializeField]
-    public int NumberOfEnemiesToSpawn;
+    public int numberEnemiesToSpawn;
     public int enemiesSpawned;
 
     [SerializeField]
@@ -41,13 +41,14 @@ public class Spawner : MonoBehaviour
     {
         enemiesSpawned = 0;
         doneSpawning = false;
+        numberEnemiesToSpawn = GameManager.Instance.GetComponent<StageManager>().difficulty;
         GetMovin();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (enemiesSpawned < NumberOfEnemiesToSpawn && !active) StartCoroutine(Spawn());
+        if (enemiesSpawned < numberEnemiesToSpawn && !active) StartCoroutine(Spawn());
     }
 
     private IEnumerator Spawn()
@@ -62,7 +63,7 @@ public class Spawner : MonoBehaviour
         Instantiate(GetRandomEnemy(), new Vector3(transform.position.x + PosX, transform.position.y + PosY, 0), Quaternion.identity);
 
         enemiesSpawned++;
-        if (enemiesSpawned == NumberOfEnemiesToSpawn) doneSpawning = true;
+        if (enemiesSpawned == numberEnemiesToSpawn) doneSpawning = true;
         active = false;
     }
 
@@ -74,12 +75,17 @@ public class Spawner : MonoBehaviour
     private IEnumerator GetMovin()
     {
         yield return new WaitForSeconds(gracePeriod);
-        if (NumberOfEnemiesToSpawn > 0 && NumberOfEnemiesToSpawn < enemiesSpawned) StartCoroutine(Spawn());
+        if (numberEnemiesToSpawn > 0 && numberEnemiesToSpawn < enemiesSpawned) StartCoroutine(Spawn());
     }
 
     public void Destroy()
     {
         Destroy(gameObject);
+    }
+
+    public void SetEnemiesToSpawn(int value)
+    {
+        numberEnemiesToSpawn = value;
     }
 
 

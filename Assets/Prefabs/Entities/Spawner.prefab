@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef557f69af77dcd4fb77a8bac268c002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gracePeriod: 2
+  gracePeriod: 3
   Cooldown: 0
   RandomCooldown: 1
   RCRangeInSeconds: {x: 0, y: 2}
@@ -52,9 +52,9 @@ MonoBehaviour:
   - {fileID: 1622410281043307655, guid: 3a878a26ce7119149b0b187e6d9237b7, type: 3}
   - {fileID: 2723037460912317984, guid: ecaecb3681317344bb8f34bd92b5438a, type: 3}
   - {fileID: 7527428002037570903, guid: 40803083e65985e478a331549020ac1c, type: 3}
-  NumberOfEnemiesToSpawn: 4
+  numberEnemiesToSpawn: 0
   enemiesSpawned: 0
-  RangeX: {x: -5, y: 5}
-  RangeY: {x: -5, y: 5}
+  RangeX: {x: -10, y: 10}
+  RangeY: {x: -10, y: 10}
   active: 0
   doneSpawning: 0

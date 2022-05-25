@@ -8,6 +8,11 @@ public class StageManager : MonoBehaviour
 
     private int roomsCompleted;
 
+    public int difficulty;
+
+    [SerializeField]
+    public GameObject starterWeapon;
+
     [SerializeField]
     public Transform[] spawnPoints;
 
@@ -25,11 +30,15 @@ public class StageManager : MonoBehaviour
     {
         Transform spawnPoint = GetNewSpawnPoint();
         GameManager.Instance.GetComponent<ScoreManager>().ResetScore();
+
         SpawnSpawners(spawnPoint);
         EnableSpawners();
+
         SetCameraPosition(spawnPoint);
         SetPlayerLocation(spawnPoint);
+
         ResetPlayer();
+        SpawnPlayerWeapon(spawnPoint);
     }
 
     private Transform GetNewSpawnPoint()
@@ -47,7 +56,7 @@ public class StageManager : MonoBehaviour
     {
         SpawnManager manager = GameManager.Instance.GetComponent<SpawnManager>();
         manager.enabled = true;
-        StartCoroutine(manager.EnableAll());
+        manager.EnableSpawners();
     }
 
     private void SetCameraPosition(Transform location)
@@ -114,5 +123,23 @@ public class StageManager : MonoBehaviour
     public void DisableEnemies()
     {
         GameManager.Instance.GetComponent<EnemyManager>().DisableAll();
+    }
+
+    private void SetDifficulty()
+    {
+        if (roomsCompleted == 0)
+        {
+            GameManager.Instance.GetComponent<SpawnManager>().SetSpawnersToSpawn(1);
+        }
+        else
+        {
+            GameManager.Instance.GetComponent<SpawnManager>().SetSpawnersToSpawn(roomsCompleted + 1);
+        }
+    }
+
+    private void SpawnPlayerWeapon(Transform location)
+    {
+        Debug.Log("Spawning weapon");
+        Instantiate(starterWeapon, location.position, Quaternion.identity);
     }
 }

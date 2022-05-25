@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public Inventory PlayerInventory;
     public Weapon PlayerWeaponComponent;
 
-    public bool GameLoop = false, gameOver = false, MenuLoop = true, ShopLoop = false, OptionsLoop = false;
+    public bool GameLoop = false, gameOver = false, finishedRoom = false, MenuLoop = true, ShopLoop = false, OptionsLoop = false;
 
     private void Awake()
     {
@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
 
         StageManager = gameObject.GetComponent<StageManager>();
 
-        PlayerInventory = GameObject.Find("Inventory").GetComponent<Inventory>();
+        PlayerInventory = gameObject.GetComponent<Inventory>();
 
         StageManager.DisableSpawners();
         StageManager.DisableEnemies();
@@ -69,12 +69,14 @@ public class GameManager : MonoBehaviour
 
             // REFRESH NULL COMPONENTS
             if (_player == null) _player = GameObject.FindWithTag("Player");
-            if (PlayerInventory == null) PlayerInventory = GameObject.Find("Inventory").GetComponent<Inventory>();
+            if (PlayerInventory == null) PlayerInventory = gameObject.GetComponent<Inventory>();
             if (_player != null && PlayerWeaponComponent == null) PlayerWeaponComponent = GameManager.Instance.Player.GetComponentInChildren<Weapon>();
 
-            if (LegitGameOver())
+            finishedRoom = (EnemyManager.GetNumberOfEnemiesAlive() == 0 && (EnemyManager.GetEnemiesSlain() == SpawnManager.GetNumberOfEnemiesSpawned()) && SpawnManager.IsDoneSpawning());
+
+            if (finishedRoom)
             {
-                GameOver();
+                FinishRound();
             }
         } 
         else if (gameOver)
@@ -102,14 +104,18 @@ public class GameManager : MonoBehaviour
         UIController.ShowGame();
     }
 
-    public bool LegitGameOver()
+    public void FinishRound()
     {
-        Debug.Log($"Enemies Alive. {EnemyManager.GetNumberOfEnemiesAlive()}. Should be 0.");
-        Debug.Log($"Enemies Slain. {EnemyManager.GetEnemiesSlain()}. Should be 0.");
-        Debug.Log($"Enemies Spawned. {SpawnManager.GetNumberOfEnemiesSpawned()}. Should be equal to enemies slain.");
-        Debug.Log($"Done spawning. {SpawnManager.IsDoneSpawning()}.");
-        
-        return (EnemyManager.GetNumberOfEnemiesAlive() == 0 && (EnemyManager.GetEnemiesSlain() == SpawnManager.GetNumberOfEnemiesSpawned()) && SpawnManager.IsDoneSpawning());
+        if (GameLoop)
+        {
+            GameLoop = false;
+            gameOver = true;
+            StageManager.RoomCompleted();
+            ScoreManager.RecordScore();
+            UIController.ShowGameOver();
+            Debug.Log("waitin");
+            StartCoroutine(WaitForGameOverScreen());
+        }
     }
 
     public void GameOver()
@@ -118,9 +124,9 @@ public class GameManager : MonoBehaviour
         {
             GameLoop = false;
             gameOver = true;
-            ScoreManager.RecordScore();
-            // if (EnemyManager.GetNumberOfEnemiesAlive() > 0) EnemyManager.DisableAll();
+            EnemyManager.DestroyEnemies();
             UIController.ShowGameOver();
+            // Reset Inventory ?
             Debug.Log("waitin");
             StartCoroutine(WaitForGameOverScreen());
         } 
@@ -132,8 +138,6 @@ public class GameManager : MonoBehaviour
         Debug.Log("Reactivating");
         gameOver = false;
         MenuLoop = true;
-
-        StageManager.RoomCompleted();
 
         ResetGame();
     }

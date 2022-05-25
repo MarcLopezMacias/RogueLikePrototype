@@ -9,8 +9,8 @@ public class Collector : MonoBehaviour
         ICollectible collectible = collision.GetComponent<ICollectible>();
         if(collectible != null)
         {
-            IncreaseScore();
             collectible.Collect();
+            IncreaseScore();
         }
     }
 

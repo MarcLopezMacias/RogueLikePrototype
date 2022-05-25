@@ -180,10 +180,10 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>,
 
     public void Shoot(int amount)
     {
+        StartCoroutine(ShootCD());
+
         GameObject projectile = Instantiate(bulletType, firePoint.position, gameObject.transform.rotation);
         projectile.GetComponent<Rigidbody2D>().AddForce(faceDirection * amount, ForceMode2D.Impulse);
-
-        StartCoroutine(ShootCD());
 
         // RaycastHit2D hit = Physics2D.Raycast(transform.position, target);
         // Player player = hit.collider.transform.gameObject.GetComponent<Player>();
@@ -204,5 +204,10 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>,
     public void Reset()
     {
         Start();
+    }
+
+    public void Destroy()
+    {
+        Destroy(gameObject);
     }
 }

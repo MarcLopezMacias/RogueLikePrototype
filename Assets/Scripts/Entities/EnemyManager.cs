@@ -84,5 +84,14 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
+    public void DestroyEnemies()
+    {
+        foreach (GameObject enemy in EnemiesInGame)
+        {
+            Enemy enemyComponent = enemy.GetComponent<Enemy>();
+            enemyComponent.Destroy();
+        }
+        EnemiesInGame.Clear();
+    }
 
 }

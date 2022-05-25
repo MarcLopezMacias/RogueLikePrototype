@@ -32,9 +32,8 @@ public class SpawnManager : MonoBehaviour
         }
     }
 
-    public IEnumerator EnableAll()
+    public void EnableSpawners()
     {
-        yield return new WaitForSeconds(0.1f);
         foreach (GameObject spawner in sceneSpawners)
         {
             spawner.GetComponent<Spawner>().enabled = true;
@@ -54,7 +53,7 @@ public class SpawnManager : MonoBehaviour
         int number = 0;
         foreach (GameObject spawner in sceneSpawners)
         {
-            number += spawner.GetComponent<Spawner>().NumberOfEnemiesToSpawn;
+            number += spawner.GetComponent<Spawner>().numberEnemiesToSpawn;
         }
         return number;
     }
@@ -76,6 +75,9 @@ public class SpawnManager : MonoBehaviour
         float PosY = Random.Range(RangeY.x, RangeY.y);
         Instantiate(spawner, new Vector3(location.position.x + PosX, location.position.y + PosY, 0), Quaternion.identity);
         spawnersSpawned++;
+
+        spawner.GetComponent<Spawner>().numberEnemiesToSpawn = GameManager.Instance.GetComponent<StageManager>().difficulty;
+
         if (spawnersSpawned < numberOfSpawnersToSpawn) Spawn(location);
     }
 
@@ -113,5 +115,10 @@ public class SpawnManager : MonoBehaviour
         spawnersSpawned = 0;
         enemiesSpawned = 0;
         spawnedEverything = false;
+    }
+
+    public void SetSpawnersToSpawn(int value)
+    {
+        numberOfSpawnersToSpawn = value;
     }
 }

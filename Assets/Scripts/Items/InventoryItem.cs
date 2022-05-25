@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class InventoryItem : MonoBehaviour
+public class InventoryItem
 {
     public ItemData itemData;
     public int stackSize;
