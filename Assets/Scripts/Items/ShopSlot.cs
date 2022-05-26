@@ -6,9 +6,19 @@ using UnityEngine.UI;
 public class ShopSlot : MonoBehaviour
 {
 
+    [SerializeField]
     public Image icon;
+
+    [SerializeField]
+    public Image nameLabel;
+
+    [SerializeField]
     public Text nameText;
+
+    [SerializeField]
     public Button priceButton;
+
+    [SerializeField]
     public Text priceText;
 
     public bool selected;
@@ -21,6 +31,7 @@ public class ShopSlot : MonoBehaviour
     public void ClearSlot()
     {
         icon.enabled = false;
+        nameLabel.enabled = false;
         nameText.enabled = false;
         priceButton.enabled = false;
         priceText.enabled = false;
@@ -36,9 +47,10 @@ public class ShopSlot : MonoBehaviour
         }
 
         icon.enabled = true;
+        nameLabel.enabled = true;
         nameText.enabled = true;
         priceButton.enabled = true;
-        priceButton.enabled = false;
+        priceText.enabled = true;
 
         icon.sprite = item.Icon;
         nameText.text = item.Name;
@@ -47,7 +59,13 @@ public class ShopSlot : MonoBehaviour
 
     private void Select()
     {
+        Debug.Log($"Selecting {nameText.text}");
         selected = true;
+    }
+
+    private void OnEnable()
+    {
+        Start();
     }
 
 }

@@ -80,7 +80,7 @@ public class UIController : MonoBehaviour
         else if (GameManager.Instance.ShopLoop)
         {
             if (!inShop) ShowShop();
-            UpdateCoinValue();
+            // UpdateCoinValue();
         }
         else if (GameManager.Instance.MenuLoop)
         {
