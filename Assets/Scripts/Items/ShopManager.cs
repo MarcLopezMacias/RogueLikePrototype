@@ -24,7 +24,7 @@ public class ShopManager : MonoBehaviour
     {
         shopSlots = new List<ShopSlot>(shopItems.Count);
         DrawShop(shopItems);
-        buyButton.onClick.AddListener(AttemptBuy);
+        // buyButton.onClick.AddListener(AttemptBuy);
         EnableAll();
     }
 
@@ -65,7 +65,7 @@ public class ShopManager : MonoBehaviour
 
         for (int i = 0; i < shopSlots.Capacity; i++)
         {
-            CreateShopSlot();
+            CreateShopSlot(i);
         }
 
         for (int i = 0; i < shopItems.Count; i++)
@@ -75,7 +75,7 @@ public class ShopManager : MonoBehaviour
         }
     }
 
-    void CreateShopSlot()
+    void CreateShopSlot(int i)
     {
         GameObject newSlot = Instantiate(slotPrefab);
         newSlot.transform.SetParent(transform, false);
@@ -84,17 +84,15 @@ public class ShopManager : MonoBehaviour
         newSlotComponent.ClearSlot();
 
         shopSlots.Add(newSlotComponent);
+
+        shopSlots[i].priceButton.onClick.AddListener(() => AttemptBuy(shopItems[i]));
+
     }
 
-    private void AttemptBuy()
+    private void AttemptBuy(ItemData item)
     {
-        ItemData item = FindSelectedItem();
-        if (item == null) Debug.Log("Couldn't find Item");
-        else
-        {
-            Debug.Log("Attempting Buy");
-            if (CanAfford(item)) Buy(item);
-        }
+        Debug.Log("Attempting Buy");
+        if (CanAfford(item)) Buy(item);
     }
 
     private bool CanAfford(ItemData item)
@@ -110,6 +108,7 @@ public class ShopManager : MonoBehaviour
         inventoryComponent.Add(item);
 
         GameManager.Instance.GetComponent<ScoreManager>().DecreaseCoins(item.Price);
+        GameManager.Instance.GetComponent<UIController>().UpdateCoinValue();
     }
 
     private ItemData FindSelectedItem()

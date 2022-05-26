@@ -25,7 +25,7 @@ public class ShopSlot : MonoBehaviour
 
     void Start()
     {
-        priceButton.onClick.AddListener(Select);
+
     }
 
     public void ClearSlot()
@@ -55,12 +55,6 @@ public class ShopSlot : MonoBehaviour
         icon.sprite = item.Icon;
         nameText.text = item.Name;
         priceText.text = item.Price.ToString();
-    }
-
-    private void Select()
-    {
-        Debug.Log($"Selecting {nameText.text}");
-        selected = true;
     }
 
     private void OnEnable()

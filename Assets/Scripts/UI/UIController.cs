@@ -80,7 +80,6 @@ public class UIController : MonoBehaviour
         else if (GameManager.Instance.ShopLoop)
         {
             if (!inShop) ShowShop();
-            // UpdateCoinValue();
         }
         else if (GameManager.Instance.MenuLoop)
         {
@@ -325,7 +324,7 @@ public class UIController : MonoBehaviour
         effectsMuted = !effectsMuted;
     }
 
-    private void UpdateCoinValue()
+    public void UpdateCoinValue()
     {
         currencyAmountText.text = $"{GameManager.Instance.GetComponent<ScoreManager>().coins.ToString()}";
     }
