@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ShopSlot : MonoBehaviour
+public class ShopSlot : MonoBehaviour, IBuyable
 {
 
     [SerializeField]
@@ -60,6 +60,17 @@ public class ShopSlot : MonoBehaviour
     private void OnEnable()
     {
         Start();
+    }
+
+
+    public static event HandleItemBought OnItemBought;
+    public delegate void HandleItemBought(ItemData itemData);
+
+    public ItemData specificItemData;
+
+    public void Buy()
+    {
+        OnItemBought?.Invoke(specificItemData);
     }
 
 }

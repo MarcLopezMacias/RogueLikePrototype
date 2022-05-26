@@ -41,13 +41,13 @@ public class Inventory : MonoBehaviour
     private void OnEnable()
     {
         Item.OnItemCollected += Add;
-        Item.OnItemBought += Add;
+        ShopSlot.OnItemBought += Add;
     }
 
     private void OnDisable()
     {
         Item.OnItemCollected -= Add;
-        Item.OnItemBought -= Add;
+        ShopSlot.OnItemBought -= Add;
     }
 
     public void Add(ItemData itemData)

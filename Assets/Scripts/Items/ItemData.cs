@@ -6,6 +6,7 @@ using System;
 [Serializable]
 public abstract class ItemData : ScriptableObject
 {
+
     [Header("Name")]
     public string Name;
 
@@ -26,3 +27,4 @@ public abstract class ItemData : ScriptableObject
     public Sprite Icon;
 
 }
+

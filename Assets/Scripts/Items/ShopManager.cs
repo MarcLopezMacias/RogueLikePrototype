@@ -18,8 +18,6 @@ public class ShopManager : MonoBehaviour
     public GameObject slotPrefab;
     public List<ShopSlot> shopSlots;
 
-    public Button buyButton;
-
     void Start()
     {
         shopSlots = new List<ShopSlot>(shopItems.Count);
@@ -35,12 +33,12 @@ public class ShopManager : MonoBehaviour
 
     private void OnEnable()
     {
-        Item.OnItemBought += inventoryComponent.Add;
+        ShopSlot.OnItemBought += inventoryComponent.Add;
     }
 
     private void OnDisable()
     {
-        Item.OnItemBought -= inventoryComponent.Add;
+        ShopSlot.OnItemBought -= inventoryComponent.Add;
     }
 
     private IEnumerator RefreshPlayerInventory()
@@ -106,18 +104,8 @@ public class ShopManager : MonoBehaviour
     private void Buy(ItemData item)
     {
         inventoryComponent.Add(item);
-
         GameManager.Instance.GetComponent<ScoreManager>().DecreaseCoins(item.Price);
         GameManager.Instance.GetComponent<UIController>().UpdateCoinValue();
-    }
-
-    private ItemData FindSelectedItem()
-    {
-        for (int i = 0; i < shopItems.Count; i++)
-        {
-            if (shopSlots[i].GetComponent<ShopSlot>().selected) return shopItems[i];
-        }
-        return null;
     }
 
     public void EnableAll()
