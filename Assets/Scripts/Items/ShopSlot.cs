@@ -7,12 +7,23 @@ public class ShopSlot : MonoBehaviour
 {
 
     public Image icon;
-    public Text labelText;
+    public Text nameText;
+    public Button priceButton;
+    public Text priceText;
+
+    public bool selected;
+
+    void Start()
+    {
+        priceButton.onClick.AddListener(Select);
+    }
 
     public void ClearSlot()
     {
         icon.enabled = false;
-        labelText.enabled = false;
+        nameText.enabled = false;
+        priceButton.enabled = false;
+        priceText.enabled = false;
     }
 
     public void DrawSlot(ItemData item)
@@ -25,9 +36,18 @@ public class ShopSlot : MonoBehaviour
         }
 
         icon.enabled = true;
-        labelText.enabled = true;
+        nameText.enabled = true;
+        priceButton.enabled = true;
+        priceButton.enabled = false;
 
         icon.sprite = item.Icon;
-        labelText.text = item.Name;
+        nameText.text = item.Name;
+        priceText.text = item.Price.ToString();
     }
+
+    private void Select()
+    {
+        selected = true;
+    }
+
 }

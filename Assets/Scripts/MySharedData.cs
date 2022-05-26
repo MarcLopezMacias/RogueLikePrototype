@@ -10,4 +10,5 @@ public class MySharedData
 {
     public List<int> lastScores;
     public int maxScore;
+    public int coins;
 }

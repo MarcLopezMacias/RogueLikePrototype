@@ -77,6 +77,7 @@ public class GameManager : MonoBehaviour
             if (finishedRoom)
             {
                 FinishRound();
+                finishedRoom = false;
             }
         } 
         else if (gameOver)
@@ -90,15 +91,17 @@ public class GameManager : MonoBehaviour
 
         if (MenuLoop && !UIController.inMenu) UIController.ShowMenu();
         else if (OptionsLoop && !UIController.inOptions) UIController.ShowPanel();
-        else if (ShopLoop && !UIController.inShop) UIController.ShowShop();
-        
+        else if (ShopLoop && !UIController.inShop) UIController.OpenShop();
     }
 
     public void StartGame()
     {
-        MenuLoop = false;
         GameLoop = true;
+        MenuLoop = false;
 
+        UIController.HideMenu();
+        UIController.ShowGame();
+        
         StageManager.LoadNewStage();
 
         UIController.ShowGame();

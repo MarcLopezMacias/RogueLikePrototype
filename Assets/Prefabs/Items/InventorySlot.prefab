@@ -318,7 +318,7 @@ GameObject:
   - component: {fileID: 6774107171299600255}
   - component: {fileID: 254683021621612444}
   m_Layer: 5
-  m_Name: InventorySlot 1
+  m_Name: InventorySlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2799039, g: 0.6981132, b: 0.45010313, a: 1}
+  m_Color: {r: 0.4706821, g: 0.8207547, b: 0.18970275, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:

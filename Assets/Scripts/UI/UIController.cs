@@ -7,7 +7,7 @@ using UnityEngine.Audio;
 public class UIController : MonoBehaviour
 {
    [SerializeField]
-    public bool inGame, inMenu, inShop, inOptions, musicMuted, effectsMuted;
+    public bool inGame, gameOver, inMenu, inShop, inOptions;
 
     [SerializeField]
     public Button playButton, shopButton, quitButton;
@@ -38,8 +38,6 @@ public class UIController : MonoBehaviour
     public Text RoomsCompletedText;
     public Text lastScoresText;
 
-    private bool showingMenu;
-
     public Button optionsButton;
 
     public Button muteMusicButton, muteEffectsButton;
@@ -50,16 +48,18 @@ public class UIController : MonoBehaviour
     public Slider effectsSlider;
     public Button closeOptionsButton;
 
+    public bool musicMuted, effectsMuted;
+
     // SHOP
     public Canvas ShopCanvas;
+    public Button closeShopButton;
+    public Text currencyAmountText;
 
-
-
-    // Start is called before the first frame update
     void Start()
     { 
         playButton.onClick.AddListener(() => GameManager.Instance.StartGame());
-        shopButton.onClick.AddListener(() => ShowShop());
+        shopButton.onClick.AddListener(() => OpenShop());
+        closeShopButton.onClick.AddListener(() => CloseShop());
         quitButton.onClick.AddListener(() => GameManager.Instance.Quit());
 
         optionsButton.onClick.AddListener(() => OpenOptions());
@@ -71,27 +71,28 @@ public class UIController : MonoBehaviour
         CloseOptions();
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        if (GameManager.Instance.GameLoop)
-        {
-            ShowGame();
-        }
-        else if(GameManager.Instance.gameOver)
-        {
-            ShowGameOver();
-        }
-        else if (GameManager.Instance.OptionsLoop)
+        if (GameManager.Instance.OptionsLoop)
         {
             UpdateVolumeValues();
         }
-        else if (GameManager.Instance.MenuLoop)
-        {
-            if (!showingMenu) ShowMenu();
-        } 
         else if (GameManager.Instance.ShopLoop)
         {
-            ShowShop();
+            if (!inShop) ShowShop();
+            UpdateCoinValue();
+        }
+        else if (GameManager.Instance.MenuLoop)
+        {
+            if (!inMenu) ShowMenu();
+        }
+        else if (GameManager.Instance.GameLoop)
+        {
+            ShowGame();
+        }
+        else if (GameManager.Instance.gameOver)
+        {
+            ShowGameOver();
         }
 
     }
@@ -187,7 +188,7 @@ public class UIController : MonoBehaviour
 
     public void ShowMenu()
     {
-        showingMenu = true;
+        inMenu = true;
         MenuCanvas.enabled = true;
         HideGame();
         HideShop();
@@ -213,33 +214,52 @@ public class UIController : MonoBehaviour
 
     public void ShowGame()
     {
+        inGame = true;
         ShowGameUI();
         HideGameOverUI();
-
-        HideMenu();
-        HideShop();
     }
 
-    public void ShowShop()
+    public void OpenShop()
     {
-        ShopCanvas.enabled = true;
+        ShowShop();
         HideGame();
         HideMenu();
+    }
+
+    private void CloseShop()
+    {
+        HideShop();
+        HideGame();
+        ShowMenu();
+    }
+
+    private void ShowShop()
+    {
+        ShopCanvas.enabled = true;
+        GameManager.Instance.MenuLoop = false;
+        GameManager.Instance.ShopLoop = true;
+        UpdateCoinValue();
+        inShop = true;
     }
 
     private void HideShop()
     {
         ShopCanvas.enabled = false;
+        GameManager.Instance.MenuLoop = true;
+        GameManager.Instance.ShopLoop = false;
+        inShop = false;
     }
 
-    private void HideMenu()
+    public void HideMenu()
     {
         MenuCanvas.enabled = false;
+        inMenu = false;
     }
 
     private void HideGame()
     {
         GameCanvas.enabled = false;
+        inGame = false;
     }
 
     public void SetHighScore()
@@ -249,6 +269,7 @@ public class UIController : MonoBehaviour
 
     private void OpenOptions()
     {
+        inOptions = true;
         ShowPanel();
     }
 
@@ -271,6 +292,7 @@ public class UIController : MonoBehaviour
         GameManager.Instance.OptionsLoop = false;
         GameManager.Instance.MenuLoop = true;
         optionsPanel.gameObject.SetActive(false);
+        inOptions = false;
     }
 
     private void UpdateVolumeValues()
@@ -301,5 +323,10 @@ public class UIController : MonoBehaviour
     private void MuteEffects()
     {
         effectsMuted = !effectsMuted;
+    }
+
+    private void UpdateCoinValue()
+    {
+        currencyAmountText.text = $"{GameManager.Instance.GetComponent<ScoreManager>().coins.ToString()}";
     }
 }
