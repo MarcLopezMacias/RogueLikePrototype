@@ -199,10 +199,15 @@ public class UIController : MonoBehaviour
         int highestScore = GameManager.Instance.GetComponent<ScoreManager>().maxScore;
         HighestScoreText.text = ($"Highest Score\n" +
         $"{highestScore}");
-       
-        string lastScores = GameManager.Instance.GetComponent<ScoreManager>().lastScores.ToString();
+
+        List<int> lastScores = GameManager.Instance.GetComponent<ScoreManager>().lastScores;
+        string lastScoresString = "";
+        foreach(int score in lastScores)
+        {
+            lastScoresString += "   " + score;
+        }
         lastScoresText.text = ($"Latest scores\n" +
-        $"{lastScores}");
+        $"{lastScoresString}");
 
         int roomsCompleted = GameManager.Instance.GetComponent<StageManager>().GetRoomsCompleted();
         RoomsCompletedText.text = ($"Rooms Completed\n" +
