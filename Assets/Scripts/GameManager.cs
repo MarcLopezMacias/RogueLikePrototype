@@ -129,6 +129,8 @@ public class GameManager : MonoBehaviour
             gameOver = true;
             EnemyManager.DestroyEnemies();
             UIController.ShowGameOver();
+            PlayerInventory.ResetInventory();
+            ScoreManager.ResetCoins();
             // Reset Inventory ?
             Debug.Log("waitin");
             StartCoroutine(WaitForGameOverScreen());

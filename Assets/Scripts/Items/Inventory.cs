@@ -30,6 +30,12 @@ public class Inventory : MonoBehaviour
         if(Input.GetButtonDown("Heal"))
         {
             AttemptHeal();
+            AttemptUse1UP();
+        }
+
+        if (Input.GetButtonDown("ApplyBuffs"))
+        {
+            AttemptApplyBuffs();
         }
 
         if (weaponComponent == null)
@@ -62,7 +68,7 @@ public class Inventory : MonoBehaviour
                 if (activeItem.activeType.ToString() == "Weapon")
                 {
                     WeaponScriptableObject weapon = (WeaponScriptableObject)activeItem;
-                    weapon.ResetWeapon();
+                    weapon.FullReload();
                 }
             }
             else
@@ -87,10 +93,10 @@ public class Inventory : MonoBehaviour
                 ActiveItem activeItem = (ActiveItem)itemData;
                 if (activeItem.activeType.ToString() == "Weapon")
                 {
-                    WeaponScriptableObject instance = Instantiate((WeaponScriptableObject)activeItem);
-                    UpdateWeapon(instance);
+                    WeaponScriptableObject weapon = (WeaponScriptableObject)activeItem;
+                    UpdateWeapon(weapon);
                     currentSlot = fancyInventory.Count;
-                    weapons.Add(instance);
+                    weapons.Add(weapon);
                 }
             }
 
@@ -156,7 +162,7 @@ public class Inventory : MonoBehaviour
         {
             weaponComponent.weaponData = newWeaponData;
             weaponComponent.GetComponent<SpriteRenderer>().sprite = newWeaponData.Icon;
-            weaponComponent.weaponData.ResetWeapon();
+            weaponComponent.weaponData.FullReload();
         }
     }
 
@@ -188,6 +194,54 @@ public class Inventory : MonoBehaviour
         return null;
     }
 
+    private void AttemptUse1UP()
+    {
+        Consumables ExtraLife = FindTheExtraLife();
+        if (ExtraLife != null)
+        {
+            GameManager.Instance.Player.GetComponent<Player>().IncreaseLifes(ExtraLife.AmountToConsume);
+            Remove(ExtraLife);
+        }
+    }
+
+    private Consumables FindTheExtraLife()
+    {
+        foreach (InventoryItem item in fancyInventory)
+        {
+            if (item.itemData.Name.ToString() == "1 UP")
+            {
+                return (Consumables)item.itemData;
+            }
+        }
+        return null;
+    }
+
+    private void AttemptApplyBuffs()
+    {
+        List<Buffs> buffs = FindBuffs();
+        if (buffs.Count > 0)
+        {
+            foreach(Buffs buff in buffs)
+            {
+                GameManager.Instance.Player.GetComponent<Player>().ApplyBuff(buff);
+                Remove(buff);
+            }
+        }
+    }
+
+    private List<Buffs> FindBuffs()
+    {
+        List<Buffs> list = new List<Buffs>();
+        foreach (InventoryItem item in fancyInventory)
+        {
+            if (item.itemData.Type.ToString() == "Passive")
+            {
+                list.Add((Buffs)item.itemData);
+            }
+        }
+        return list;
+    }
+
     public List<ItemData> GetInventoryItems()
     {
         List<ItemData> items = new List<ItemData>();
@@ -196,5 +250,11 @@ public class Inventory : MonoBehaviour
             items.Add(item.itemData);
         }
         return items;
+    }
+
+    public void ResetInventory()
+    {
+        fancyInventory = new List<InventoryItem>();
+        fancyDictionary = new Dictionary<ItemData, InventoryItem>();
     }
 }

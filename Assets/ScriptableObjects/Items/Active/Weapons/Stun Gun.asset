@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f8ad3d61dc5dcc4eb6bf225cd84bcd5, type: 3}
+  m_Name: Stun Gun
+  m_EditorClassIdentifier: 
+  Name: Stun Gun
+  Type: 0
+  DropChance: 10
+  Price: 0
+  Icon: {fileID: 21300000, guid: 1959adfdc5c338840858eec9307f0184, type: 3}
+  activeType: 1
+  Damage: 0
+  CurrentBullets: 8994
+  MaxReloadBullets: 9000
+  TotalBulletsLeft: 9000
+  MaxCapacity: 9000
+  FireRate: 1
+  FireForce: 10
+  BulletXShoot: 1
+  BulletType: {fileID: 1385484731772730384, guid: 6db7ce3564fb2c94b82f436181508bf9,
+    type: 3}
+  ShootEffect: {fileID: 4770980759696460002, guid: 184fa074e5e3e4b419c2f34472fd31d0,
+    type: 3}

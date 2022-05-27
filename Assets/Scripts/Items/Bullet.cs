@@ -13,6 +13,9 @@ public class Bullet : MonoBehaviour
     [SerializeField]
     public int bulletLifeTime = 4;
 
+    [SerializeField]
+    public int bulletDamage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +49,7 @@ public class Bullet : MonoBehaviour
                 break;
             case "Player":
                 Debug.Log("Hit player");
-                collider.GetComponent<Player>().Damage(2);
+                collider.GetComponent<Player>().Damage(bulletDamage);
                 Impact();
                 break;
 

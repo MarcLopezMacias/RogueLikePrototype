@@ -6,6 +6,7 @@ using UnityEngine;
 public class Buffs : ItemData
 {
 
-    public int AmountToBuff;
+    public string Stat;
+    public float Amount;
 
 }

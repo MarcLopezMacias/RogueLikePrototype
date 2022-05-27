@@ -45,6 +45,11 @@ public class Player : Character, IKillable, IDamageable<float>, IHealable<float>
         }
     }
 
+    public void IncreaseLifes(int amount)
+    {
+        playerData.Lifes += amount;
+    }
+
     public void Kill()
     {
         GameManager.Instance.GetComponent<SoundController>().PlayDeathPlayer();
@@ -74,6 +79,22 @@ public class Player : Character, IKillable, IDamageable<float>, IHealable<float>
     public void SetLocation(Transform location)
     {
         gameObject.transform.position = location.position;
+    }
+
+    public void ApplyBuff(Buffs buff)
+    {
+        switch (buff.Stat)
+        {
+            case "Health":
+                playerData.IncreaseMaxHealth(buff.Amount);
+                break;
+            case "Damage":
+                playerData.IncreaseDamage(buff.Amount);
+                break;
+            case "FireRate":
+                gameObject.GetComponentInChildren<Weapon>().weaponData.IncreaseFireRate(buff.Amount);
+                break;
+        }
     }
 
 }

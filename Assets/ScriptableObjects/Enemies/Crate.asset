@@ -23,6 +23,7 @@ MonoBehaviour:
   AttackDamage: 0
   AggroRange: 0
   Static: 1
+  Aggressive: 0
   XP: 1
   Score: 0
   DropList:
@@ -30,3 +31,7 @@ MonoBehaviour:
   - {fileID: 7935000967339715316, guid: c5e6151dcbb810c459bb2b1043c97df8, type: 3}
   - {fileID: 1213118706352963534, guid: d50533d2ac93b5d4396534ea8f4b925e, type: 3}
   - {fileID: 7645452208743938966, guid: 6ae890e212e3d684ebf2a6a341f1e505, type: 3}
+  - {fileID: 6449636464029301745, guid: 7753f0dcda7710a45b46b15c947e7f8d, type: 3}
+  - {fileID: 3533046459834811182, guid: c25a3829248cdae46b3bfd909080f0a1, type: 3}
+  - {fileID: 7230155762728623264, guid: 4bbd4ff85303b1c4682cf84bac4b509a, type: 3}
+  - {fileID: 2624535622464140752, guid: 54d36315cec6d7e4d813260506dc1b55, type: 3}

@@ -23,7 +23,7 @@ public class PlayerData : ScriptableObject
     public int XPRequiredToLevelUp;
 
     [Header("Combat Stats")]
-    public float BumpDamage;
+    public float Damage, BumpDamage;
     public float Health, MaxHealth;
     public int Lifes, MaxLifes;
 
@@ -75,11 +75,23 @@ public class PlayerData : ScriptableObject
 
     public void ResetHealth()
     {
-        Health = MaxHealth;
+        if (Health < MaxHealth) Health = MaxHealth;
     }
 
     public void ResetLifes()
     {
-        Lifes = MaxLifes;
+        if (Lifes < MaxLifes) Lifes = MaxLifes;
+    }
+
+    public void IncreaseMaxHealth(float amount)
+    {
+        Debug.Log("Increasing Health");
+        MaxHealth += amount;
+    }
+
+    public void IncreaseDamage(float amount)
+    {
+        Debug.Log("Increasing Damage");
+        Damage += amount;
     }
 }

@@ -23,7 +23,7 @@ public class Weapon : MonoBehaviour
 
         if (weaponData != null)
         {
-            weaponData.ResetWeapon();
+            weaponData.FullReload();
             SpriteRenderer sr = gameObject.GetComponent<SpriteRenderer>();
             sr.sprite = weaponData.Icon;
         }
@@ -71,6 +71,8 @@ public class Weapon : MonoBehaviour
 
     private void Shoot()
     {
+        Instantiate(weaponData.ShootEffect, firePoint.position, firePoint.rotation);
+
         GameObject projectile = Instantiate(weaponData.BulletType, firePoint.position, firePoint.rotation);
         projectile.GetComponent<Rigidbody2D>().AddForce(firePoint.right * weaponData.FireForce, ForceMode2D.Impulse);
 

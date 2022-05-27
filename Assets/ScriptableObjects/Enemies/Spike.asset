@@ -23,6 +23,10 @@ MonoBehaviour:
   AttackDamage: 3
   AggroRange: 0
   Static: 1
+  Aggressive: 0
   XP: 1
   Score: 1
-  DropList: []
+  DropList:
+  - {fileID: 7645452208743938966, guid: 6ae890e212e3d684ebf2a6a341f1e505, type: 3}
+  - {fileID: 6302590516226146340, guid: 94084ee3e7b71af4986c5c3472868b7f, type: 3}
+  - {fileID: 7935000967339715316, guid: c5e6151dcbb810c459bb2b1043c97df8, type: 3}

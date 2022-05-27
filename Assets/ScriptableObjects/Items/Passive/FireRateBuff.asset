@@ -17,4 +17,5 @@ MonoBehaviour:
   DropChance: 1
   Price: 100
   Icon: {fileID: 21300000, guid: 24726326f0d24dc41875ec34f94e95b2, type: 3}
-  AmountToBuff: 20
+  Stat: FireRate
+  Amount: 0.1

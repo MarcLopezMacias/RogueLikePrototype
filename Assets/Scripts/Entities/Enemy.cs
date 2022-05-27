@@ -45,24 +45,32 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>,
 
     void FixedUpdate()
     {
-        // IF ITS A CRATE OR WHATEVER
-        if (!enemyInstance.Aggressive && enemyInstance.Static)
+        if (!Stunned)
         {
-            // celebrate
+            // IF ITS A CRATE OR WHATEVER
+            if (!enemyInstance.Aggressive && enemyInstance.Static)
+            {
+                // celebrate
+            }
+            // IF ITS A REGULAR ENEMY
+            else if (enemyInstance.Aggressive && !enemyInstance.Static)
+            {
+                Aim();
+                Move();
+                Animate(false);
+            }
+            // IF ITS A STATIC ENEMY
+            else if (enemyInstance.Aggressive && enemyInstance.Static)
+            {
+                Aim();
+                if (canShoot && UnityEngine.Random.Range(0, 100) <= hitMissChance) Shoot(enemyInstance.AttackDamage);
+                Animate(true);
+            }
         }
-        // IF ITS A REGULAR ENEMY
-        else if (enemyInstance.Aggressive && !enemyInstance.Static) 
+        else
         {
-            Aim();
-            Move();
-            Animate(false);
-        }
-        // IF ITS A STATIC ENEMY
-        else if(enemyInstance.Aggressive && enemyInstance.Static)
-        {
-            Aim();
-            if (canShoot && UnityEngine.Random.Range(0, 100) <= hitMissChance) Shoot(enemyInstance.AttackDamage);
-            Animate(true);
+            StayPut();
+            Debug.Log("Enemy Stunned");
         }
     }
 
@@ -209,5 +217,10 @@ public class Enemy : Character, IKillable, IDamageable<float>, IHealable<float>,
     public void Destroy()
     {
         Destroy(gameObject);
+    }
+
+    private void StayPut()
+    {
+        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
     }
 }

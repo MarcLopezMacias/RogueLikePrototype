@@ -61,4 +61,9 @@ public class ScoreManager : MonoBehaviour
     {
         coins -= amount;
     }
+
+    public void ResetCoins()
+    {
+        coins = 0;
+    }
 }

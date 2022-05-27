@@ -18,6 +18,7 @@ public class WeaponScriptableObject : ActiveItem
     public int BulletXShoot;
 
     public GameObject BulletType;
+    public GameObject ShootEffect;
 
     public bool CanShoot()
     {
@@ -34,8 +35,9 @@ public class WeaponScriptableObject : ActiveItem
         CurrentBullets--;
     }
 
-    public void ResetWeapon()
+    public void FullReload()
     {
+        Debug.Log("Bullets restock");
         CurrentBullets = MaxReloadBullets;
         TotalBulletsLeft = MaxCapacity;
     }
@@ -57,5 +59,11 @@ public class WeaponScriptableObject : ActiveItem
     private bool CanReload()
     {
         return TotalBulletsLeft - (MaxReloadBullets - CurrentBullets) >= 0;
+    }
+
+    public void IncreaseFireRate(float amount)
+    {
+        Debug.Log("Increasing Fire Rate");
+        FireRate += amount;
     }
 }

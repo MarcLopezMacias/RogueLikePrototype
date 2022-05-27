@@ -3,6 +3,7 @@
 public class Character : MonoBehaviour
 {
     public bool GodMode = false;
+    public bool Stunned = false;
     protected Animator Animator;
 
     // Start is called before the first frame update
